@@ -13,6 +13,16 @@
 		9B665F0225FC9A65002E4CD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B665F0025FC9A65002E4CD2 /* Main.storyboard */; };
 		9B665F0425FC9A67002E4CD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B665F0325FC9A67002E4CD2 /* Assets.xcassets */; };
 		9B665F0725FC9A67002E4CD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B665F0525FC9A67002E4CD2 /* LaunchScreen.storyboard */; };
+		9B665F2925FC9D67002E4CD2 /* SCDream2.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9B665F1F25FC9D67002E4CD2 /* SCDream2.otf */; };
+		9B665F2A25FC9D67002E4CD2 /* SCDream6.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9B665F2025FC9D67002E4CD2 /* SCDream6.otf */; };
+		9B665F2B25FC9D67002E4CD2 /* SCDream9.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9B665F2125FC9D67002E4CD2 /* SCDream9.otf */; };
+		9B665F2C25FC9D67002E4CD2 /* SCDream1.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9B665F2225FC9D67002E4CD2 /* SCDream1.otf */; };
+		9B665F2D25FC9D67002E4CD2 /* 나눔손글씨 딸에게 엄마가.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B665F2325FC9D67002E4CD2 /* 나눔손글씨 딸에게 엄마가.ttf */; };
+		9B665F2E25FC9D67002E4CD2 /* SCDream3.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9B665F2425FC9D67002E4CD2 /* SCDream3.otf */; };
+		9B665F2F25FC9D67002E4CD2 /* SCDream7.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9B665F2525FC9D67002E4CD2 /* SCDream7.otf */; };
+		9B665F3025FC9D67002E4CD2 /* SCDream4.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9B665F2625FC9D67002E4CD2 /* SCDream4.otf */; };
+		9B665F3125FC9D67002E4CD2 /* SCDream8.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9B665F2725FC9D67002E4CD2 /* SCDream8.otf */; };
+		9B665F3225FC9D67002E4CD2 /* SCDream5.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9B665F2825FC9D67002E4CD2 /* SCDream5.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +34,16 @@
 		9B665F0325FC9A67002E4CD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B665F0625FC9A67002E4CD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B665F0825FC9A67002E4CD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B665F1F25FC9D67002E4CD2 /* SCDream2.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDream2.otf; sourceTree = "<group>"; };
+		9B665F2025FC9D67002E4CD2 /* SCDream6.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDream6.otf; sourceTree = "<group>"; };
+		9B665F2125FC9D67002E4CD2 /* SCDream9.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDream9.otf; sourceTree = "<group>"; };
+		9B665F2225FC9D67002E4CD2 /* SCDream1.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDream1.otf; sourceTree = "<group>"; };
+		9B665F2325FC9D67002E4CD2 /* 나눔손글씨 딸에게 엄마가.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "나눔손글씨 딸에게 엄마가.ttf"; sourceTree = "<group>"; };
+		9B665F2425FC9D67002E4CD2 /* SCDream3.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDream3.otf; sourceTree = "<group>"; };
+		9B665F2525FC9D67002E4CD2 /* SCDream7.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDream7.otf; sourceTree = "<group>"; };
+		9B665F2625FC9D67002E4CD2 /* SCDream4.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDream4.otf; sourceTree = "<group>"; };
+		9B665F2725FC9D67002E4CD2 /* SCDream8.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDream8.otf; sourceTree = "<group>"; };
+		9B665F2825FC9D67002E4CD2 /* SCDream5.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDream5.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +147,16 @@
 		9B665F1D25FC9AF3002E4CD2 /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				9B665F2325FC9D67002E4CD2 /* 나눔손글씨 딸에게 엄마가.ttf */,
+				9B665F2225FC9D67002E4CD2 /* SCDream1.otf */,
+				9B665F1F25FC9D67002E4CD2 /* SCDream2.otf */,
+				9B665F2425FC9D67002E4CD2 /* SCDream3.otf */,
+				9B665F2625FC9D67002E4CD2 /* SCDream4.otf */,
+				9B665F2825FC9D67002E4CD2 /* SCDream5.otf */,
+				9B665F2025FC9D67002E4CD2 /* SCDream6.otf */,
+				9B665F2525FC9D67002E4CD2 /* SCDream7.otf */,
+				9B665F2725FC9D67002E4CD2 /* SCDream8.otf */,
+				9B665F2125FC9D67002E4CD2 /* SCDream9.otf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -188,8 +218,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B665F2A25FC9D67002E4CD2 /* SCDream6.otf in Resources */,
+				9B665F2C25FC9D67002E4CD2 /* SCDream1.otf in Resources */,
+				9B665F2925FC9D67002E4CD2 /* SCDream2.otf in Resources */,
+				9B665F2E25FC9D67002E4CD2 /* SCDream3.otf in Resources */,
 				9B665F0725FC9A67002E4CD2 /* LaunchScreen.storyboard in Resources */,
+				9B665F2F25FC9D67002E4CD2 /* SCDream7.otf in Resources */,
+				9B665F3225FC9D67002E4CD2 /* SCDream5.otf in Resources */,
+				9B665F3125FC9D67002E4CD2 /* SCDream8.otf in Resources */,
+				9B665F2B25FC9D67002E4CD2 /* SCDream9.otf in Resources */,
+				9B665F2D25FC9D67002E4CD2 /* 나눔손글씨 딸에게 엄마가.ttf in Resources */,
 				9B665F0425FC9A67002E4CD2 /* Assets.xcassets in Resources */,
+				9B665F3025FC9D67002E4CD2 /* SCDream4.otf in Resources */,
 				9B665F0225FC9A65002E4CD2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
