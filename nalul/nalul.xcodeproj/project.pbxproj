@@ -23,6 +23,7 @@
 		9B665F3025FC9D67002E4CD2 /* SCDream4.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9B665F2625FC9D67002E4CD2 /* SCDream4.otf */; };
 		9B665F3125FC9D67002E4CD2 /* SCDream8.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9B665F2725FC9D67002E4CD2 /* SCDream8.otf */; };
 		9B665F3225FC9D67002E4CD2 /* SCDream5.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9B665F2825FC9D67002E4CD2 /* SCDream5.otf */; };
+		9B9326C325FCA33D005D06E2 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9326C225FCA33D005D06E2 /* UIFont+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		9B665F2625FC9D67002E4CD2 /* SCDream4.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDream4.otf; sourceTree = "<group>"; };
 		9B665F2725FC9D67002E4CD2 /* SCDream8.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDream8.otf; sourceTree = "<group>"; };
 		9B665F2825FC9D67002E4CD2 /* SCDream5.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDream5.otf; sourceTree = "<group>"; };
+		9B9326C225FCA33D005D06E2 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 		9B665F1925FC9AC6002E4CD2 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				9B9326C225FCA33D005D06E2 /* UIFont+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			files = (
 				9B665EFF25FC9A65002E4CD2 /* ViewController.swift in Sources */,
 				9B665EFB25FC9A65002E4CD2 /* AppDelegate.swift in Sources */,
+				9B9326C325FCA33D005D06E2 /* UIFont+Extension.swift in Sources */,
 				9B665EFD25FC9A65002E4CD2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
