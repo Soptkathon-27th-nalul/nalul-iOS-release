@@ -27,6 +27,7 @@
 		9B9326C625FCA46A005D06E2 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9326C525FCA46A005D06E2 /* UIButton+Extension.swift */; };
 		9B9326C925FCA4AE005D06E2 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9326C825FCA4AE005D06E2 /* UIView+Extension.swift */; };
 		9B9326CD25FCA52E005D06E2 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9326CC25FCA52E005D06E2 /* UILabel+Extension.swift */; };
+		9B9326D125FCA5D8005D06E2 /* ImageFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9326D025FCA5D8005D06E2 /* ImageFileManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		9B9326C525FCA46A005D06E2 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		9B9326C825FCA4AE005D06E2 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		9B9326CC25FCA52E005D06E2 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		9B9326D025FCA5D8005D06E2 /* ImageFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFileManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				9B9326C525FCA46A005D06E2 /* UIButton+Extension.swift */,
 				9B9326C825FCA4AE005D06E2 /* UIView+Extension.swift */,
 				9B9326CC25FCA52E005D06E2 /* UILabel+Extension.swift */,
+				9B9326D025FCA5D8005D06E2 /* ImageFileManager.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				9B9326C325FCA33D005D06E2 /* UIFont+Extension.swift in Sources */,
 				9B9326C625FCA46A005D06E2 /* UIButton+Extension.swift in Sources */,
 				9B665EFD25FC9A65002E4CD2 /* SceneDelegate.swift in Sources */,
+				9B9326D125FCA5D8005D06E2 /* ImageFileManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
