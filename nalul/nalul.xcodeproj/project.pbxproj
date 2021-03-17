@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B41C0E0260252B600791CE2 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B41C0DF260252B600791CE2 /* Setting.storyboard */; };
+		9B41C0E3260252C600791CE2 /* SettingListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B41C0E2260252C600791CE2 /* SettingListVC.swift */; };
 		9B665EFB25FC9A65002E4CD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B665EFA25FC9A65002E4CD2 /* AppDelegate.swift */; };
 		9B665EFD25FC9A65002E4CD2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B665EFC25FC9A65002E4CD2 /* SceneDelegate.swift */; };
 		9B665EFF25FC9A65002E4CD2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B665EFE25FC9A65002E4CD2 /* ViewController.swift */; };
@@ -31,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B41C0DF260252B600791CE2 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Setting.storyboard; path = nalul/Screen/nalul/Screen/Setting/Storyboard/Setting.storyboard; sourceTree = SOURCE_ROOT; };
+		9B41C0E2260252C600791CE2 /* SettingListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingListVC.swift; path = nalul/Screen/nalul/Screen/Setting/ViewController/SettingListVC.swift; sourceTree = SOURCE_ROOT; };
 		9B665EF725FC9A65002E4CD2 /* nalul.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nalul.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B665EFA25FC9A65002E4CD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B665EFC25FC9A65002E4CD2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +71,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B41C0DC260252A400791CE2 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				9B41C0DE260252AC00791CE2 /* Storyboard */,
+				9B41C0DD260252A700791CE2 /* ViewController */,
+			);
+			name = Setting;
+			path = nalul/Screen/Setting;
+			sourceTree = "<group>";
+		};
+		9B41C0DD260252A700791CE2 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9B41C0E2260252C600791CE2 /* SettingListVC.swift */,
+			);
+			name = ViewController;
+			path = ../nalul/Screen/Setting/ViewController;
+			sourceTree = "<group>";
+		};
+		9B41C0DE260252AC00791CE2 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				9B41C0DF260252B600791CE2 /* Setting.storyboard */,
+			);
+			name = Storyboard;
+			path = ../nalul/Screen/Setting/Storyboard;
+			sourceTree = "<group>";
+		};
 		9B665EEE25FC9A65002E4CD2 = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +140,7 @@
 		9B665F1725FC9AAA002E4CD2 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				9B41C0DC260252A400791CE2 /* Setting */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -242,6 +275,7 @@
 				9B665F3225FC9D67002E4CD2 /* SCDream5.otf in Resources */,
 				9B665F3125FC9D67002E4CD2 /* SCDream8.otf in Resources */,
 				9B665F2B25FC9D67002E4CD2 /* SCDream9.otf in Resources */,
+				9B41C0E0260252B600791CE2 /* Setting.storyboard in Resources */,
 				9B665F2D25FC9D67002E4CD2 /* 나눔손글씨 딸에게 엄마가.ttf in Resources */,
 				9B665F0425FC9A67002E4CD2 /* Assets.xcassets in Resources */,
 				9B665F3025FC9D67002E4CD2 /* SCDream4.otf in Resources */,
@@ -260,6 +294,7 @@
 				9B665EFF25FC9A65002E4CD2 /* ViewController.swift in Sources */,
 				9B665EFB25FC9A65002E4CD2 /* AppDelegate.swift in Sources */,
 				9B9326CD25FCA52E005D06E2 /* UILabel+Extension.swift in Sources */,
+				9B41C0E3260252C600791CE2 /* SettingListVC.swift in Sources */,
 				9B9326C325FCA33D005D06E2 /* UIFont+Extension.swift in Sources */,
 				9B9326C625FCA46A005D06E2 /* UIButton+Extension.swift in Sources */,
 				9B665EFD25FC9A65002E4CD2 /* SceneDelegate.swift in Sources */,
