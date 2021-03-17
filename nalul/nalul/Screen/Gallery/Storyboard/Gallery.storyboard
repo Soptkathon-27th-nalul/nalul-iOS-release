@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rzh-bM-Csy">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gallaryBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Rzh-bM-Csy">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xZu-ZF-K6L">
@@ -116,6 +116,7 @@
                     </view>
                     <connections>
                         <outlet property="backButton" destination="Rug-dx-E6S" id="UrS-PN-9Ac"/>
+                        <outlet property="galleryBackImage" destination="Rzh-bM-Csy" id="Jg6-eV-hPe"/>
                         <outlet property="galleryListCollectionView" destination="4BW-Ch-qfV" id="JT8-Y3-amO"/>
                         <outlet property="titleLabel" destination="h1Z-5b-MS0" id="kOc-4j-ZoU"/>
                         <outlet property="writeButton" destination="J8r-Tz-84E" id="d3M-hr-K3T"/>
@@ -128,6 +129,7 @@
     </scenes>
     <resources>
         <image name="btnBack" width="27" height="25"/>
+        <image name="gallaryBackground" width="375" height="822"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

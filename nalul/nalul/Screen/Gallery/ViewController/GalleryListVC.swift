@@ -19,6 +19,8 @@ class GalleryListVC: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var writeButton: UIButton!
     
+    @IBOutlet weak var galleryBackImage: UIImageView!
+    
     @IBOutlet weak var galleryListCollectionView:
         UICollectionView!
     
@@ -50,7 +52,7 @@ extension GalleryListVC {
     
     func setView() {
         
-        view.backgroundColor = .black
+        galleryBackImage.image = UIImage(named: "gallaryBackground")
         galleryListCollectionView.backgroundColor = .none
         
         titleLabel.font = UIFont.threeLight(size: 17)
