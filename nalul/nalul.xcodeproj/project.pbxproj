@@ -28,6 +28,8 @@
 		9B9326C925FCA4AE005D06E2 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9326C825FCA4AE005D06E2 /* UIView+Extension.swift */; };
 		9B9326CD25FCA52E005D06E2 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9326CC25FCA52E005D06E2 /* UILabel+Extension.swift */; };
 		9B9326D125FCA5D8005D06E2 /* ImageFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9326D025FCA5D8005D06E2 /* ImageFileManager.swift */; };
+		9B9433F12601E12C005D987A /* Gallery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B9433F02601E12C005D987A /* Gallery.storyboard */; };
+		9B9433F52601E148005D987A /* GalleryListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9433F42601E148005D987A /* GalleryListVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		9B9326C825FCA4AE005D06E2 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		9B9326CC25FCA52E005D06E2 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		9B9326D025FCA5D8005D06E2 /* ImageFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFileManager.swift; sourceTree = "<group>"; };
+		9B9433F02601E12C005D987A /* Gallery.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Gallery.storyboard; sourceTree = "<group>"; };
+		9B9433F42601E148005D987A /* GalleryListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryListVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,7 @@
 		9B665F1725FC9AAA002E4CD2 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				9B9433EE2601E117005D987A /* Gallery */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -176,6 +181,31 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
+		9B9433EE2601E117005D987A /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				9B9433F32601E134005D987A /* ViewController */,
+				9B9433EF2601E11C005D987A /* Storyboard */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		9B9433EF2601E11C005D987A /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				9B9433F02601E12C005D987A /* Gallery.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		9B9433F32601E134005D987A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9B9433F42601E148005D987A /* GalleryListVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -240,6 +270,7 @@
 				9B665F0725FC9A67002E4CD2 /* LaunchScreen.storyboard in Resources */,
 				9B665F2F25FC9D67002E4CD2 /* SCDream7.otf in Resources */,
 				9B665F3225FC9D67002E4CD2 /* SCDream5.otf in Resources */,
+				9B9433F12601E12C005D987A /* Gallery.storyboard in Resources */,
 				9B665F3125FC9D67002E4CD2 /* SCDream8.otf in Resources */,
 				9B665F2B25FC9D67002E4CD2 /* SCDream9.otf in Resources */,
 				9B665F2D25FC9D67002E4CD2 /* 나눔손글씨 딸에게 엄마가.ttf in Resources */,
@@ -263,6 +294,7 @@
 				9B9326C325FCA33D005D06E2 /* UIFont+Extension.swift in Sources */,
 				9B9326C625FCA46A005D06E2 /* UIButton+Extension.swift in Sources */,
 				9B665EFD25FC9A65002E4CD2 /* SceneDelegate.swift in Sources */,
+				9B9433F52601E148005D987A /* GalleryListVC.swift in Sources */,
 				9B9326D125FCA5D8005D06E2 /* ImageFileManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
