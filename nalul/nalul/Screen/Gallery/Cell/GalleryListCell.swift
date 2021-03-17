@@ -15,11 +15,12 @@ class GalleryListCell: UICollectionViewCell {
     
     // MARK: IBOutlet
     
+    @IBOutlet weak var galleryImageView: UIImageView!
+    
     // MARK: Life Cycle Part
     
     override func awakeFromNib() {
-//        self.contentView.backgroundColor = .white
-        self.contentView.setBorder(borderColor: .white, borderWidth: 1)
+        self.contentView.setBorder(borderColor: .nalulLightGray, borderWidth: 1)
     }
     
     // MARK: Function
