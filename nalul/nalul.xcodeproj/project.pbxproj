@@ -31,6 +31,7 @@
 		9B9433F12601E12C005D987A /* Gallery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B9433F02601E12C005D987A /* Gallery.storyboard */; };
 		9B9433F52601E148005D987A /* GalleryListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9433F42601E148005D987A /* GalleryListVC.swift */; };
 		9B9433FC2601EE49005D987A /* GalleryListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9433FB2601EE49005D987A /* GalleryListCell.swift */; };
+		9B9434042601FDBD005D987A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9434032601FDBD005D987A /* UIColor+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		9B9433F02601E12C005D987A /* Gallery.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Gallery.storyboard; sourceTree = "<group>"; };
 		9B9433F42601E148005D987A /* GalleryListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryListVC.swift; sourceTree = "<group>"; };
 		9B9433FB2601EE49005D987A /* GalleryListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryListCell.swift; sourceTree = "<group>"; };
+		9B9434032601FDBD005D987A /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 				9B9326C825FCA4AE005D06E2 /* UIView+Extension.swift */,
 				9B9326CC25FCA52E005D06E2 /* UILabel+Extension.swift */,
 				9B9326D025FCA5D8005D06E2 /* ImageFileManager.swift */,
+				9B9434032601FDBD005D987A /* UIColor+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				9B9326C925FCA4AE005D06E2 /* UIView+Extension.swift in Sources */,
 				9B9433FC2601EE49005D987A /* GalleryListCell.swift in Sources */,
 				9B665EFF25FC9A65002E4CD2 /* ViewController.swift in Sources */,
+				9B9434042601FDBD005D987A /* UIColor+Extension.swift in Sources */,
 				9B665EFB25FC9A65002E4CD2 /* AppDelegate.swift in Sources */,
 				9B9326CD25FCA52E005D06E2 /* UILabel+Extension.swift in Sources */,
 				9B9326C325FCA33D005D06E2 /* UIFont+Extension.swift in Sources */,
