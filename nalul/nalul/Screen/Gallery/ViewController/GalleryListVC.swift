@@ -8,7 +8,7 @@
 import UIKit
 
 class GalleryListVC: UIViewController {
-
+    
     // MARK: Variable Part
     
     var titleName: String?
@@ -39,7 +39,7 @@ class GalleryListVC: UIViewController {
         setButton()
         
     }
-
+    
 }
 
 // MARK: Extension
@@ -62,6 +62,9 @@ extension GalleryListVC {
             titleLabel.text = "왼쪽 눈"
         }
         
+        galleryListCollectionView.dataSource = self
+        galleryListCollectionView.delegate = self
+        
     }
     
     
@@ -72,7 +75,60 @@ extension GalleryListVC {
         writeButton.tintColor = .white
         writeButton.setBorder(borderColor: .white, borderWidth: 1)
         writeButton.makeRounded(cornerRadius: nil)
+        
+    }
+    
+    
+}
 
+extension GalleryListVC: UICollectionViewDelegateFlowLayout {
+    // CollectionView 크기 잡기
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        // 한 아이템의 크기
+        
+        return CGSize(width: 110/375*collectionView.frame.width, height: 110/375*collectionView.frame.width)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        // 아이템간의 위아래 간격
+        
+        return 13
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        // 아이템간의 오른쪽 간격
+        
+        return 72
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        // collectionView와 View 간의 간격
+        
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: self.view.frame.width - (110/375*collectionView.frame.width*2 + 72))
+        
+    }
+    
+}
+
+extension GalleryListVC: UICollectionViewDataSource {
+    // CollectionView 데이터 넣기
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        // 최소 단위 12개로 설정
+        
+        return 12
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GalleryListCell.identifier, for: indexPath) as? GalleryListCell else {
+            return UICollectionViewCell()
+        }
+        
+        return cell
     }
     
     

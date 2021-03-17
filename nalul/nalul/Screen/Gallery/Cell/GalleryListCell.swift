@@ -7,16 +7,19 @@
 
 import UIKit
 
-class GalleryListCollectionViewCell: UICollectionViewCell {
+class GalleryListCell: UICollectionViewCell {
     
     // MARK: Variable Part
+    
+    static let identifier = "GalleryListCell"
     
     // MARK: IBOutlet
     
     // MARK: Life Cycle Part
     
     override func awakeFromNib() {
-         
+//        self.contentView.backgroundColor = .white
+        self.contentView.setBorder(borderColor: .white, borderWidth: 1)
     }
     
     // MARK: Function
