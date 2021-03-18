@@ -33,6 +33,7 @@
 		9B9433F52601E148005D987A /* GalleryListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9433F42601E148005D987A /* GalleryListVC.swift */; };
 		9B9433FC2601EE49005D987A /* GalleryListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9433FB2601EE49005D987A /* GalleryListCell.swift */; };
 		9B9434042601FDBD005D987A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9434032601FDBD005D987A /* UIColor+Extension.swift */; };
+		9B9AA19A2603327B00B03862 /* GalleryDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9AA1992603327B00B03862 /* GalleryDetailVC.swift */; };
 		9BCABC4C26031DA0002B4D29 /* MainStartBlockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCABC4B26031DA0002B4D29 /* MainStartBlockCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		9B9433F42601E148005D987A /* GalleryListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryListVC.swift; sourceTree = "<group>"; };
 		9B9433FB2601EE49005D987A /* GalleryListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryListCell.swift; sourceTree = "<group>"; };
 		9B9434032601FDBD005D987A /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		9B9AA1992603327B00B03862 /* GalleryDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryDetailVC.swift; sourceTree = "<group>"; };
 		9BCABC4B26031DA0002B4D29 /* MainStartBlockCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStartBlockCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -238,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				9B9433F42601E148005D987A /* GalleryListVC.swift */,
+				9B9AA1992603327B00B03862 /* GalleryDetailVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				9B9326C625FCA46A005D06E2 /* UIButton+Extension.swift in Sources */,
 				9B665EFD25FC9A65002E4CD2 /* SceneDelegate.swift in Sources */,
 				9B9433F52601E148005D987A /* GalleryListVC.swift in Sources */,
+				9B9AA19A2603327B00B03862 /* GalleryDetailVC.swift in Sources */,
 				9B9326D125FCA5D8005D06E2 /* ImageFileManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
