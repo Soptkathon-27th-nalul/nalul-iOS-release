@@ -9,6 +9,11 @@
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="나눔손글씨 딸에게 엄마가.ttf">
+            <string>NanumDdarEGeEomMaGa</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Gallery ListVC-->
         <scene sceneID="BXR-Bo-ePm">
@@ -180,8 +185,8 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Lu-FM-LHy">
-                                <rect key="frame" x="0.0" y="138.5" width="409" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="0.0" y="141" width="409" height="18.5"/>
+                                <fontDescription key="fontDescription" name="NanumDdarEGeEomMaGa" family="나눔손글씨 딸에게 엄마가" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -201,20 +206,20 @@
                                 <rect key="frame" x="0.0" y="548.5" width="414" height="347.5"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FkN-ih-gPi">
-                                <rect key="frame" x="26" y="588.5" width="362" height="21"/>
+                                <rect key="frame" x="26" y="598.5" width="362" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BOn-Aq-BDL">
-                                <rect key="frame" x="24" y="627.5" width="366" height="1"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="24" y="637.5" width="366" height="2"/>
+                                <color key="backgroundColor" white="1" alpha="0.10374905415718129" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="Abr-oR-b27"/>
+                                    <constraint firstAttribute="height" constant="2" id="Abr-oR-b27"/>
                                 </constraints>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bJn-xz-scx">
-                                <rect key="frame" x="26" y="648.5" width="362" height="192.5"/>
+                                <rect key="frame" x="26" y="659.5" width="362" height="181.5"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -231,7 +236,7 @@
                             <constraint firstItem="hhS-Ne-bRd" firstAttribute="trailing" secondItem="gfm-a5-CeK" secondAttribute="trailing" id="AKw-mW-H30"/>
                             <constraint firstItem="WlL-hx-GQ8" firstAttribute="leading" secondItem="hhS-Ne-bRd" secondAttribute="leading" constant="14" id="BGD-8j-yZv"/>
                             <constraint firstItem="BOn-Aq-BDL" firstAttribute="top" secondItem="FkN-ih-gPi" secondAttribute="bottom" constant="18" id="FGK-yy-NIK"/>
-                            <constraint firstItem="FkN-ih-gPi" firstAttribute="top" secondItem="OfI-Or-gpG" secondAttribute="bottom" constant="10" id="H6f-Fv-rud"/>
+                            <constraint firstItem="FkN-ih-gPi" firstAttribute="top" secondItem="OfI-Or-gpG" secondAttribute="bottom" constant="20" id="H6f-Fv-rud"/>
                             <constraint firstItem="WlL-hx-GQ8" firstAttribute="centerX" secondItem="bAw-I9-cIC" secondAttribute="centerX" id="ITE-Vs-nu1"/>
                             <constraint firstItem="bxq-Dx-1lG" firstAttribute="top" secondItem="bAw-I9-cIC" secondAttribute="top" constant="45" id="JaL-nt-2ro"/>
                             <constraint firstItem="OfI-Or-gpG" firstAttribute="leading" secondItem="hhS-Ne-bRd" secondAttribute="leading" id="JqO-nH-xcV"/>
@@ -255,6 +260,15 @@
                             <constraint firstItem="bxq-Dx-1lG" firstAttribute="leading" secondItem="hhS-Ne-bRd" secondAttribute="leading" id="zsh-6a-hpy"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="answerTextView" destination="bJn-xz-scx" id="qFe-6x-XCs"/>
+                        <outlet property="bottomLayoutConstraint" destination="Z0i-Fy-6RB" id="jRo-mx-x0g"/>
+                        <outlet property="dateLabel" destination="9Lu-FM-LHy" id="fql-8P-t9D"/>
+                        <outlet property="deleteButton" destination="7jZ-Ja-ML5" id="Q4g-5t-8rt"/>
+                        <outlet property="questionLabel" destination="FkN-ih-gPi" id="mux-If-xci"/>
+                        <outlet property="titleLabel" destination="Kmj-C0-Vb6" id="dvy-dJ-4l0"/>
+                        <outlet property="userImageView" destination="OfI-Or-gpG" id="pY5-0x-AOo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2OP-bg-MVb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
