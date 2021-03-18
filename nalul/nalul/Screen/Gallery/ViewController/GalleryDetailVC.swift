@@ -106,6 +106,7 @@ extension GalleryDetailVC {
     }
     
     func setButton() {
+        
         deleteButton.setTitle("삭제", for: .normal)
         deleteButton.titleLabel?.font = UIFont.threeLight(size: 14)
         deleteButton.tintColor = .white
