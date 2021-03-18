@@ -14,15 +14,17 @@ class MainStartVC: UIViewController {
     // MARK: IBOutlet
     
     @IBOutlet weak var backgroundImageView: UIImageView!
-    @IBOutlet weak var padView: UIView!
     @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var subLabel: UILabel!
     
-    @IBOutlet weak var buttonExplainLabel: UILabel!
+    @IBOutlet weak var blockCollectionView: UICollectionView!
     
     @IBOutlet weak var yesButton: UIButton!
     
     @IBOutlet weak var useExplainLabel: UILabel!
+    
+    @IBOutlet weak var topLayoutConstraint: NSLayoutConstraint!
+    @IBOutlet weak var bottomLayoutConstraint: NSLayoutConstraint!
     
     // MARK: IBAction
     
@@ -30,16 +32,17 @@ class MainStartVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        setView()
-//        setLabel()
+        setView()
+        setLabel()
         // Do any additional setup after loading the view.
     }
     
     override func viewDidLayoutSubviews() {
-//        setButton()
-//        if view.safeAreaInsets.bottom == 0.0 {
-//            startButtonConstraint.constant = 20
-//        }
+        setButton()
+        if view.safeAreaInsets.bottom == 0.0 {
+            topLayoutConstraint.constant = 30
+            bottomLayoutConstraint.constant = 20
+        }
     }
 
 }
@@ -53,9 +56,9 @@ extension MainStartVC {
     func setView() {
         // 뷰 관련 Style 설정
         
-        backgroundImageView.image = UIImage(named: "testImage")
+        self.view.backgroundColor = .black
         
-        padView.setRounded(radius: 18)
+        backgroundImageView.image = UIImage(named: "mainStartBoder")
     
     }
     
@@ -82,7 +85,7 @@ extension MainStartVC {
         welcomeLabel.font = UIFont.threeLight(size: 14)
         
         if let text = welcomeLabel.text {
-            // "좋은 아침입니다!" 부분에만 폰트를 다르게 설정
+            // 첫째줄만 폰트를 다르게 설정
             let attributedStr = NSMutableAttributedString(string: welcomeLabel.text ?? "")
             attributedStr.addAttribute(NSAttributedString.Key(rawValue: kCTFontAttributeName as String), value: UIFont.threeLight(size: 12), range: (text as NSString).range(of: "narul"))
 
@@ -95,19 +98,15 @@ extension MainStartVC {
         subLabel.textColor = .white
         subLabel.font = UIFont.twoExLight(size: 11)
         
-        buttonExplainLabel.text = "touch!"
-        buttonExplainLabel.textColor = .white
-        buttonExplainLabel.font = UIFont.fourRegular(size: 11)
-        
-        useExplainLabel.text = "메모장을 눌러보세요\n나에게 중독되어 가는거에요, narul"
+        useExplainLabel.text = "이제 시작. 나를에서 나를 찾아봐요\n나에게 중독되어 가는거에요, narul"
         useExplainLabel.textColor = .white
         useExplainLabel.font = UIFont.twoExLight(size:  11)
         useExplainLabel.numberOfLines = 0
         
         if let text = useExplainLabel.text {
-            // "좋은 아침입니다!" 부분에만 폰트를 다르게 설정
+            // 첫째줄 부분에만 폰트를 다르게 설정
             let attributedStr = NSMutableAttributedString(string: useExplainLabel.text ?? "")
-            attributedStr.addAttribute(NSAttributedString.Key(rawValue: kCTFontAttributeName as String), value: UIFont.threeLight(size: 14), range: (text as NSString).range(of: "메모장을 눌러보세요"))
+            attributedStr.addAttribute(NSAttributedString.Key(rawValue: kCTFontAttributeName as String), value: UIFont.threeLight(size: 14), range: (text as NSString).range(of: "이제 시작. 나를에서 나를 찾아봐요"))
 
             useExplainLabel.attributedText = attributedStr
         }

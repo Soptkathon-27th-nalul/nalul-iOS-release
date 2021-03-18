@@ -1,19 +1,19 @@
 {
   "images" : [
     {
+      "filename" : "gallaryBackground1.png",
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "mainImgRectangle.png"
+      "scale" : "1x"
     },
     {
       "scale" : "2x",
       "idiom" : "universal",
-      "filename" : "mainImgRectangle@2x.png"
+      "filename" : "gallaryBackground1@2x.png"
     },
     {
-      "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "mainImgRectangle@3x.png"
+      "idiom" : "universal",
+      "filename" : "gallaryBackground1@3x.png"
     }
   ],
   "info" : {
