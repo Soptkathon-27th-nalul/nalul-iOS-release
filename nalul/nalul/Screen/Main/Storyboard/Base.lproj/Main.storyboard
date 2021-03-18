@@ -62,19 +62,32 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="GmN-gf-quq" secondAttribute="height" multiplier="1:1" id="rYJ-WW-qnI"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WrD-Do-brz">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WrD-Do-brz">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="mNo-0x-eHs">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MainStartBlockCell" id="mNo-0x-eHs" customClass="MainStartBlockCell" customModule="nalul" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="3wl-NR-8cj">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plusButtonImg" translatesAutoresizingMaskIntoConstraints="NO" id="hVV-pG-T5c">
+                                                    <rect key="frame" x="56" y="51" width="16" height="26"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="hVV-pG-T5c" secondAttribute="height" multiplier="11:18" id="8cS-4L-rmU"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="hVV-pG-T5c" firstAttribute="centerY" secondItem="3wl-NR-8cj" secondAttribute="centerY" id="N82-35-0XI"/>
+                                                <constraint firstItem="hVV-pG-T5c" firstAttribute="centerX" secondItem="3wl-NR-8cj" secondAttribute="centerX" id="Oci-4I-yKo"/>
+                                                <constraint firstItem="hVV-pG-T5c" firstAttribute="width" secondItem="3wl-NR-8cj" secondAttribute="width" multiplier="11/88" id="eWt-Ph-vg9"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
                                     </collectionViewCell>
                                 </cells>
@@ -123,6 +136,7 @@
     </scenes>
     <resources>
         <image name="mainStartBoder" width="343" height="732"/>
+        <image name="plusButtonImg" width="8.5" height="9"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

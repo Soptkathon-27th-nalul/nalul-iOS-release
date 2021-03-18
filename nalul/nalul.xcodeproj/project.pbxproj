@@ -33,6 +33,7 @@
 		9B9433F52601E148005D987A /* GalleryListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9433F42601E148005D987A /* GalleryListVC.swift */; };
 		9B9433FC2601EE49005D987A /* GalleryListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9433FB2601EE49005D987A /* GalleryListCell.swift */; };
 		9B9434042601FDBD005D987A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9434032601FDBD005D987A /* UIColor+Extension.swift */; };
+		9BCABC4C26031DA0002B4D29 /* MainStartBlockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCABC4B26031DA0002B4D29 /* MainStartBlockCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		9B9433F42601E148005D987A /* GalleryListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryListVC.swift; sourceTree = "<group>"; };
 		9B9433FB2601EE49005D987A /* GalleryListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryListCell.swift; sourceTree = "<group>"; };
 		9B9434032601FDBD005D987A /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		9BCABC4B26031DA0002B4D29 /* MainStartBlockCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStartBlockCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 		9B9326D425FCAEF4005D06E2 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				9BCABC4A26031D8A002B4D29 /* Cell */,
 				9B9326D725FCBF2A005D06E2 /* ViewController */,
 				9B9326D525FCAF08005D06E2 /* Storyboard */,
 			);
@@ -201,18 +204,18 @@
 			isa = PBXGroup;
 			children = (
 				9B665F0025FC9A65002E4CD2 /* Main.storyboard */,
-            );
-            path = Storyboard;
-            sourceTree = "<group>";
-        };
-        9B9326D725FCBF2A005D06E2 /* ViewController */ = {
-            isa = PBXGroup;
-            children = (
-                9B9326D825FCBF3A005D06E2 /* MainStartVC.swift */,
-            );
-            path = ViewController;
-            sourceTree = "<group>";
-        };
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		9B9326D725FCBF2A005D06E2 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9B9326D825FCBF3A005D06E2 /* MainStartVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		9B9433EE2601E117005D987A /* Gallery */ = {
 			isa = PBXGroup;
 			children = (
@@ -243,6 +246,14 @@
 			isa = PBXGroup;
 			children = (
 				9B9433FB2601EE49005D987A /* GalleryListCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		9BCABC4A26031D8A002B4D29 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9BCABC4B26031DA0002B4D29 /* MainStartBlockCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -335,6 +346,7 @@
 				9B9434042601FDBD005D987A /* UIColor+Extension.swift in Sources */,
 				9B665EFB25FC9A65002E4CD2 /* AppDelegate.swift in Sources */,
 				9B9326CD25FCA52E005D06E2 /* UILabel+Extension.swift in Sources */,
+				9BCABC4C26031DA0002B4D29 /* MainStartBlockCell.swift in Sources */,
 				9B9326C325FCA33D005D06E2 /* UIFont+Extension.swift in Sources */,
 				9B9326C625FCA46A005D06E2 /* UIButton+Extension.swift in Sources */,
 				9B665EFD25FC9A65002E4CD2 /* SceneDelegate.swift in Sources */,

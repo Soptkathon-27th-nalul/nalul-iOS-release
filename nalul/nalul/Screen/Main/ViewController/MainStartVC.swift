@@ -59,6 +59,10 @@ extension MainStartVC {
         self.view.backgroundColor = .black
         
         backgroundImageView.image = UIImage(named: "mainStartBoder")
+        
+        blockCollectionView.backgroundColor = .none
+        blockCollectionView.dataSource = self
+        blockCollectionView.delegate = self
     
     }
     
@@ -114,4 +118,56 @@ extension MainStartVC {
         useExplainLabel.lineSetting(kernValue: 0, lineSpacing: 12)
         
     }
+}
+
+extension MainStartVC: UICollectionViewDelegateFlowLayout {
+    // CollectionView 크기 잡기
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        // 한 아이템의 크기
+        
+        return CGSize(width: (collectionView.frame.width-10)/3, height: (collectionView.frame.width-10)/3)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        // 아이템간의 위아래 간격
+        
+        return 5
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        // 아이템간의 오른쪽 간격
+        
+        return 5
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        // collectionView와 View 간의 간격
+        
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        
+    }
+    
+}
+
+extension MainStartVC: UICollectionViewDataSource {
+    // CollectionView 데이터 넣기
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        return 9
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MainStartBlockCell.identifier, for: indexPath) as? MainStartBlockCell else {
+            return UICollectionViewCell()
+        }
+        
+        return cell
+    }
+    
+    
 }
