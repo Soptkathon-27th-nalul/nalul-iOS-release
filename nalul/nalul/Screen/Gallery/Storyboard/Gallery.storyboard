@@ -202,7 +202,7 @@
                                     <constraint firstAttribute="height" constant="20" id="SD4-6l-viW"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vector" translatesAutoresizingMaskIntoConstraints="NO" id="gfm-a5-CeK">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgInsertAsset" translatesAutoresizingMaskIntoConstraints="NO" id="gfm-a5-CeK">
                                 <rect key="frame" x="0.0" y="548.5" width="414" height="347.5"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FkN-ih-gPi">
@@ -280,8 +280,8 @@
         <image name="detailTopBackground" width="374" height="144"/>
         <image name="filmboxImage" width="346.5" height="20.5"/>
         <image name="gallaryBackground" width="375" height="822"/>
+        <image name="imgInsertAsset" width="375" height="340"/>
         <image name="testImage" width="675" height="1200"/>
-        <image name="vector" width="375" height="344"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
