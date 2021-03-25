@@ -196,22 +196,13 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="x" translatesAutoresizingMaskIntoConstraints="NO" id="886-ln-bU6">
-                                        <rect key="frame" x="175" y="-5" width="10" height="14"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="14" id="Tqc-uA-C6k"/>
-                                            <constraint firstAttribute="width" constant="10" id="iKf-zc-sM6"/>
-                                        </constraints>
-                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="36H-iN-ahQ" firstAttribute="leading" secondItem="YUi-qz-TAU" secondAttribute="leading" id="0r7-23-3pv"/>
-                                    <constraint firstItem="886-ln-bU6" firstAttribute="centerX" secondItem="YUi-qz-TAU" secondAttribute="centerX" id="7TL-Q2-XNB"/>
                                     <constraint firstAttribute="bottom" secondItem="36H-iN-ahQ" secondAttribute="bottom" id="8Mo-s4-Hgh"/>
                                     <constraint firstAttribute="trailing" secondItem="36H-iN-ahQ" secondAttribute="trailing" id="M56-RR-vH5"/>
                                     <constraint firstItem="36H-iN-ahQ" firstAttribute="top" secondItem="YUi-qz-TAU" secondAttribute="top" id="Uzq-h2-TY6"/>
-                                    <constraint firstItem="886-ln-bU6" firstAttribute="top" secondItem="YUi-qz-TAU" secondAttribute="top" constant="-5" id="c56-aR-YDU"/>
                                     <constraint firstAttribute="width" secondItem="YUi-qz-TAU" secondAttribute="height" multiplier="320:65" id="z8u-iu-g62"/>
                                 </constraints>
                             </view>
@@ -226,9 +217,18 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                     </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="x" translatesAutoresizingMaskIntoConstraints="NO" id="886-ln-bU6">
+                                        <rect key="frame" x="202" y="241.5" width="10" height="14"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="14" id="Tqc-uA-C6k"/>
+                                            <constraint firstAttribute="width" constant="10" id="iKf-zc-sM6"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="886-ln-bU6" secondAttribute="bottom" constant="-5" id="7it-yo-WlI"/>
                                     <constraint firstItem="Fq1-n6-gej" firstAttribute="centerX" secondItem="LX0-Ti-ih3" secondAttribute="centerX" id="Bd5-91-c2u"/>
+                                    <constraint firstItem="886-ln-bU6" firstAttribute="centerX" secondItem="LX0-Ti-ih3" secondAttribute="centerX" id="S0y-Dh-EaS"/>
                                     <constraint firstItem="Fq1-n6-gej" firstAttribute="centerY" secondItem="LX0-Ti-ih3" secondAttribute="centerY" constant="-5" id="XhJ-zd-xPR"/>
                                 </constraints>
                             </view>
@@ -261,6 +261,18 @@
                             <constraint firstItem="Q6f-KA-7UB" firstAttribute="leading" secondItem="2gm-3j-peo" secondAttribute="leading" id="zfP-8a-ec6"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="clipImage" destination="886-ln-bU6" id="fDT-Pg-Lfw"/>
+                        <outlet property="dateLabel" destination="uWG-Ve-iOy" id="9ki-Xp-0dA"/>
+                        <outlet property="explainLabel" destination="36H-iN-ahQ" id="X1e-u2-bmU"/>
+                        <outlet property="homeAlbumCollectionView" destination="ymc-yZ-E5T" id="Jkg-QE-ZP7"/>
+                        <outlet property="middleSubView" destination="LX0-Ti-ih3" id="uJ4-oC-dKa"/>
+                        <outlet property="settingButton" destination="Rlk-La-wCD" id="7hf-UL-dpn"/>
+                        <outlet property="shakeButton" destination="Fq1-n6-gej" id="7cj-Ti-dxf"/>
+                        <outlet property="subPopUpView" destination="YUi-qz-TAU" id="Yym-NJ-Q9V"/>
+                        <outlet property="todayQuestionLabel" destination="Q6f-KA-7UB" id="hq8-rW-b1i"/>
+                        <outlet property="userBackImageView" destination="qu4-NE-ArK" id="9HR-Al-J41"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ljv-rT-m7f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
