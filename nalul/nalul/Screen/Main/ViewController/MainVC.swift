@@ -31,6 +31,8 @@ class MainVC: UIViewController {
     @IBOutlet weak var clipImage: UIImageView!
     @IBOutlet weak var explainLabel: UILabel!
     
+    @IBOutlet weak var constraintToBottom: NSLayoutConstraint!
+    @IBOutlet weak var constraintToTop: NSLayoutConstraint!
     // MARK: IBAction
     
     // MARK: Life Cycle Part
@@ -74,6 +76,11 @@ extension MainVC {
         homeAlbumCollectionView.dataSource = self
         homeAlbumCollectionView.backgroundColor = .none
         
+        if !UIScreen.main.hasNotch {
+            // 노치가 없으면 간격 줄여주기
+            constraintToBottom.constant = 20
+            constraintToTop.constant = 20
+        }
     }
     
     // MARK: Label Style Function

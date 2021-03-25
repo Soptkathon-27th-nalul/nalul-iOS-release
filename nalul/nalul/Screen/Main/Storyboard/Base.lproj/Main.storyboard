@@ -288,6 +288,8 @@
                     </view>
                     <connections>
                         <outlet property="clipImage" destination="886-ln-bU6" id="fDT-Pg-Lfw"/>
+                        <outlet property="constraintToBottom" destination="q0y-qM-WIA" id="tVR-WZ-l4a"/>
+                        <outlet property="constraintToTop" destination="zEU-mc-IU8" id="yE3-Cu-zRd"/>
                         <outlet property="dateLabel" destination="uWG-Ve-iOy" id="9ki-Xp-0dA"/>
                         <outlet property="explainLabel" destination="36H-iN-ahQ" id="X1e-u2-bmU"/>
                         <outlet property="homeAlbumCollectionView" destination="ymc-yZ-E5T" id="Jkg-QE-ZP7"/>
