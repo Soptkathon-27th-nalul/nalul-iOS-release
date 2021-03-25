@@ -11,6 +11,8 @@ class MainVC: UIViewController {
 
     // MARK: Variable Part
     
+    var partNameArray: [String] = ["left\neye","left\nhand","eye\nbrow","right\nhand","ear","lips","cheek","right\neye","nose"]
+    
     // MARK: IBOutlet
     
     @IBOutlet weak var userBackImageView: UIImageView!
@@ -68,7 +70,9 @@ extension MainVC {
         subPopUpView.alpha = 0.6
         subPopUpView.setRounded(radius: 32.5)
 
-            
+        homeAlbumCollectionView.delegate = self
+        homeAlbumCollectionView.dataSource = self
+        homeAlbumCollectionView.backgroundColor = .none
         
     }
     
@@ -96,6 +100,20 @@ extension MainVC {
         dateLabel.font = UIFont.twoExLight(size: 11)
         dateLabel.textColor = .white
         
+        explainLabel.numberOfLines = 0
+        explainLabel.text = "+ 버튼을 눌러 사진을 추가하세요\n사진 순서는 랜덤입니다"
+        explainLabel.font = UIFont.threeLight(size: 14)
+        explainLabel.textColor = .white
+        
+        if let text = explainLabel.text {
+            // 두번째줄만 폰트를 다르게 설정
+            let attributedStr = NSMutableAttributedString(string: text)
+            attributedStr.addAttribute(NSAttributedString.Key(rawValue: kCTFontAttributeName as String), value: UIFont.twoExLight(size: 11), range: (text as NSString).range(of: "사진 순서는 랜덤입니다"))
+
+            explainLabel.attributedText = attributedStr
+        }
+        
+        explainLabel.lineSetting(kernValue: 0, lineSpacing: 12)
     }
     
     // MARK: Button Style Function
@@ -114,3 +132,56 @@ extension MainVC {
     }
 }
 
+extension MainVC: UICollectionViewDelegateFlowLayout {
+    // CollectionView 크기 잡기
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        // 한 아이템의 크기
+        
+        return CGSize(width: (collectionView.frame.width-10)/3, height: (collectionView.frame.width-10)/3)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        // 아이템간의 위아래 간격
+        
+        return 5
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        // 아이템간의 오른쪽 간격
+        
+        return 5
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        // collectionView와 View 간의 간격
+        
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        
+    }
+    
+}
+
+extension MainVC: UICollectionViewDataSource {
+    // CollectionView 데이터 넣기
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        return 9
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MainAlbumCell.identifier, for: indexPath) as? MainAlbumCell else {
+            return UICollectionViewCell()
+        }
+        
+        cell.configure(name: partNameArray[indexPath.row])
+        
+        return cell
+    }
+    
+    
+}

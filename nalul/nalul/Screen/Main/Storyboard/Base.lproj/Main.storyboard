@@ -170,20 +170,45 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ymc-yZ-E5T" secondAttribute="height" multiplier="1:1" id="B8p-90-XQQ"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PlG-P4-ibm">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PlG-P4-ibm">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="aGQ-N7-6xW">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MainAlbumCell" id="aGQ-N7-6xW" customClass="MainAlbumCell" customModule="nalul" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="qk4-D5-7tb">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Sd8-dB-BTR">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRb-uc-Cp9">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="qRb-uc-Cp9" firstAttribute="leading" secondItem="qk4-D5-7tb" secondAttribute="leading" id="1og-PW-Pzo"/>
+                                                <constraint firstAttribute="trailing" secondItem="Sd8-dB-BTR" secondAttribute="trailing" id="22f-LV-Mgw"/>
+                                                <constraint firstAttribute="bottom" secondItem="Sd8-dB-BTR" secondAttribute="bottom" id="5ac-Yj-pms"/>
+                                                <constraint firstAttribute="trailing" secondItem="qRb-uc-Cp9" secondAttribute="trailing" id="BfZ-Kh-tD7"/>
+                                                <constraint firstItem="Sd8-dB-BTR" firstAttribute="leading" secondItem="qk4-D5-7tb" secondAttribute="leading" id="Gvh-l4-25e"/>
+                                                <constraint firstItem="Sd8-dB-BTR" firstAttribute="top" secondItem="qk4-D5-7tb" secondAttribute="top" id="W9S-WP-kqQ"/>
+                                                <constraint firstAttribute="bottom" secondItem="qRb-uc-Cp9" secondAttribute="bottom" id="ZNd-yb-bc9"/>
+                                                <constraint firstItem="qRb-uc-Cp9" firstAttribute="top" secondItem="qk4-D5-7tb" secondAttribute="top" id="uhW-AM-paG"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="partNameLabel" destination="qRb-uc-Cp9" id="NkS-wb-5Ek"/>
+                                            <outlet property="userImage" destination="Sd8-dB-BTR" id="HXT-qI-cY4"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -210,7 +235,7 @@
                                 <rect key="frame" x="0.0" y="502.5" width="414" height="250.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fq1-n6-gej">
-                                        <rect key="frame" x="179" y="92" width="56" height="56"/>
+                                        <rect key="frame" x="179" y="102" width="56" height="56"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Fq1-n6-gej" secondAttribute="height" multiplier="1:1" id="AOq-de-1Pf"/>
                                             <constraint firstAttribute="width" constant="56" id="zvh-ju-XbJ"/>
@@ -229,7 +254,7 @@
                                     <constraint firstAttribute="bottom" secondItem="886-ln-bU6" secondAttribute="bottom" constant="-5" id="7it-yo-WlI"/>
                                     <constraint firstItem="Fq1-n6-gej" firstAttribute="centerX" secondItem="LX0-Ti-ih3" secondAttribute="centerX" id="Bd5-91-c2u"/>
                                     <constraint firstItem="886-ln-bU6" firstAttribute="centerX" secondItem="LX0-Ti-ih3" secondAttribute="centerX" id="S0y-Dh-EaS"/>
-                                    <constraint firstItem="Fq1-n6-gej" firstAttribute="centerY" secondItem="LX0-Ti-ih3" secondAttribute="centerY" constant="-5" id="XhJ-zd-xPR"/>
+                                    <constraint firstItem="Fq1-n6-gej" firstAttribute="centerY" secondItem="LX0-Ti-ih3" secondAttribute="centerY" constant="5" id="XhJ-zd-xPR"/>
                                 </constraints>
                             </view>
                         </subviews>

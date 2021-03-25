@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B071B54260C8F6100CCECF4 /* MainAlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B071B53260C8F6100CCECF4 /* MainAlbumCell.swift */; };
 		9B665EFB25FC9A65002E4CD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B665EFA25FC9A65002E4CD2 /* AppDelegate.swift */; };
 		9B665EFD25FC9A65002E4CD2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B665EFC25FC9A65002E4CD2 /* SceneDelegate.swift */; };
 		9B665EFF25FC9A65002E4CD2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B665EFE25FC9A65002E4CD2 /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B071B53260C8F6100CCECF4 /* MainAlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAlbumCell.swift; sourceTree = "<group>"; };
 		9B665EF725FC9A65002E4CD2 /* nalul.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nalul.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B665EFA25FC9A65002E4CD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B665EFC25FC9A65002E4CD2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				9BCABC4B26031DA0002B4D29 /* MainStartBlockCell.swift */,
+				9B071B53260C8F6100CCECF4 /* MainAlbumCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				9B9326C925FCA4AE005D06E2 /* UIView+Extension.swift in Sources */,
 				9B9433FC2601EE49005D987A /* GalleryListCell.swift in Sources */,
 				9B665EFF25FC9A65002E4CD2 /* ViewController.swift in Sources */,
+				9B071B54260C8F6100CCECF4 /* MainAlbumCell.swift in Sources */,
 				9B9434042601FDBD005D987A /* UIColor+Extension.swift in Sources */,
 				9B665EFB25FC9A65002E4CD2 /* AppDelegate.swift in Sources */,
 				9B9326CD25FCA52E005D06E2 /* UILabel+Extension.swift in Sources */,
