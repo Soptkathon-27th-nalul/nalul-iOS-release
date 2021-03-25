@@ -11,7 +11,7 @@ extension UIFont {
     
     // MARK: 나눔손글씨 딸에게 엄마가 Font
     class func momFont(size: CGFloat) -> UIFont {
-        return UIFont(name: "나눔손글씨 딸에게 엄마가", size: size)!
+        return UIFont(name: "NanumDdarEGeEomMaGa", size: size)!
     }
     
     // MARK: S-CoreDream Font
