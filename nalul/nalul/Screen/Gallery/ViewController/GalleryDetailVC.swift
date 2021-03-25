@@ -26,9 +26,7 @@ class GalleryDetailVC: UIViewController {
     @IBOutlet weak var userImageView: UIImageView!
     
     @IBOutlet weak var questionLabel: UILabel!
-    @IBOutlet weak var answerTextView: UITextView!
-    
-    @IBOutlet weak var bottomLayoutConstraint: NSLayoutConstraint!
+    @IBOutlet weak var answerLabel: UILabel!
     
     // MARK: IBAction
     
@@ -43,9 +41,6 @@ class GalleryDetailVC: UIViewController {
     
     override func viewDidLayoutSubviews() {
         setButton()
-        if view.safeAreaInsets.bottom == 0.0 {
-            bottomLayoutConstraint.constant = 20
-        }
     }
     
 }
@@ -94,15 +89,17 @@ extension GalleryDetailVC {
         questionLabel.font = UIFont.threeLight(size: 15)
         questionLabel.textColor = .white
 
+        answerLabel.numberOfLines = 0
         if let answer = answer {
-            answerTextView.text = answer
+            answerLabel.text = answer
         } else {
-            answerTextView.text = "내 오른쪽 눈은 적색일지도 모른다.\n밤샘이 잦은 탓에,\n눈에 돋은 핏줄을 숨길 수가 없다.\n\n조만간 푹 쉬고\n흰색의 눈에 갈색의 동공이 빛나는\n건강한 하루를 보내고 싶다."
+            answerLabel.text = "내 오른쪽 눈은 적색일지도 모른다.\n밤샘이 잦은 탓에,\n눈에 돋은 핏줄을 숨길 수가 없다.\n\n조만간 푹 쉬고\n흰색의 눈에 갈색의 동공이 빛나는\n건강한 하루를 보내고 싶다."
         }
-        answerTextView.textColor = .white
-        answerTextView.font = UIFont.oneThin(size: 14)
-        answerTextView.isEditable = false
-        answerTextView.lineSetting(kernValue: 0.0, lineSpacing: 8.0)
+        answerLabel.textColor = .white
+        answerLabel.font = UIFont.oneThin(size: 14)
+        answerLabel
+            .lineSetting(kernValue: 0.0, lineSpacing: 8.0)
+        answerLabel.textAlignment = .left
     }
     
     func setButton() {
