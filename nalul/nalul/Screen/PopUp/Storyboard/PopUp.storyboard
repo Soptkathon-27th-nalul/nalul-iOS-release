@@ -12,7 +12,7 @@
         <!--Pop UpVC-->
         <scene sceneID="DKe-k8-LX0">
             <objects>
-                <viewController id="8cT-vx-tue" customClass="PopUpVC" customModule="nalul" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PopUpVC" id="8cT-vx-tue" customClass="PopUpVC" customModule="nalul" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0iQ-Gv-ePk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
