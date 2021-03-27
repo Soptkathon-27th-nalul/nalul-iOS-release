@@ -60,6 +60,11 @@
                             <constraint firstItem="omN-hD-HNd" firstAttribute="centerX" secondItem="0iQ-Gv-ePk" secondAttribute="centerX" id="tdK-oq-QTD"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buttonView" destination="Ffs-3k-WUg" id="cC0-pS-8AU"/>
+                        <outlet property="mentLabel" destination="YSe-RM-6BK" id="vc3-S8-etB"/>
+                        <outlet property="popUpView" destination="omN-hD-HNd" id="36t-t6-8sJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rdJ-7l-aVz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
