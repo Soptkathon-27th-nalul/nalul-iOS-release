@@ -13,6 +13,8 @@ class PopUpVC: UIViewController {
     
     var questionMent: String?
     var explainMent: String?
+    let yesButton = UIButton()
+    let noButton = UIButton()
     
     
     // MARK: IBOutlet
@@ -26,10 +28,19 @@ class PopUpVC: UIViewController {
     // MARK: Life Cycle Part
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         setView()
         setLabel()
+        
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillLayoutSubviews() {
+        
+        // 버튼 둥글게
+        yesButton.layer.cornerRadius = self.buttonView.frame.height/2
+        noButton.layer.cornerRadius = self.buttonView.frame.height/2
     }
 
 }
@@ -41,8 +52,9 @@ extension PopUpVC {
     // MARK: View Style Function
     
     func setView() {
+        
         self.view.backgroundColor = .nalulBlack
-        self.view.backgroundColor?.withAlphaComponent(0.3)
+        self.view.backgroundColor?.withAlphaComponent(0.6)
         
         self.popUpView.backgroundColor = .nalulBlack
         self.popUpView.backgroundColor?.withAlphaComponent(0.8)
@@ -50,6 +62,7 @@ extension PopUpVC {
         self.popUpView.setBorder(borderColor: .nalulLightGray, borderWidth: 1)
         
         buttonView.backgroundColor = .clear
+        
     }
     
     // MARK: Label Style Function
@@ -82,6 +95,71 @@ extension PopUpVC {
             mentLabel.lineSetting(kernValue: 0, lineSpacing: 12)
         }
         
+        
+    }
+    
+    // MARK: Make One Button Function
+    
+    func setOneButton() {
+        
+        yesButton.setTitle("그래", for: .normal)
+        yesButton.titleLabel?.font = .threeLight(size: 12)
+        yesButton.setTitleColor(.white, for: .normal)
+        yesButton.backgroundColor = .gray
+        
+        self.buttonView.addSubview(yesButton)
+        
+        // 레이아웃을 수동으로 주고싶을 때 호출하는 인스턴스
+        // true 일 때는 자동으로 레이아웃을 주는데 false로 지정하면서 내가 원하는대로 레이아웃을 줄 수 있게 함
+        yesButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        yesButton.centerXAnchor.constraint(equalTo: self.buttonView.centerXAnchor).isActive = true
+        // 가운데 정렬
+        yesButton.widthAnchor.constraint(equalToConstant: self.buttonView.frame.height)
+            .isActive = true
+        yesButton.heightAnchor.constraint(equalToConstant: self.buttonView.frame.height)
+            .isActive = true
+        // Button의 넓이와 높이 주기
+        
+    }
+    
+    // MARK: Make Two Button Function
+    
+    func setTwoButton() {
+        
+        // 첫번재 버튼
+        noButton.setTitle("아니", for: .normal)
+        noButton.titleLabel?.font = .threeLight(size: 12)
+        noButton.setTitleColor(.white, for: .normal)
+        noButton.backgroundColor = .gray
+        
+        self.buttonView.addSubview(noButton)
+        
+        noButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        noButton.centerXAnchor.constraint(equalTo: self.buttonView.centerXAnchor, constant: -48).isActive = true
+        noButton.widthAnchor.constraint(equalToConstant: self.buttonView.frame.height)
+            .isActive = true
+        noButton.heightAnchor.constraint(equalToConstant: self.buttonView.frame.height)
+            .isActive = true
+        
+        // 두번째 버튼
+        yesButton.setTitle("응", for: .normal)
+        yesButton.titleLabel?.font = .threeLight(size: 12)
+        yesButton.setTitleColor(.white, for: .normal)
+        yesButton.backgroundColor = .clear
+        yesButton.setBorder(borderColor: .gray, borderWidth: 1)
+        
+        self.buttonView.addSubview(yesButton)
+        
+        yesButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        yesButton.centerXAnchor.constraint(equalTo: self.buttonView.centerXAnchor, constant: 48).isActive = true
+        // 가운데 정렬
+        yesButton.widthAnchor.constraint(equalToConstant: self.buttonView.frame.height)
+            .isActive = true
+        yesButton.heightAnchor.constraint(equalToConstant: self.buttonView.frame.height)
+            .isActive = true
         
     }
 }
