@@ -42,6 +42,7 @@
 		9B9AA19A2603327B00B03862 /* GalleryDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9AA1992603327B00B03862 /* GalleryDetailVC.swift */; };
 		9B9AA19E2603427F00B03862 /* UITextView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9AA19D2603427F00B03862 /* UITextView+Extension.swift */; };
 		9BCABC4C26031DA0002B4D29 /* MainStartBlockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCABC4B26031DA0002B4D29 /* MainStartBlockCell.swift */; };
+		9BD010F3261F606100A30F7C /* UIDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD010F2261F606100A30F7C /* UIDate+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		9B9AA1992603327B00B03862 /* GalleryDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryDetailVC.swift; sourceTree = "<group>"; };
 		9B9AA19D2603427F00B03862 /* UITextView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Extension.swift"; sourceTree = "<group>"; };
 		9BCABC4B26031DA0002B4D29 /* MainStartBlockCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStartBlockCell.swift; sourceTree = "<group>"; };
+		9BD010F2261F606100A30F7C /* UIDate+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDate+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 				9B9434032601FDBD005D987A /* UIColor+Extension.swift */,
 				9B9AA19D2603427F00B03862 /* UITextView+Extension.swift */,
 				9B071B57260C941000CCECF4 /* UIScreen+Extension.swift */,
+				9BD010F2261F606100A30F7C /* UIDate+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				9B071B54260C8F6100CCECF4 /* MainAlbumCell.swift in Sources */,
 				9B9434042601FDBD005D987A /* UIColor+Extension.swift in Sources */,
 				9B23A23D2616F5C0002BF809 /* PhotoInsertVC.swift in Sources */,
+				9BD010F3261F606100A30F7C /* UIDate+Extension.swift in Sources */,
 				9B665EFB25FC9A65002E4CD2 /* AppDelegate.swift in Sources */,
 				9B9326CD25FCA52E005D06E2 /* UILabel+Extension.swift in Sources */,
 				9B7E3A0A260F36B50086535C /* PopUpVC.swift in Sources */,

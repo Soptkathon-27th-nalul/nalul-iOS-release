@@ -12,7 +12,6 @@ class PhotoInsertVC: UIViewController {
     // MARK: Variable Part
     
     var titleName: String?
-    var postDate: String?
     var question: String?
     
     // MARK: IBOutlet
@@ -56,12 +55,8 @@ extension PhotoInsertVC {
         titleLabel.font = UIFont.threeLight(size: 17)
         titleLabel.textColor = .white
         
-        if let postDate = postDate {
-            postDateLabel.text = postDate
-        } else {
-            postDateLabel.text = "20210424"
-        }
-        
+        postDateLabel.text = Date().datePickerToString()
+        // 글 쓰는 현재 날짜로 설정
         postDateLabel.font = UIFont.momFont(size: 16)
         postDateLabel.textColor = .white
         
