@@ -447,6 +447,14 @@
                         </constraints>
                     </view>
                     <size key="freeformSize" width="414" height="1000"/>
+                    <connections>
+                        <outlet property="answerTextField" destination="7hM-5Q-IfP" id="mZl-iu-7Bq"/>
+                        <outlet property="insertButton" destination="VCE-Hz-nkh" id="3Mn-Dw-k42"/>
+                        <outlet property="photoChoseButton" destination="Uy6-bl-h7I" id="8fn-3M-3MF"/>
+                        <outlet property="postDateLabel" destination="hng-ml-mYg" id="VNV-uE-NXE"/>
+                        <outlet property="questionLabel" destination="zbj-0J-AWG" id="hEm-QU-yJb"/>
+                        <outlet property="titleLabel" destination="vwx-AA-AOG" id="uKZ-xm-6f7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GQG-Yh-IVZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
