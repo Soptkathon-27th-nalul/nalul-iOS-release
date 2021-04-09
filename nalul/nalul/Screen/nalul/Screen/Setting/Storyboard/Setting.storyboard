@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgSettings" translatesAutoresizingMaskIntoConstraints="NO" id="h82-As-rTe">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgSettings" translatesAutoresizingMaskIntoConstraints="NO" id="h82-As-rTe">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="16O-Vx-ItL">
@@ -45,10 +45,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Bi3-4q-rH6">
-                                <rect key="frame" x="0.0" y="191" width="414" height="334"/>
+                                <rect key="frame" x="0.0" y="191" width="414" height="360"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="334" id="H6T-jF-edi"/>
+                                    <constraint firstAttribute="height" constant="360" id="H6T-jF-edi"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingCell" rowHeight="71" id="OIU-Qn-d2J" customClass="SettingCell" customModule="nalul" customModuleProvider="target">
@@ -91,6 +91,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="buttonImage" destination="rhs-Cc-qEp" id="NfC-Qa-pLj"/>
                                             <outlet property="titleLabel" destination="gF0-30-3KH" id="CIC-C8-9YU"/>
                                             <outlet property="underlineView" destination="3pJ-Qk-YJf" id="UKt-V1-fbH"/>
                                         </connections>
@@ -98,7 +99,7 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YsA-L3-fwY">
-                                <rect key="frame" x="31" y="545" width="352" height="21"/>
+                                <rect key="frame" x="31" y="571" width="352" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -114,7 +115,7 @@
                             <constraint firstItem="Bi3-4q-rH6" firstAttribute="top" secondItem="xRJ-qt-j40" secondAttribute="bottom" constant="34" id="Nj9-fF-Via"/>
                             <constraint firstItem="2GC-Ze-OKo" firstAttribute="trailing" secondItem="h82-As-rTe" secondAttribute="trailing" id="O7u-rW-YJZ"/>
                             <constraint firstItem="h82-As-rTe" firstAttribute="top" secondItem="lBZ-TX-be8" secondAttribute="top" id="OZg-Rv-qJS"/>
-                            <constraint firstItem="h82-As-rTe" firstAttribute="leading" secondItem="2GC-Ze-OKo" secondAttribute="leading" id="RQJ-5V-bpN"/>
+                            <constraint firstItem="h82-As-rTe" firstAttribute="leading" secondItem="lBZ-TX-be8" secondAttribute="leading" id="RQJ-5V-bpN"/>
                             <constraint firstItem="2GC-Ze-OKo" firstAttribute="trailing" secondItem="16O-Vx-ItL" secondAttribute="trailing" id="T6X-k6-YAE"/>
                             <constraint firstItem="2GC-Ze-OKo" firstAttribute="trailing" secondItem="xRJ-qt-j40" secondAttribute="trailing" id="ZEa-qw-O0L"/>
                             <constraint firstItem="xRJ-qt-j40" firstAttribute="leading" secondItem="2GC-Ze-OKo" secondAttribute="leading" constant="31" id="dgB-sd-Rm1"/>
@@ -125,6 +126,11 @@
                             <constraint firstItem="16O-Vx-ItL" firstAttribute="leading" secondItem="2GC-Ze-OKo" secondAttribute="leading" id="yVF-DS-ZQh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="explainLabel" destination="YsA-L3-fwY" id="1Eh-qr-IbR"/>
+                        <outlet property="settingListTableView" destination="Bi3-4q-rH6" id="rnf-Dg-z7q"/>
+                        <outlet property="titleLabel" destination="xRJ-qt-j40" id="y95-gv-DQP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MA3-Ov-Jok" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

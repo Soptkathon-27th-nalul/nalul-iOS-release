@@ -17,6 +17,7 @@ class SettingCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var underlineView: UIView!
+    @IBOutlet weak var buttonImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,12 +31,17 @@ class SettingCell: UITableViewCell {
         titleLabel.textColor = .white
         underlineView.backgroundColor = .white
         underlineView.alpha = 0.2
+        contentView.backgroundColor = .black
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func setTitle(name: String) {
+        titleLabel.text = name
     }
 
 }
