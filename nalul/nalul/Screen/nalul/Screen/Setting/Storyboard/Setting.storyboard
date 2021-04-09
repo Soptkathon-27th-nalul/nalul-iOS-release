@@ -57,6 +57,38 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OIU-Qn-d2J" id="e25-i9-lgz">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="71"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3pJ-Qk-YJf">
+                                                    <rect key="frame" x="31" y="70" width="352" height="1"/>
+                                                    <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="laf-f1-795"/>
+                                                    </constraints>
+                                                </view>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btnSettings1" translatesAutoresizingMaskIntoConstraints="NO" id="rhs-Cc-qEp">
+                                                    <rect key="frame" x="353" y="16.5" width="38" height="38"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="38" id="Odt-4c-HWH"/>
+                                                        <constraint firstAttribute="height" constant="38" id="QEg-sg-ewa"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gF0-30-3KH">
+                                                    <rect key="frame" x="33" y="25" width="320" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="rhs-Cc-qEp" firstAttribute="leading" secondItem="gF0-30-3KH" secondAttribute="trailing" id="4Kb-kI-nvY"/>
+                                                <constraint firstAttribute="trailing" secondItem="3pJ-Qk-YJf" secondAttribute="trailing" constant="31" id="C9U-L6-Cde"/>
+                                                <constraint firstItem="gF0-30-3KH" firstAttribute="centerY" secondItem="e25-i9-lgz" secondAttribute="centerY" id="NhH-Tl-n6U"/>
+                                                <constraint firstAttribute="trailing" secondItem="rhs-Cc-qEp" secondAttribute="trailing" constant="23" id="OD5-Ts-BF4"/>
+                                                <constraint firstAttribute="bottom" secondItem="3pJ-Qk-YJf" secondAttribute="bottom" id="XM0-Ur-1ch"/>
+                                                <constraint firstItem="3pJ-Qk-YJf" firstAttribute="leading" secondItem="e25-i9-lgz" secondAttribute="leading" constant="31" id="fjX-RU-tGm"/>
+                                                <constraint firstItem="rhs-Cc-qEp" firstAttribute="centerY" secondItem="e25-i9-lgz" secondAttribute="centerY" id="rqo-L4-XEo"/>
+                                                <constraint firstItem="gF0-30-3KH" firstAttribute="leading" secondItem="e25-i9-lgz" secondAttribute="leading" constant="33" id="ySI-hd-ZzU"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -98,8 +130,12 @@
     <resources>
         <image name="bgSettings" width="375" height="812"/>
         <image name="btnBack" width="27" height="25"/>
+        <image name="btnSettings1" width="38" height="38"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
