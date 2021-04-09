@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9B071B54260C8F6100CCECF4 /* MainAlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B071B53260C8F6100CCECF4 /* MainAlbumCell.swift */; };
 		9B071B58260C941000CCECF4 /* UIScreen+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B071B57260C941000CCECF4 /* UIScreen+Extension.swift */; };
+		9B23A23D2616F5C0002BF809 /* PhotoInsertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B23A23C2616F5C0002BF809 /* PhotoInsertVC.swift */; };
 		9B665EFB25FC9A65002E4CD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B665EFA25FC9A65002E4CD2 /* AppDelegate.swift */; };
 		9B665EFD25FC9A65002E4CD2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B665EFC25FC9A65002E4CD2 /* SceneDelegate.swift */; };
 		9B665EFF25FC9A65002E4CD2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B665EFE25FC9A65002E4CD2 /* ViewController.swift */; };
@@ -41,11 +42,13 @@
 		9B9AA19A2603327B00B03862 /* GalleryDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9AA1992603327B00B03862 /* GalleryDetailVC.swift */; };
 		9B9AA19E2603427F00B03862 /* UITextView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9AA19D2603427F00B03862 /* UITextView+Extension.swift */; };
 		9BCABC4C26031DA0002B4D29 /* MainStartBlockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCABC4B26031DA0002B4D29 /* MainStartBlockCell.swift */; };
+		9BD010F3261F606100A30F7C /* UIDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD010F2261F606100A30F7C /* UIDate+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9B071B53260C8F6100CCECF4 /* MainAlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAlbumCell.swift; sourceTree = "<group>"; };
 		9B071B57260C941000CCECF4 /* UIScreen+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Extension.swift"; sourceTree = "<group>"; };
+		9B23A23C2616F5C0002BF809 /* PhotoInsertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoInsertVC.swift; sourceTree = "<group>"; };
 		9B665EF725FC9A65002E4CD2 /* nalul.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nalul.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B665EFA25FC9A65002E4CD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B665EFC25FC9A65002E4CD2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +83,7 @@
 		9B9AA1992603327B00B03862 /* GalleryDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryDetailVC.swift; sourceTree = "<group>"; };
 		9B9AA19D2603427F00B03862 /* UITextView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Extension.swift"; sourceTree = "<group>"; };
 		9BCABC4B26031DA0002B4D29 /* MainStartBlockCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStartBlockCell.swift; sourceTree = "<group>"; };
+		9BD010F2261F606100A30F7C /* UIDate+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDate+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +165,7 @@
 				9B9434032601FDBD005D987A /* UIColor+Extension.swift */,
 				9B9AA19D2603427F00B03862 /* UITextView+Extension.swift */,
 				9B071B57260C941000CCECF4 /* UIScreen+Extension.swift */,
+				9BD010F2261F606100A30F7C /* UIDate+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -282,6 +287,7 @@
 			children = (
 				9B9433F42601E148005D987A /* GalleryListVC.swift */,
 				9B9AA1992603327B00B03862 /* GalleryDetailVC.swift */,
+				9B23A23C2616F5C0002BF809 /* PhotoInsertVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -391,6 +397,8 @@
 				9B665EFF25FC9A65002E4CD2 /* ViewController.swift in Sources */,
 				9B071B54260C8F6100CCECF4 /* MainAlbumCell.swift in Sources */,
 				9B9434042601FDBD005D987A /* UIColor+Extension.swift in Sources */,
+				9B23A23D2616F5C0002BF809 /* PhotoInsertVC.swift in Sources */,
+				9BD010F3261F606100A30F7C /* UIDate+Extension.swift in Sources */,
 				9B665EFB25FC9A65002E4CD2 /* AppDelegate.swift in Sources */,
 				9B9326CD25FCA52E005D06E2 /* UILabel+Extension.swift in Sources */,
 				9B7E3A0A260F36B50086535C /* PopUpVC.swift in Sources */,
