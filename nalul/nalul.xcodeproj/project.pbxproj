@@ -51,6 +51,7 @@
 		9BD0110A2620494800A30F7C /* LogoOnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD011092620494800A30F7C /* LogoOnboardingVC.swift */; };
 		9BD0110D26204EBF00A30F7C /* ExplainOnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD0110C26204EBF00A30F7C /* ExplainOnboardingVC.swift */; };
 		9BD01110262050F700A30F7C /* OnboardingGalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD0110F262050F700A30F7C /* OnboardingGalleryCell.swift */; };
+		9BD01115262054F400A30F7C /* BackgroundSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD01114262054F400A30F7C /* BackgroundSettingVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +101,7 @@
 		9BD011092620494800A30F7C /* LogoOnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoOnboardingVC.swift; sourceTree = "<group>"; };
 		9BD0110C26204EBF00A30F7C /* ExplainOnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplainOnboardingVC.swift; sourceTree = "<group>"; };
 		9BD0110F262050F700A30F7C /* OnboardingGalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingGalleryCell.swift; sourceTree = "<group>"; };
+		9BD01114262054F400A30F7C /* BackgroundSettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundSettingVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -388,6 +390,7 @@
 				9BD011062620485900A30F7C /* OnboardingPageController.swift */,
 				9BD011092620494800A30F7C /* LogoOnboardingVC.swift */,
 				9BD0110C26204EBF00A30F7C /* ExplainOnboardingVC.swift */,
+				9BD01114262054F400A30F7C /* BackgroundSettingVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -487,6 +490,7 @@
 				9B9326D925FCBF3A005D06E2 /* MainStartVC.swift in Sources */,
 				9B9326C925FCA4AE005D06E2 /* UIView+Extension.swift in Sources */,
 				9B9433FC2601EE49005D987A /* GalleryListCell.swift in Sources */,
+				9BD01115262054F400A30F7C /* BackgroundSettingVC.swift in Sources */,
 				9B665EFF25FC9A65002E4CD2 /* ViewController.swift in Sources */,
 				9B071B54260C8F6100CCECF4 /* MainAlbumCell.swift in Sources */,
 				9BD011072620485900A30F7C /* OnboardingPageController.swift in Sources */,
