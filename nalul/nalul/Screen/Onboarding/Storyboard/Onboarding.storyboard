@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="w5l-3s-tAF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="skn-mZ-GfK">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Onboarding Page Controller-->
@@ -14,5 +17,58 @@
             </objects>
             <point key="canvasLocation" x="61" y="98"/>
         </scene>
+        <!--Logo OnboardingVC-->
+        <scene sceneID="0CM-JP-4rX">
+            <objects>
+                <viewController storyboardIdentifier="LogoOnboardingVC" id="skn-mZ-GfK" customClass="LogoOnboardingVC" customModule="nalul" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4wF-IJ-FTL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboardingBg" translatesAutoresizingMaskIntoConstraints="NO" id="pTF-pL-6Kf">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e4X-2c-ede">
+                                <rect key="frame" x="68" y="159" width="278" height="278"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="e4X-2c-ede" secondAttribute="height" multiplier="1:1" id="HfX-H9-hZo"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Z4-99-KrD">
+                                <rect key="frame" x="186" y="523" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Wg3-84-Juf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="e4X-2c-ede" firstAttribute="centerX" secondItem="4wF-IJ-FTL" secondAttribute="centerX" id="3cP-6Y-KVx"/>
+                            <constraint firstItem="e4X-2c-ede" firstAttribute="top" secondItem="4wF-IJ-FTL" secondAttribute="top" constant="159" id="6cO-VV-sxn"/>
+                            <constraint firstAttribute="bottom" secondItem="pTF-pL-6Kf" secondAttribute="bottom" id="Ysq-eB-gLv"/>
+                            <constraint firstItem="4Z4-99-KrD" firstAttribute="centerX" secondItem="4wF-IJ-FTL" secondAttribute="centerX" id="bFh-MP-1px"/>
+                            <constraint firstItem="pTF-pL-6Kf" firstAttribute="top" secondItem="4wF-IJ-FTL" secondAttribute="top" id="da0-Dk-wJY"/>
+                            <constraint firstItem="e4X-2c-ede" firstAttribute="leading" secondItem="Wg3-84-Juf" secondAttribute="leading" constant="68" id="mCd-TK-fj5"/>
+                            <constraint firstItem="pTF-pL-6Kf" firstAttribute="leading" secondItem="Wg3-84-Juf" secondAttribute="leading" id="n4c-09-6gW"/>
+                            <constraint firstItem="4Z4-99-KrD" firstAttribute="top" secondItem="e4X-2c-ede" secondAttribute="bottom" constant="86" id="qef-aP-AG1"/>
+                            <constraint firstItem="Wg3-84-Juf" firstAttribute="trailing" secondItem="pTF-pL-6Kf" secondAttribute="trailing" id="qhs-eE-DP2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="explainLabel" destination="4Z4-99-KrD" id="KiQ-Wb-Z7e"/>
+                        <outlet property="logoImageView" destination="e4X-2c-ede" id="G7C-J7-Bm9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hM3-aW-THh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1095.6521739130435" y="45.535714285714285"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="onboardingBg" width="375" height="812"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
