@@ -345,11 +345,13 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7hM-5Q-IfP">
-                                                <rect key="frame" x="26" y="495" width="362" height="34"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Gc-FH-OO8">
+                                                <rect key="frame" x="26" y="495" width="362" height="248"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="textColor" systemColor="labelColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                            </textView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="labelColor"/>
                                         <constraints>
@@ -357,18 +359,19 @@
                                             <constraint firstItem="3gv-Nb-fvL" firstAttribute="top" secondItem="zbj-0J-AWG" secondAttribute="bottom" constant="18" id="7s3-yy-w04"/>
                                             <constraint firstItem="zbj-0J-AWG" firstAttribute="top" secondItem="Uy6-bl-h7I" secondAttribute="bottom" constant="20" id="Doy-y8-R8F"/>
                                             <constraint firstItem="3gv-Nb-fvL" firstAttribute="leading" secondItem="n8h-qz-2co" secondAttribute="leading" constant="24" id="EGy-rW-kx8"/>
-                                            <constraint firstItem="7hM-5Q-IfP" firstAttribute="top" secondItem="3gv-Nb-fvL" secondAttribute="bottom" constant="20" id="KVN-ME-Pq3"/>
                                             <constraint firstItem="zbj-0J-AWG" firstAttribute="centerX" secondItem="n8h-qz-2co" secondAttribute="centerX" id="LJW-LU-hYl"/>
+                                            <constraint firstItem="3Gc-FH-OO8" firstAttribute="top" secondItem="3gv-Nb-fvL" secondAttribute="bottom" constant="20" id="N0E-8b-Tfh"/>
                                             <constraint firstAttribute="trailing" secondItem="eUs-hX-RJP" secondAttribute="trailing" constant="-2" id="T56-1H-uj7"/>
-                                            <constraint firstItem="7hM-5Q-IfP" firstAttribute="leading" secondItem="zbj-0J-AWG" secondAttribute="leading" id="U2f-iw-OqM"/>
                                             <constraint firstItem="d5M-Rl-BeD" firstAttribute="centerX" secondItem="n8h-qz-2co" secondAttribute="centerX" id="WVi-ac-c05"/>
+                                            <constraint firstItem="3Gc-FH-OO8" firstAttribute="trailing" secondItem="zbj-0J-AWG" secondAttribute="trailing" id="XX7-yW-heJ"/>
                                             <constraint firstItem="eUs-hX-RJP" firstAttribute="leading" secondItem="n8h-qz-2co" secondAttribute="leading" constant="-2" id="XuG-Rz-TQ9"/>
                                             <constraint firstAttribute="trailing" secondItem="Uy6-bl-h7I" secondAttribute="trailing" id="atg-Ma-3NA"/>
                                             <constraint firstItem="d5M-Rl-BeD" firstAttribute="leading" secondItem="n8h-qz-2co" secondAttribute="leading" constant="14" id="bYo-dd-9i6"/>
                                             <constraint firstItem="Uy6-bl-h7I" firstAttribute="top" secondItem="n8h-qz-2co" secondAttribute="top" id="e0t-Aq-S6N"/>
                                             <constraint firstItem="d5M-Rl-BeD" firstAttribute="top" secondItem="n8h-qz-2co" secondAttribute="top" constant="17" id="ep9-ui-xcl"/>
+                                            <constraint firstAttribute="bottom" secondItem="3Gc-FH-OO8" secondAttribute="bottom" constant="20" id="gpg-3v-u1H"/>
+                                            <constraint firstItem="3Gc-FH-OO8" firstAttribute="leading" secondItem="zbj-0J-AWG" secondAttribute="leading" id="hDJ-HF-rl0"/>
                                             <constraint firstAttribute="bottom" secondItem="eUs-hX-RJP" secondAttribute="bottom" id="iYv-ga-Zxd"/>
-                                            <constraint firstItem="7hM-5Q-IfP" firstAttribute="trailing" secondItem="zbj-0J-AWG" secondAttribute="trailing" id="pSw-x5-lMY"/>
                                             <constraint firstItem="eUs-hX-RJP" firstAttribute="top" secondItem="Uy6-bl-h7I" secondAttribute="bottom" constant="-30" id="rXu-wT-x2Z"/>
                                             <constraint firstItem="zbj-0J-AWG" firstAttribute="leading" secondItem="n8h-qz-2co" secondAttribute="leading" constant="26" id="tXK-al-SOT"/>
                                             <constraint firstItem="Uy6-bl-h7I" firstAttribute="leading" secondItem="n8h-qz-2co" secondAttribute="leading" id="yVN-P2-uFi"/>
@@ -448,11 +451,12 @@
                     </view>
                     <size key="freeformSize" width="414" height="1000"/>
                     <connections>
-                        <outlet property="answerTextField" destination="7hM-5Q-IfP" id="mZl-iu-7Bq"/>
+                        <outlet property="answerTextView" destination="3Gc-FH-OO8" id="t77-gy-3ya"/>
                         <outlet property="insertButton" destination="VCE-Hz-nkh" id="3Mn-Dw-k42"/>
                         <outlet property="photoChoseButton" destination="Uy6-bl-h7I" id="8fn-3M-3MF"/>
                         <outlet property="postDateLabel" destination="hng-ml-mYg" id="VNV-uE-NXE"/>
                         <outlet property="questionLabel" destination="zbj-0J-AWG" id="hEm-QU-yJb"/>
+                        <outlet property="scrollView" destination="ElZ-GK-HYl" id="aGE-Ad-BbF"/>
                         <outlet property="titleLabel" destination="vwx-AA-AOG" id="uKZ-xm-6f7"/>
                     </connections>
                 </viewController>
