@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9B41C0E0260252B600791CE2 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B41C0DF260252B600791CE2 /* Setting.storyboard */; };
-		9B41C0E3260252C600791CE2 /* SettingListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B41C0E2260252C600791CE2 /* SettingListVC.swift */; };
 		9B071B54260C8F6100CCECF4 /* MainAlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B071B53260C8F6100CCECF4 /* MainAlbumCell.swift */; };
 		9B071B58260C941000CCECF4 /* UIScreen+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B071B57260C941000CCECF4 /* UIScreen+Extension.swift */; };
 		9B23A23D2616F5C0002BF809 /* PhotoInsertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B23A23C2616F5C0002BF809 /* PhotoInsertVC.swift */; };
+		9B41C0E0260252B600791CE2 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B41C0DF260252B600791CE2 /* Setting.storyboard */; };
+		9B41C0E3260252C600791CE2 /* SettingListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B41C0E2260252C600791CE2 /* SettingListVC.swift */; };
 		9B665EFB25FC9A65002E4CD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B665EFA25FC9A65002E4CD2 /* AppDelegate.swift */; };
 		9B665EFD25FC9A65002E4CD2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B665EFC25FC9A65002E4CD2 /* SceneDelegate.swift */; };
 		9B665EFF25FC9A65002E4CD2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B665EFE25FC9A65002E4CD2 /* ViewController.swift */; };
@@ -45,14 +45,15 @@
 		9B9AA19E2603427F00B03862 /* UITextView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9AA19D2603427F00B03862 /* UITextView+Extension.swift */; };
 		9BCABC4C26031DA0002B4D29 /* MainStartBlockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCABC4B26031DA0002B4D29 /* MainStartBlockCell.swift */; };
 		9BD010F3261F606100A30F7C /* UIDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD010F2261F606100A30F7C /* UIDate+Extension.swift */; };
+		9BD010FC26203ACA00A30F7C /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD010FB26203ACA00A30F7C /* SettingCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9B41C0DF260252B600791CE2 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Setting.storyboard; path = nalul/Screen/nalul/Screen/Setting/Storyboard/Setting.storyboard; sourceTree = SOURCE_ROOT; };
-		9B41C0E2260252C600791CE2 /* SettingListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingListVC.swift; path = nalul/Screen/nalul/Screen/Setting/ViewController/SettingListVC.swift; sourceTree = SOURCE_ROOT; };
 		9B071B53260C8F6100CCECF4 /* MainAlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAlbumCell.swift; sourceTree = "<group>"; };
 		9B071B57260C941000CCECF4 /* UIScreen+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Extension.swift"; sourceTree = "<group>"; };
 		9B23A23C2616F5C0002BF809 /* PhotoInsertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoInsertVC.swift; sourceTree = "<group>"; };
+		9B41C0DF260252B600791CE2 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Setting.storyboard; path = nalul/Screen/nalul/Screen/Setting/Storyboard/Setting.storyboard; sourceTree = SOURCE_ROOT; };
+		9B41C0E2260252C600791CE2 /* SettingListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingListVC.swift; path = nalul/Screen/nalul/Screen/Setting/ViewController/SettingListVC.swift; sourceTree = SOURCE_ROOT; };
 		9B665EF725FC9A65002E4CD2 /* nalul.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nalul.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B665EFA25FC9A65002E4CD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B665EFC25FC9A65002E4CD2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +89,7 @@
 		9B9AA19D2603427F00B03862 /* UITextView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Extension.swift"; sourceTree = "<group>"; };
 		9BCABC4B26031DA0002B4D29 /* MainStartBlockCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStartBlockCell.swift; sourceTree = "<group>"; };
 		9BD010F2261F606100A30F7C /* UIDate+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDate+Extension.swift"; sourceTree = "<group>"; };
+		9BD010FB26203ACA00A30F7C /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 		9B41C0DC260252A400791CE2 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				9BD010F926203AAC00A30F7C /* Cell */,
 				9B41C0DE260252AC00791CE2 /* Storyboard */,
 				9B41C0DD260252A700791CE2 /* ViewController */,
 			);
@@ -342,6 +345,14 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		9BD010F926203AAC00A30F7C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9BD010FB26203ACA00A30F7C /* SettingCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -438,6 +449,7 @@
 				9B41C0E3260252C600791CE2 /* SettingListVC.swift in Sources */,
 				9B7E3A0A260F36B50086535C /* PopUpVC.swift in Sources */,
 				9B8AD92C260B45650082D9D3 /* MainVC.swift in Sources */,
+				9BD010FC26203ACA00A30F7C /* SettingCell.swift in Sources */,
 				9B071B58260C941000CCECF4 /* UIScreen+Extension.swift in Sources */,
 				9BCABC4C26031DA0002B4D29 /* MainStartBlockCell.swift in Sources */,
 				9B9AA19E2603427F00B03862 /* UITextView+Extension.swift in Sources */,
