@@ -46,6 +46,13 @@
 		9BCABC4C26031DA0002B4D29 /* MainStartBlockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCABC4B26031DA0002B4D29 /* MainStartBlockCell.swift */; };
 		9BD010F3261F606100A30F7C /* UIDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD010F2261F606100A30F7C /* UIDate+Extension.swift */; };
 		9BD010FC26203ACA00A30F7C /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD010FB26203ACA00A30F7C /* SettingCell.swift */; };
+		9BD01104262046F800A30F7C /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BD01103262046F800A30F7C /* Onboarding.storyboard */; };
+		9BD011072620485900A30F7C /* OnboardingPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD011062620485900A30F7C /* OnboardingPageController.swift */; };
+		9BD0110A2620494800A30F7C /* LogoOnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD011092620494800A30F7C /* LogoOnboardingVC.swift */; };
+		9BD0110D26204EBF00A30F7C /* ExplainOnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD0110C26204EBF00A30F7C /* ExplainOnboardingVC.swift */; };
+		9BD01110262050F700A30F7C /* OnboardingGalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD0110F262050F700A30F7C /* OnboardingGalleryCell.swift */; };
+		9BD01115262054F400A30F7C /* BackgroundSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD01114262054F400A30F7C /* BackgroundSettingVC.swift */; };
+		9BD01119262061D900A30F7C /* BackgroundConfirmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD01118262061D900A30F7C /* BackgroundConfirmVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +97,13 @@
 		9BCABC4B26031DA0002B4D29 /* MainStartBlockCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStartBlockCell.swift; sourceTree = "<group>"; };
 		9BD010F2261F606100A30F7C /* UIDate+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDate+Extension.swift"; sourceTree = "<group>"; };
 		9BD010FB26203ACA00A30F7C /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
+		9BD01103262046F800A30F7C /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		9BD011062620485900A30F7C /* OnboardingPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageController.swift; sourceTree = "<group>"; };
+		9BD011092620494800A30F7C /* LogoOnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoOnboardingVC.swift; sourceTree = "<group>"; };
+		9BD0110C26204EBF00A30F7C /* ExplainOnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplainOnboardingVC.swift; sourceTree = "<group>"; };
+		9BD0110F262050F700A30F7C /* OnboardingGalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingGalleryCell.swift; sourceTree = "<group>"; };
+		9BD01114262054F400A30F7C /* BackgroundSettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundSettingVC.swift; sourceTree = "<group>"; };
+		9BD01118262061D900A30F7C /* BackgroundConfirmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundConfirmVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +187,7 @@
 		9B665F1725FC9AAA002E4CD2 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				9BD01100262046D100A30F7C /* Onboarding */,
 				9B41C0DC260252A400791CE2 /* Setting */,
 				9B7E3A02260F36930086535C /* PopUp */,
 				9B9326D425FCAEF4005D06E2 /* Main */,
@@ -353,6 +368,44 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		9BD01100262046D100A30F7C /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				9BD011122620510E00A30F7C /* Cell */,
+				9BD01102262046DB00A30F7C /* ViewController */,
+				9BD01101262046D700A30F7C /* Storyboard */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		9BD01101262046D700A30F7C /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				9BD01103262046F800A30F7C /* Onboarding.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		9BD01102262046DB00A30F7C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9BD011062620485900A30F7C /* OnboardingPageController.swift */,
+				9BD011092620494800A30F7C /* LogoOnboardingVC.swift */,
+				9BD0110C26204EBF00A30F7C /* ExplainOnboardingVC.swift */,
+				9BD01114262054F400A30F7C /* BackgroundSettingVC.swift */,
+				9BD01118262061D900A30F7C /* BackgroundConfirmVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		9BD011122620510E00A30F7C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9BD0110F262050F700A30F7C /* OnboardingGalleryCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -420,6 +473,7 @@
 				9B665F3225FC9D67002E4CD2 /* SCDream5.otf in Resources */,
 				9B9433F12601E12C005D987A /* Gallery.storyboard in Resources */,
 				9B665F3125FC9D67002E4CD2 /* SCDream8.otf in Resources */,
+				9BD01104262046F800A30F7C /* Onboarding.storyboard in Resources */,
 				9B665F2B25FC9D67002E4CD2 /* SCDream9.otf in Resources */,
 				9B41C0E0260252B600791CE2 /* Setting.storyboard in Resources */,
 				9B665F2D25FC9D67002E4CD2 /* 나눔손글씨 딸에게 엄마가.ttf in Resources */,
@@ -439,13 +493,17 @@
 				9B9326D925FCBF3A005D06E2 /* MainStartVC.swift in Sources */,
 				9B9326C925FCA4AE005D06E2 /* UIView+Extension.swift in Sources */,
 				9B9433FC2601EE49005D987A /* GalleryListCell.swift in Sources */,
+				9BD01115262054F400A30F7C /* BackgroundSettingVC.swift in Sources */,
 				9B665EFF25FC9A65002E4CD2 /* ViewController.swift in Sources */,
 				9B071B54260C8F6100CCECF4 /* MainAlbumCell.swift in Sources */,
+				9BD011072620485900A30F7C /* OnboardingPageController.swift in Sources */,
 				9B9434042601FDBD005D987A /* UIColor+Extension.swift in Sources */,
+				9BD0110D26204EBF00A30F7C /* ExplainOnboardingVC.swift in Sources */,
 				9B23A23D2616F5C0002BF809 /* PhotoInsertVC.swift in Sources */,
 				9BD010F3261F606100A30F7C /* UIDate+Extension.swift in Sources */,
 				9B665EFB25FC9A65002E4CD2 /* AppDelegate.swift in Sources */,
 				9B9326CD25FCA52E005D06E2 /* UILabel+Extension.swift in Sources */,
+				9BD0110A2620494800A30F7C /* LogoOnboardingVC.swift in Sources */,
 				9B41C0E3260252C600791CE2 /* SettingListVC.swift in Sources */,
 				9B7E3A0A260F36B50086535C /* PopUpVC.swift in Sources */,
 				9B8AD92C260B45650082D9D3 /* MainVC.swift in Sources */,
@@ -454,7 +512,9 @@
 				9BCABC4C26031DA0002B4D29 /* MainStartBlockCell.swift in Sources */,
 				9B9AA19E2603427F00B03862 /* UITextView+Extension.swift in Sources */,
 				9B9326C325FCA33D005D06E2 /* UIFont+Extension.swift in Sources */,
+				9BD01119262061D900A30F7C /* BackgroundConfirmVC.swift in Sources */,
 				9B9326C625FCA46A005D06E2 /* UIButton+Extension.swift in Sources */,
+				9BD01110262050F700A30F7C /* OnboardingGalleryCell.swift in Sources */,
 				9B665EFD25FC9A65002E4CD2 /* SceneDelegate.swift in Sources */,
 				9B9433F52601E148005D987A /* GalleryListVC.swift in Sources */,
 				9B9AA19A2603327B00B03862 /* GalleryDetailVC.swift in Sources */,
