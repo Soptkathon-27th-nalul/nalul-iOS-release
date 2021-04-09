@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="w5l-3s-tAF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bFe-6N-bjr">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -210,6 +210,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PIS-Qw-QkU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3469.5652173913045" y="65.625"/>
+        </scene>
+        <!--Background ConfirmVC-->
+        <scene sceneID="4bX-IN-Wjy">
+            <objects>
+                <viewController storyboardIdentifier="BackgroundConfirmVC" id="bFe-6N-bjr" customClass="BackgroundConfirmVC" customModule="nalul" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gzI-z0-Qd4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UeZ-Oj-dyj">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ob0-6q-ACa">
+                                <rect key="frame" x="88" y="781" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="hjo-KK-cOm"/>
+                                    <constraint firstAttribute="width" secondItem="Ob0-6q-ACa" secondAttribute="height" multiplier="1:1" id="zHw-c6-eTL"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdG-AV-92x">
+                                <rect key="frame" x="278" y="781" width="48" height="48"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hgi-ME-7wW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sdG-AV-92x" firstAttribute="centerY" secondItem="Ob0-6q-ACa" secondAttribute="centerY" id="9Us-BI-tAg"/>
+                            <constraint firstItem="sdG-AV-92x" firstAttribute="width" secondItem="Ob0-6q-ACa" secondAttribute="width" id="E75-ya-tjN"/>
+                            <constraint firstItem="UeZ-Oj-dyj" firstAttribute="top" secondItem="gzI-z0-Qd4" secondAttribute="top" id="Ud7-bR-6Ld"/>
+                            <constraint firstItem="hgi-ME-7wW" firstAttribute="trailing" secondItem="UeZ-Oj-dyj" secondAttribute="trailing" id="fSA-8V-Ji0"/>
+                            <constraint firstItem="Ob0-6q-ACa" firstAttribute="leading" secondItem="hgi-ME-7wW" secondAttribute="leading" constant="88" id="feL-P5-WLP"/>
+                            <constraint firstItem="hgi-ME-7wW" firstAttribute="trailing" secondItem="sdG-AV-92x" secondAttribute="trailing" constant="88" id="j60-ye-ROj"/>
+                            <constraint firstAttribute="bottom" secondItem="Ob0-6q-ACa" secondAttribute="bottom" constant="67" id="mP8-ci-fnv"/>
+                            <constraint firstItem="UeZ-Oj-dyj" firstAttribute="leading" secondItem="hgi-ME-7wW" secondAttribute="leading" id="qA2-kz-fPK"/>
+                            <constraint firstAttribute="bottom" secondItem="UeZ-Oj-dyj" secondAttribute="bottom" id="uZ4-i9-dH6"/>
+                            <constraint firstItem="sdG-AV-92x" firstAttribute="height" secondItem="Ob0-6q-ACa" secondAttribute="height" id="zg4-DZ-40N"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="againButton" destination="Ob0-6q-ACa" id="nsQ-OI-I47"/>
+                        <outlet property="backgroundImageView" destination="UeZ-Oj-dyj" id="6fA-i7-CDk"/>
+                        <outlet property="okButton" destination="sdG-AV-92x" id="GFT-o3-eyC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ype-bR-i83" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4366.666666666667" y="22.767857142857142"/>
         </scene>
     </scenes>
     <resources>
