@@ -53,6 +53,7 @@
 		9BD01110262050F700A30F7C /* OnboardingGalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD0110F262050F700A30F7C /* OnboardingGalleryCell.swift */; };
 		9BD01115262054F400A30F7C /* BackgroundSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD01114262054F400A30F7C /* BackgroundSettingVC.swift */; };
 		9BD01119262061D900A30F7C /* BackgroundConfirmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD01118262061D900A30F7C /* BackgroundConfirmVC.swift */; };
+		9BD0111F262185B400A30F7C /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD0111E262185B400A30F7C /* UIImage+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +105,7 @@
 		9BD0110F262050F700A30F7C /* OnboardingGalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingGalleryCell.swift; sourceTree = "<group>"; };
 		9BD01114262054F400A30F7C /* BackgroundSettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundSettingVC.swift; sourceTree = "<group>"; };
 		9BD01118262061D900A30F7C /* BackgroundConfirmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundConfirmVC.swift; sourceTree = "<group>"; };
+		9BD0111E262185B400A30F7C /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +219,7 @@
 				9B9AA19D2603427F00B03862 /* UITextView+Extension.swift */,
 				9B071B57260C941000CCECF4 /* UIScreen+Extension.swift */,
 				9BD010F2261F606100A30F7C /* UIDate+Extension.swift */,
+				9BD0111E262185B400A30F7C /* UIImage+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -517,6 +520,7 @@
 				9BD01110262050F700A30F7C /* OnboardingGalleryCell.swift in Sources */,
 				9B665EFD25FC9A65002E4CD2 /* SceneDelegate.swift in Sources */,
 				9B9433F52601E148005D987A /* GalleryListVC.swift in Sources */,
+				9BD0111F262185B400A30F7C /* UIImage+Extension.swift in Sources */,
 				9B9AA19A2603327B00B03862 /* GalleryDetailVC.swift in Sources */,
 				9B9326D125FCA5D8005D06E2 /* ImageFileManager.swift in Sources */,
 			);

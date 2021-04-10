@@ -59,9 +59,23 @@ extension BackgroundConfirmVC {
     func setBackground() {
         
         if let backImage = backImage {
-            backgroundImageView.image = backImage
+            
+            backgroundImageView.image = backImage.convertToGrayScale()
+            // 흑백처리
+            backgroundImageView.transform = CGAffineTransform(rotationAngle: .pi)
+            // 180도 뒤집어주기
+            
         } else {
             backgroundImageView.image = UIImage(named: "testBlackImage")
         }
     }
+    
 }
+
+//        let uniqueFileName: String = "UserBackgroundImage"
+
+//        if let image = myImage {
+//            ImageFileManager.shared.saveImage(image: image, name: uniqueFileName) { [weak self] onSuccess in
+//                                print("saveImage onSuccess: \(onSuccess)")
+//            }
+//        }
