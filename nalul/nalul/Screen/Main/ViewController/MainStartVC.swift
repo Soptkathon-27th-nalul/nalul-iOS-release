@@ -28,6 +28,19 @@ class MainStartVC: UIViewController {
     
     // MARK: IBAction
     
+    
+    @IBAction func yesButtonDidTap(_ sender: Any) {
+        guard let mainVC = self.storyboard?.instantiateViewController(identifier: "MainNavigationVC") as? MainNavigationVC else {
+            return
+        }
+        self.view.window?.rootViewController?.dismiss(animated: false, completion: {
+            // 현재뷰를 pop 한 다음, 다음 뷰로 이동하기
+            mainVC.modalPresentationStyle = .fullScreen
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.window?.rootViewController?.present(mainVC, animated: true, completion: nil)
+        })
+    }
+    
     // MARK: Life Cycle Part
     
     override func viewDidLoad() {

@@ -12,7 +12,7 @@ class BackgroundConfirmVC: UIViewController {
     // MARK: Variable Part
     
     var backImage: UIImage?
-
+    
     // MARK: IBOutlet
     
     @IBOutlet weak var backgroundImageView: UIImageView!
@@ -22,7 +22,8 @@ class BackgroundConfirmVC: UIViewController {
     // MARK: IBAction
     
     @IBAction func againButtonDidTap(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
+//        self.navigationController?.popViewController(animated: true)
         
     }
     
@@ -36,10 +37,15 @@ class BackgroundConfirmVC: UIViewController {
                 print("saveImage onSuccess: \(onSuccess)")
                 
                 let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-                guard let firstTab = storyboard.instantiateViewController(identifier: "MainStartVC") as? MainStartVC else {
+                guard let homeTab = storyboard.instantiateViewController(identifier: "MainStartVC") as? MainStartVC else {
                     return
                 }
-                self?.present(firstTab, animated: true, completion: nil)
+                self?.view.window?.rootViewController?.dismiss(animated: false, completion: {
+                    // 현재뷰를 pop 한 다음, 다음 뷰로 이동하기
+                    homeTab.modalPresentationStyle = .fullScreen
+                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                    appDelegate.window?.rootViewController?.present(homeTab, animated: true, completion: nil)
+                })
                 
             }
         }
@@ -61,7 +67,7 @@ class BackgroundConfirmVC: UIViewController {
         againButton.makeRounded(cornerRadius: nil)
         okButton.makeRounded(cornerRadius: nil)
     }
-
+    
 }
 
 // MARK: Extension
@@ -84,7 +90,7 @@ extension BackgroundConfirmVC {
         okButton.setBorder(borderColor: .white, borderWidth: 1)
         okButton.backgroundColor = .clear
     }
-
+    
     func setBackground() {
         
         if let backImage = backImage {

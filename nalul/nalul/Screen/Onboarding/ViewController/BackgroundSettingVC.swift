@@ -125,7 +125,8 @@ extension BackgroundSettingVC: UIImagePickerControllerDelegate, UINavigationCont
         }
         
         firstTab.backImage = myImage
-        self.navigationController?.pushViewController(firstTab, animated: true)
+        firstTab.modalPresentationStyle = .fullScreen
+        self.present(firstTab, animated: true, completion: nil)
         // 확인하는 뷰로 이동하기
         
     }

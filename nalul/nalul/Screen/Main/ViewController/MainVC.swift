@@ -61,13 +61,10 @@ extension MainVC {
     func setView() {
         // 뷰 관련 Style 설정
         
+        let uniqueFileName: String = "UserBackgroundImage"
+        userBackImageView.image = ImageFileManager.shared.getSavedImage(named: uniqueFileName)
         // 사용자 배경화면 설정
-        if let backImage = UserDefaults.standard.string(forKey: "backgroundImg") {
-            userBackImageView.image = UIImage(named: backImage)
-        } else {
-            userBackImageView.image = UIImage(named: "testBlackImage")
-        }
-        
+
         subPopUpView.backgroundColor = .nalulDarkGray
         subPopUpView.alpha = 0.6
         subPopUpView.setRounded(radius: 32.5)
