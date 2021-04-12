@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eYD-yx-JCR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y93-TR-YZb">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -49,6 +49,9 @@
                                             <constraint firstAttribute="width" secondItem="8BO-bw-Vma" secondAttribute="height" multiplier="1:1" id="w2i-MA-0i3"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="yesButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eMD-nb-D8S"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -286,6 +289,7 @@
                             <constraint firstItem="Q6f-KA-7UB" firstAttribute="leading" secondItem="2gm-3j-peo" secondAttribute="leading" id="zfP-8a-ec6"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="8z6-MY-eW6"/>
                     <connections>
                         <outlet property="clipImage" destination="886-ln-bU6" id="fDT-Pg-Lfw"/>
                         <outlet property="constraintToBottom" destination="q0y-qM-WIA" id="tVR-WZ-l4a"/>
@@ -303,7 +307,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ljv-rT-m7f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="836" y="53"/>
+            <point key="canvasLocation" x="1744.9275362318842" y="52.901785714285715"/>
+        </scene>
+        <!--Main NavigationVC-->
+        <scene sceneID="4sz-N6-0sp">
+            <objects>
+                <navigationController storyboardIdentifier="MainNavigationVC" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Y93-TR-YZb" customClass="MainNavigationVC" customModule="nalul" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rfl-vi-MdW">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eYD-yx-JCR" kind="relationship" relationship="rootViewController" id="aPF-AS-efX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4fW-EP-6CG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="834.78260869565224" y="52.901785714285715"/>
         </scene>
     </scenes>
     <resources>

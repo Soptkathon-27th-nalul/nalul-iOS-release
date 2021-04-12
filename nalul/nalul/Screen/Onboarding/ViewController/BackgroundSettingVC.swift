@@ -8,10 +8,69 @@
 import UIKit
 
 class BackgroundSettingVC: UIViewController {
-
+    
+    // MARK: Variable Part
+    
+    var myImage: UIImage?
+    
+    // MARK: IBOutlet
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var explainLabel: UILabel!
+    
+    // MARK: IBAction
+    
+    @IBAction func registerButtonDidTap(_ sender: Any) {
+        // 배경화면 지정 버튼 클릭 시
+        
+        let optionMenu = UIAlertController(title: nil, message: "배경화면 등록하기", preferredStyle: .actionSheet)
+
+        let deleteAction = UIAlertAction(title: "카메라 촬영", style: .default, handler: {
+            // 카메라 선택 시 action
+            
+            (alert: UIAlertAction!) -> Void in
+            
+            let vc = UIImagePickerController()
+            vc.sourceType = .camera
+            vc.cameraDevice = .front
+            vc.delegate = self
+            vc.mediaTypes = ["public.image"]
+            vc.allowsEditing = false
+            self.present(vc, animated: true, completion: nil)
+            
+        })
+        
+        let saveAction = UIAlertAction(title: "앨범에서 사진 선택하기", style: .default, handler: {
+            // 갤러시 선택 시 action
+            
+            (alert: UIAlertAction!) -> Void in
+            
+            let vc = UIImagePickerController()
+            vc.sourceType = .photoLibrary
+            vc.delegate = self
+            vc.mediaTypes = ["public.image"]
+            vc.allowsEditing = false
+            self.present(vc, animated: true, completion: nil)
+        })
+        
+        
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: {
+            
+            (alert: UIAlertAction!) -> Void in
+            
+        })
+        
+        //action sheet에 옵션 추가.
+        
+        optionMenu.addAction(deleteAction)
+        optionMenu.addAction(saveAction)
+        optionMenu.addAction(cancelAction)
+
+        self.present(optionMenu, animated: true, completion: nil)
+    }
+    
+    // MARK: Life Cycle Part
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,10 +78,14 @@ class BackgroundSettingVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    
 }
 
+// MARK: Extension
+
 extension BackgroundSettingVC {
+    
+    // MARK: Function
     
     func setView() {
         titleLabel.text = "이제 nalul 찍어볼까요?"
@@ -34,5 +97,42 @@ extension BackgroundSettingVC {
         explainLabel.textColor = .init(white: 1.0, alpha: 0.6)
         explainLabel.numberOfLines = 0
         explainLabel.textAlignment = .center
+    }
+}
+
+// MARK: UIImagePickerControllerDelegate, UINavigationControllerDelegate
+
+extension BackgroundSettingVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
+            
+            // 수정된 이미지가 있을 경우
+            myImage = image
+            
+        } else if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerOriginalImage")] as? UIImage {
+            
+            // 오리지널 이미지가 있을 경우
+            myImage = image
+        }
+        
+        picker.dismiss(animated: true, completion: nil)
+        
+        
+        guard let firstTab = self.storyboard?.instantiateViewController(identifier: "BackgroundConfirmVC") as? BackgroundConfirmVC else {
+            return
+        }
+        
+        firstTab.backImage = myImage
+        firstTab.modalPresentationStyle = .fullScreen
+        self.present(firstTab, animated: true, completion: nil)
+        // 확인하는 뷰로 이동하기
+        
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        
+        picker.dismiss(animated: true, completion: nil)
     }
 }
