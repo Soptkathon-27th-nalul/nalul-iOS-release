@@ -19,6 +19,35 @@ class BackgroundConfirmVC: UIViewController {
     @IBOutlet weak var againButton: UIButton!
     @IBOutlet weak var okButton: UIButton!
     
+    // MARK: IBAction
+    
+    @IBAction func againButtonDidTap(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+        
+    }
+    
+    @IBAction func okButtonDidTap(_ sender: Any) {
+        
+        let uniqueFileName: String = "UserBackgroundImage"
+        
+        if let image = backgroundImageView.image {
+            
+            ImageFileManager.shared.saveImage(image: image, name: uniqueFileName) { [weak self] onSuccess in
+                print("saveImage onSuccess: \(onSuccess)")
+                
+                let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+                guard let firstTab = storyboard.instantiateViewController(identifier: "MainStartVC") as? MainStartVC else {
+                    return
+                }
+                self?.present(firstTab, animated: true, completion: nil)
+                
+            }
+        }
+        
+        
+    }
+    
+    
     // MARK: Life Cycle Part
     
     override func viewDidLoad() {
@@ -59,11 +88,8 @@ extension BackgroundConfirmVC {
     func setBackground() {
         
         if let backImage = backImage {
-            
             backgroundImageView.image = backImage.convertToGrayScale()
             // 흑백처리
-            backgroundImageView.transform = CGAffineTransform(rotationAngle: .pi)
-            // 180도 뒤집어주기
             
         } else {
             backgroundImageView.image = UIImage(named: "testBlackImage")
@@ -71,11 +97,3 @@ extension BackgroundConfirmVC {
     }
     
 }
-
-//        let uniqueFileName: String = "UserBackgroundImage"
-
-//        if let image = myImage {
-//            ImageFileManager.shared.saveImage(image: image, name: uniqueFileName) { [weak self] onSuccess in
-//                                print("saveImage onSuccess: \(onSuccess)")
-//            }
-//        }

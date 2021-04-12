@@ -23,15 +23,16 @@ class BackgroundSettingVC: UIViewController {
     @IBAction func registerButtonDidTap(_ sender: Any) {
         // 배경화면 지정 버튼 클릭 시
         
-        let optionMenu = UIAlertController(title: nil, message: "Choose Option", preferredStyle: .actionSheet)
+        let optionMenu = UIAlertController(title: nil, message: "배경화면 등록하기", preferredStyle: .actionSheet)
 
-        let deleteAction = UIAlertAction(title: "카메라", style: .default, handler: {
+        let deleteAction = UIAlertAction(title: "카메라 촬영", style: .default, handler: {
             // 카메라 선택 시 action
             
             (alert: UIAlertAction!) -> Void in
             
             let vc = UIImagePickerController()
             vc.sourceType = .camera
+            vc.cameraDevice = .front
             vc.delegate = self
             vc.mediaTypes = ["public.image"]
             vc.allowsEditing = false
@@ -39,7 +40,7 @@ class BackgroundSettingVC: UIViewController {
             
         })
         
-        let saveAction = UIAlertAction(title: "갤러리", style: .default, handler: {
+        let saveAction = UIAlertAction(title: "앨범에서 사진 선택하기", style: .default, handler: {
             // 갤러시 선택 시 action
             
             (alert: UIAlertAction!) -> Void in
