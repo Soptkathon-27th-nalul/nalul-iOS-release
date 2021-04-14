@@ -38,6 +38,11 @@ class TeamNarulVC: UIViewController {
     }
     
     
+    @IBAction func backButtonDidTap(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    
     // MARK: Life Cycle Part
     
     override func viewDidLoad() {

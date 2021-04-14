@@ -154,6 +154,9 @@
                                     <constraint firstAttribute="width" constant="36" id="bib-gl-gQi"/>
                                 </constraints>
                                 <state key="normal" image="btnSettings"/>
+                                <connections>
+                                    <action selector="settingButtonDidTap:" destination="eYD-yx-JCR" eventType="touchUpInside" id="UBf-Zh-mO3"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q6f-KA-7UB">
                                 <rect key="frame" x="0.0" y="96" width="414" height="20.5"/>

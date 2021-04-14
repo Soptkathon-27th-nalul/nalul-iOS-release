@@ -62,8 +62,8 @@
 		9B071B53260C8F6100CCECF4 /* MainAlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAlbumCell.swift; sourceTree = "<group>"; };
 		9B071B57260C941000CCECF4 /* UIScreen+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Extension.swift"; sourceTree = "<group>"; };
 		9B23A23C2616F5C0002BF809 /* PhotoInsertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoInsertVC.swift; sourceTree = "<group>"; };
-		9B41C0DF260252B600791CE2 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Setting.storyboard; path = nalul/Screen/nalul/Screen/Setting/Storyboard/Setting.storyboard; sourceTree = SOURCE_ROOT; };
-		9B41C0E2260252C600791CE2 /* SettingListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingListVC.swift; path = nalul/Screen/nalul/Screen/Setting/ViewController/SettingListVC.swift; sourceTree = SOURCE_ROOT; };
+		9B41C0DF260252B600791CE2 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Setting.storyboard; path = nalul/Screen/Setting/Storyboard/Setting.storyboard; sourceTree = SOURCE_ROOT; };
+		9B41C0E2260252C600791CE2 /* SettingListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingListVC.swift; path = nalul/Screen/Setting/ViewController/SettingListVC.swift; sourceTree = SOURCE_ROOT; };
 		9B665EF725FC9A65002E4CD2 /* nalul.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nalul.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B665EFA25FC9A65002E4CD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B665EFE25FC9A65002E4CD2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 		9B665F2725FC9D67002E4CD2 /* SCDream8.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDream8.otf; sourceTree = "<group>"; };
 		9B665F2825FC9D67002E4CD2 /* SCDream5.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDream5.otf; sourceTree = "<group>"; };
 		9B7228BA26247A0900EC2796 /* MainNavigationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationVC.swift; sourceTree = "<group>"; };
-		9B7228C0262598D800EC2796 /* TeamNarulVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TeamNarulVC.swift; path = nalul/Screen/Main/ViewController/TeamNarulVC.swift; sourceTree = SOURCE_ROOT; };
+		9B7228C0262598D800EC2796 /* TeamNarulVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TeamNarulVC.swift; path = nalul/Screen/Setting/ViewController/TeamNarulVC.swift; sourceTree = SOURCE_ROOT; };
 		9B7228C32625F02E00EC2796 /* TeamNarulCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamNarulCell.swift; sourceTree = "<group>"; };
 		9B7E3A05260F36A80086535C /* PopUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PopUp.storyboard; sourceTree = "<group>"; };
 		9B7E3A09260F36B40086535C /* PopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpVC.swift; sourceTree = "<group>"; };
@@ -130,8 +130,7 @@
 				9B41C0DE260252AC00791CE2 /* Storyboard */,
 				9B41C0DD260252A700791CE2 /* ViewController */,
 			);
-			name = Setting;
-			path = nalul/Screen/Setting;
+			path = Setting;
 			sourceTree = "<group>";
 		};
 		9B41C0DD260252A700791CE2 /* ViewController */ = {
@@ -140,8 +139,7 @@
 				9B41C0E2260252C600791CE2 /* SettingListVC.swift */,
 				9B7228C0262598D800EC2796 /* TeamNarulVC.swift */,
 			);
-			name = ViewController;
-			path = ../nalul/Screen/Setting/ViewController;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		9B41C0DE260252AC00791CE2 /* Storyboard */ = {
@@ -149,8 +147,7 @@
 			children = (
 				9B41C0DF260252B600791CE2 /* Setting.storyboard */,
 			);
-			name = Storyboard;
-			path = ../nalul/Screen/Setting/Storyboard;
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		9B665EEE25FC9A65002E4CD2 = {
