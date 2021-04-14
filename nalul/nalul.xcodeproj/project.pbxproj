@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -31,6 +31,11 @@
 		9B7228BB26247A0900EC2796 /* MainNavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7228BA26247A0900EC2796 /* MainNavigationVC.swift */; };
 		9B7228C1262598D800EC2796 /* TeamNarulVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7228C0262598D800EC2796 /* TeamNarulVC.swift */; };
 		9B7228C42625F02E00EC2796 /* TeamNarulCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7228C32625F02E00EC2796 /* TeamNarulCell.swift */; };
+		9B7228D02626D15D00EC2796 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7228CF2626D15D00EC2796 /* NetworkResult.swift */; };
+		9B7228D32626D17700EC2796 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7228D22626D17700EC2796 /* APIService.swift */; };
+		9B7228D62626D1A600EC2796 /* APITarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7228D52626D1A600EC2796 /* APITarget.swift */; };
+		9B7228D92626DAE500EC2796 /* GenericResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7228D82626DAE500EC2796 /* GenericResponse.swift */; };
+		9B7228DC2626DB0700EC2796 /* SimpleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7228DB2626DB0700EC2796 /* SimpleData.swift */; };
 		9B7E3A06260F36A80086535C /* PopUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B7E3A05260F36A80086535C /* PopUp.storyboard */; };
 		9B7E3A0A260F36B50086535C /* PopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7E3A09260F36B40086535C /* PopUpVC.swift */; };
 		9B8AD92C260B45650082D9D3 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8AD92B260B45650082D9D3 /* MainVC.swift */; };
@@ -88,6 +93,11 @@
 		9B7228BA26247A0900EC2796 /* MainNavigationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationVC.swift; sourceTree = "<group>"; };
 		9B7228C0262598D800EC2796 /* TeamNarulVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TeamNarulVC.swift; path = nalul/Screen/Setting/ViewController/TeamNarulVC.swift; sourceTree = SOURCE_ROOT; };
 		9B7228C32625F02E00EC2796 /* TeamNarulCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamNarulCell.swift; sourceTree = "<group>"; };
+		9B7228CF2626D15D00EC2796 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		9B7228D22626D17700EC2796 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		9B7228D52626D1A600EC2796 /* APITarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITarget.swift; sourceTree = "<group>"; };
+		9B7228D82626DAE500EC2796 /* GenericResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericResponse.swift; sourceTree = "<group>"; };
+		9B7228DB2626DB0700EC2796 /* SimpleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleData.swift; sourceTree = "<group>"; };
 		9B7E3A05260F36A80086535C /* PopUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PopUp.storyboard; sourceTree = "<group>"; };
 		9B7E3A09260F36B40086535C /* PopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpVC.swift; sourceTree = "<group>"; };
 		9B8AD92B260B45650082D9D3 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -142,7 +152,6 @@
 				996F8EE450F200E3197EECA5 /* Pods-nalul.debug.xcconfig */,
 				7FD8A15DB43AF13923ECE465 /* Pods-nalul.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -254,6 +263,8 @@
 		9B665F1A25FC9ACB002E4CD2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9B7228D82626DAE500EC2796 /* GenericResponse.swift */,
+				9B7228DB2626DB0700EC2796 /* SimpleData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -261,6 +272,9 @@
 		9B665F1B25FC9AD4002E4CD2 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				9B7228CF2626D15D00EC2796 /* NetworkResult.swift */,
+				9B7228D22626D17700EC2796 /* APIService.swift */,
+				9B7228D52626D1A600EC2796 /* APITarget.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -565,6 +579,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B7228D92626DAE500EC2796 /* GenericResponse.swift in Sources */,
+				9B7228D32626D17700EC2796 /* APIService.swift in Sources */,
 				9B9326D925FCBF3A005D06E2 /* MainStartVC.swift in Sources */,
 				9B9326C925FCA4AE005D06E2 /* UIView+Extension.swift in Sources */,
 				9B9433FC2601EE49005D987A /* GalleryListCell.swift in Sources */,
@@ -574,9 +590,11 @@
 				9BD011072620485900A30F7C /* OnboardingPageController.swift in Sources */,
 				9B9434042601FDBD005D987A /* UIColor+Extension.swift in Sources */,
 				9BD0110D26204EBF00A30F7C /* ExplainOnboardingVC.swift in Sources */,
+				9B7228DC2626DB0700EC2796 /* SimpleData.swift in Sources */,
 				9B7228C1262598D800EC2796 /* TeamNarulVC.swift in Sources */,
 				9B23A23D2616F5C0002BF809 /* PhotoInsertVC.swift in Sources */,
 				9BD010F3261F606100A30F7C /* UIDate+Extension.swift in Sources */,
+				9B7228D62626D1A600EC2796 /* APITarget.swift in Sources */,
 				9B665EFB25FC9A65002E4CD2 /* AppDelegate.swift in Sources */,
 				9B9326CD25FCA52E005D06E2 /* UILabel+Extension.swift in Sources */,
 				9BD0110A2620494800A30F7C /* LogoOnboardingVC.swift in Sources */,
@@ -589,6 +607,7 @@
 				9B9AA19E2603427F00B03862 /* UITextView+Extension.swift in Sources */,
 				9B9326C325FCA33D005D06E2 /* UIFont+Extension.swift in Sources */,
 				9B7228C42625F02E00EC2796 /* TeamNarulCell.swift in Sources */,
+				9B7228D02626D15D00EC2796 /* NetworkResult.swift in Sources */,
 				9BD01119262061D900A30F7C /* BackgroundConfirmVC.swift in Sources */,
 				9B9326C625FCA46A005D06E2 /* UIButton+Extension.swift in Sources */,
 				9BD01110262050F700A30F7C /* OnboardingGalleryCell.swift in Sources */,
