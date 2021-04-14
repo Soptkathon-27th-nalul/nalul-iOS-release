@@ -33,7 +33,18 @@ class MainVC: UIViewController {
     
     @IBOutlet weak var constraintToBottom: NSLayoutConstraint!
     @IBOutlet weak var constraintToTop: NSLayoutConstraint!
+    
     // MARK: IBAction
+    
+    @IBAction func settingButtonDidTap(_ sender: Any) {
+        
+        let storyboard = UIStoryboard.init(name: "Setting", bundle: nil)
+        guard let settingView = storyboard.instantiateViewController(identifier: "SettingListVC") as? SettingListVC else {
+            return
+        }
+        self.navigationController?.pushViewController(settingView, animated: true)
+        
+    }
     
     // MARK: Life Cycle Part
     
@@ -62,8 +73,11 @@ extension MainVC {
         // 뷰 관련 Style 설정
         
         let uniqueFileName: String = "UserBackgroundImage"
-        userBackImageView.image = ImageFileManager.shared.getSavedImage(named: uniqueFileName)
-        // 사용자 배경화면 설정
+        if let image = ImageFileManager.shared.getSavedImage(named: uniqueFileName) {
+            userBackImageView.image = image
+        } else {
+            userBackImageView.image = UIImage(named: "testBlackImage")
+        }
 
         subPopUpView.backgroundColor = .nalulDarkGray
         subPopUpView.alpha = 0.6

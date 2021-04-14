@@ -21,6 +21,11 @@ class SettingListVC: UIViewController {
     
     // MARK: IBAction
     
+    
+    @IBAction func backButtonDidTap(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     // MARK: Life Cycle Part
     
     override func viewDidLoad() {
@@ -72,6 +77,17 @@ extension SettingListVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 59
         
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 4 {
+            
+            guard let nextView = self.storyboard?.instantiateViewController(identifier: "TeamNarulVC") as? TeamNarulVC else {
+                return
+            }
+            
+            self.navigationController?.pushViewController(nextView, animated: true)
+        }
     }
 }
 
