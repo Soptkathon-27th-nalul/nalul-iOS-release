@@ -21,6 +21,13 @@ struct APIService {
         judgeObject(target, completion: completion)
 
     }
+    
+    func signup(_ uuid: String, completion: @escaping (NetworkResult<LoginData>)->(Void)) {
+        
+        let target: APITarget = .signup(uuid: uuid)
+        judgeObject(target, completion: completion)
+
+    }
 
 }
 

@@ -17,8 +17,7 @@ class SplashVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        login(uuid: UUID().uuidString)
-        // Do any additional setup after loading the view.
+        login(uuid: UIDevice.current.identifierForVendor!.uuidString)
     }
     
 }
