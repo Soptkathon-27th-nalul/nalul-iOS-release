@@ -15,6 +15,12 @@ struct APIService {
     let provider = MoyaProvider<APITarget>()
     // MoyaProvider(->요청 보내는 클래스) 인스턴스 생성
     
+    func login(_ uuid: String, completion: @escaping (NetworkResult<LoginData>)->(Void)) {
+        
+        let target: APITarget = .login(uuid: uuid)
+        judgeObject(target, completion: completion)
+
+    }
 
 }
 
