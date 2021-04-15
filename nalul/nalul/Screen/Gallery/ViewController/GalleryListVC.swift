@@ -12,6 +12,7 @@ class GalleryListVC: UIViewController {
     // MARK: Variable Part
     
     var titleName: String?
+    var indexs: Int?
     
     // MARK: IBOutlet
     
@@ -26,6 +27,9 @@ class GalleryListVC: UIViewController {
     
     // MARK: IBAction
     
+    @IBAction func backButtonDidTap(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     
     // MARK: Life Cycle Part
     

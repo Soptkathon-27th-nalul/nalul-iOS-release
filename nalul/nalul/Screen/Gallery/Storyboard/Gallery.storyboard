@@ -31,6 +31,9 @@
                                             <constraint firstAttribute="width" secondItem="Rug-dx-E6S" secondAttribute="height" multiplier="1:1" id="JKV-jU-x7t"/>
                                         </constraints>
                                         <state key="normal" image="btnBack"/>
+                                        <connections>
+                                            <action selector="backButtonDidTap:" destination="sqx-FR-qzD" eventType="touchUpInside" id="T4n-c5-YzB"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8r-Tz-84E">
                                         <rect key="frame" x="346" y="0.0" width="48" height="48"/>

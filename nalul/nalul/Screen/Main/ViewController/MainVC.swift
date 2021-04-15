@@ -11,7 +11,7 @@ class MainVC: UIViewController {
 
     // MARK: Variable Part
     
-    var partNameArray: [String] = ["left\neye","left\nhand","eye\nbrow","right\nhand","ear","lips","cheek","right\neye","nose"]
+    var partNameArray: [String] = ["left\neye","left\nhand","mole","right\nhand","ear","lips","cheek","right\neye","nose"]
     
     // MARK: IBOutlet
     
@@ -199,6 +199,24 @@ extension MainVC: UICollectionViewDataSource {
         cell.configure(name: partNameArray[indexPath.row])
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // cell 클릭 시
+        
+        let storyboard = UIStoryboard.init(name: "Gallery", bundle: nil)
+        guard let galleryTab = storyboard.instantiateViewController(identifier: "GalleryListVC") as? GalleryListVC else {
+            return
+        }
+        
+        let titleNameArray: [String] = ["왼쪽 눈","왼쪽 손","점","오른쪽 손","귀","입술","볼","오른쪽 눈","코"]
+        
+        galleryTab.titleName = titleNameArray[indexPath.row]
+        galleryTab.indexs = indexPath.row
+        
+        self.navigationController?.pushViewController(galleryTab, animated: true)
+        // 갤러리로 이동
+        
     }
     
     
