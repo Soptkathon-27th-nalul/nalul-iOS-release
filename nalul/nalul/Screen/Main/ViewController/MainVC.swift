@@ -8,10 +8,11 @@
 import UIKit
 
 class MainVC: UIViewController {
-
+    
     // MARK: Variable Part
     
     var partNameArray: [String] = ["left\neye","left\nhand","eye\nbrow","right\nhand","ear","lips","cheek","right\neye","nose"]
+    var shuffleData: ShuffleData?
     
     // MARK: IBOutlet
     
@@ -46,6 +47,41 @@ class MainVC: UIViewController {
         
     }
     
+    @IBAction func shuffleButtonDidTap(_ sender: Any) {
+        // 섞어 버튼 클릭 시 Event
+        
+        if let jwt = UserDefaults.standard.string(forKey: "accessToken") {
+            
+            APIService.shared.shuffle(jwt) { [self] result in
+                switch result {
+                case .success(let data):
+                    // 셔플 성공
+                    
+                    shuffleData = data
+                //                    homeAlbumCollectionView.reloadData()
+                
+                case .failure(let error):
+                    
+                    if error == 400 {
+                        // 사진이 하나도 없을 때
+                        homeAlbumCollectionView.reloadData()
+                        setExplainLabel()
+                    } else {
+                        
+                        print("데이터 오류")
+                        
+                    }
+                }
+            }
+        } else {
+            // 토큰이 만료되었거나 없는 것
+            
+            print("앱 다시 실행해주세요 하고 다시 켜기")
+        }
+        
+    }
+    
+    
     // MARK: Life Cycle Part
     
     override func viewDidLoad() {
@@ -60,7 +96,7 @@ class MainVC: UIViewController {
         shakeButton.makeRounded(cornerRadius: nil)
     }
     
-
+    
 }
 
 // MARK: Extension
@@ -78,11 +114,11 @@ extension MainVC {
         } else {
             userBackImageView.image = UIImage(named: "testBlackImage")
         }
-
+        
         subPopUpView.backgroundColor = .nalulDarkGray
         subPopUpView.alpha = 0.6
         subPopUpView.setRounded(radius: 32.5)
-
+        
         homeAlbumCollectionView.delegate = self
         homeAlbumCollectionView.dataSource = self
         homeAlbumCollectionView.backgroundColor = .none
@@ -108,7 +144,7 @@ extension MainVC {
             // 첫째줄만 폰트를 다르게 설정
             let attributedStr = NSMutableAttributedString(string: text)
             attributedStr.addAttribute(NSAttributedString.Key(rawValue: kCTFontAttributeName as String), value: UIFont.threeLight(size: 12), range: (text as NSString).range(of: "당신의 나를에게"))
-
+            
             todayQuestionLabel.attributedText = attributedStr
         }
         
@@ -117,21 +153,8 @@ extension MainVC {
         dateLabel.text = "그렇게 중독되어 가는거에요"
         dateLabel.font = UIFont.twoExLight(size: 11)
         dateLabel.textColor = .white
+        setExplainLabel()
         
-        explainLabel.numberOfLines = 0
-        explainLabel.text = "+ 버튼을 눌러 사진을 추가하세요\n사진 순서는 랜덤입니다"
-        explainLabel.font = UIFont.threeLight(size: 14)
-        explainLabel.textColor = .white
-        
-        if let text = explainLabel.text {
-            // 두번째줄만 폰트를 다르게 설정
-            let attributedStr = NSMutableAttributedString(string: text)
-            attributedStr.addAttribute(NSAttributedString.Key(rawValue: kCTFontAttributeName as String), value: UIFont.twoExLight(size: 11), range: (text as NSString).range(of: "사진 순서는 랜덤입니다"))
-
-            explainLabel.attributedText = attributedStr
-        }
-        
-        explainLabel.lineSetting(kernValue: 0, lineSpacing: 12)
     }
     
     // MARK: Button Style Function
@@ -147,6 +170,31 @@ extension MainVC {
         shakeButton.setTitle("섞어", for: .normal)
         shakeButton.tintColor = .white
         
+    }
+    
+    func setExplainLabel() {
+        
+        explainLabel.numberOfLines = 0
+        explainLabel.font = UIFont.threeLight(size: 14)
+        explainLabel.textColor = .white
+        
+        if shuffleData == nil {
+            // 데이터가 없을 때 멘트
+            
+            explainLabel.text = "+ 버튼을 눌러 사진을 추가하세요\n사진 순서는 랜덤입니다"
+            if let text = explainLabel.text {
+                // 두번째줄만 폰트를 다르게 설정
+                let attributedStr = NSMutableAttributedString(string: text)
+                attributedStr.addAttribute(NSAttributedString.Key(rawValue: kCTFontAttributeName as String), value: UIFont.twoExLight(size: 11), range: (text as NSString).range(of: "사진 순서는 랜덤입니다"))
+                
+                explainLabel.attributedText = attributedStr
+            }
+        } else {
+            // 데이터가 있을 때 멘트
+            
+        }
+        
+        explainLabel.lineSetting(kernValue: 0, lineSpacing: 12)
     }
 }
 
@@ -196,7 +244,14 @@ extension MainVC: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
         
-        cell.configure(name: partNameArray[indexPath.row])
+        if let data = shuffleData {
+            // 표시 할 데이터가 있을 때
+            
+        } else {
+            // 데이터가 없을 때
+            
+            cell.configure(name: partNameArray[indexPath.row])
+        }
         
         return cell
     }

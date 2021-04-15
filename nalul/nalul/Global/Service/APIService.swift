@@ -28,6 +28,13 @@ struct APIService {
         judgeObject(target, completion: completion)
 
     }
+    
+    func shuffle(_ jwt: String, completion: @escaping (NetworkResult<ShuffleData>)->(Void)) {
+        
+        let target: APITarget = .shuffleMain(jwt: jwt)
+        judgeObject(target, completion: completion)
+
+    }
 
 }
 
