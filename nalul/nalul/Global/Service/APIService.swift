@@ -28,6 +28,13 @@ struct APIService {
         judgeObject(target, completion: completion)
 
     }
+    
+    func todayQuestion(_ category: Int, _ jwt: String, completion: @escaping (NetworkResult<QuestionData>)->(Void)) {
+        
+        let target: APITarget = .todayQuestion(category: category, jwt: jwt)
+        judgeObject(target, completion: completion)
+
+    }
 
 }
 
