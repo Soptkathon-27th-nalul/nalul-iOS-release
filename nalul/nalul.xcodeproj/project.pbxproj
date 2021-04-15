@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A0BA8C0C4EC07E4DBB9CB0F /* Pods_nalul.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B2140F1D8F529B93D3848B5 /* Pods_nalul.framework */; };
 		9B071B54260C8F6100CCECF4 /* MainAlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B071B53260C8F6100CCECF4 /* MainAlbumCell.swift */; };
 		9B071B58260C941000CCECF4 /* UIScreen+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B071B57260C941000CCECF4 /* UIScreen+Extension.swift */; };
 		9B23A23D2616F5C0002BF809 /* PhotoInsertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B23A23C2616F5C0002BF809 /* PhotoInsertVC.swift */; };
@@ -30,6 +31,11 @@
 		9B7228BB26247A0900EC2796 /* MainNavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7228BA26247A0900EC2796 /* MainNavigationVC.swift */; };
 		9B7228C1262598D800EC2796 /* TeamNarulVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7228C0262598D800EC2796 /* TeamNarulVC.swift */; };
 		9B7228C42625F02E00EC2796 /* TeamNarulCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7228C32625F02E00EC2796 /* TeamNarulCell.swift */; };
+		9B7228D02626D15D00EC2796 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7228CF2626D15D00EC2796 /* NetworkResult.swift */; };
+		9B7228D32626D17700EC2796 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7228D22626D17700EC2796 /* APIService.swift */; };
+		9B7228D62626D1A600EC2796 /* APITarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7228D52626D1A600EC2796 /* APITarget.swift */; };
+		9B7228D92626DAE500EC2796 /* GenericResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7228D82626DAE500EC2796 /* GenericResponse.swift */; };
+		9B7228DC2626DB0700EC2796 /* SimpleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7228DB2626DB0700EC2796 /* SimpleData.swift */; };
 		9B7E3A06260F36A80086535C /* PopUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B7E3A05260F36A80086535C /* PopUp.storyboard */; };
 		9B7E3A0A260F36B50086535C /* PopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7E3A09260F36B40086535C /* PopUpVC.swift */; };
 		9B8AD92C260B45650082D9D3 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8AD92B260B45650082D9D3 /* MainVC.swift */; };
@@ -59,6 +65,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7FD8A15DB43AF13923ECE465 /* Pods-nalul.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nalul.release.xcconfig"; path = "Target Support Files/Pods-nalul/Pods-nalul.release.xcconfig"; sourceTree = "<group>"; };
+		8B2140F1D8F529B93D3848B5 /* Pods_nalul.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nalul.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		996F8EE450F200E3197EECA5 /* Pods-nalul.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nalul.debug.xcconfig"; path = "Target Support Files/Pods-nalul/Pods-nalul.debug.xcconfig"; sourceTree = "<group>"; };
 		9B071B53260C8F6100CCECF4 /* MainAlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAlbumCell.swift; sourceTree = "<group>"; };
 		9B071B57260C941000CCECF4 /* UIScreen+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Extension.swift"; sourceTree = "<group>"; };
 		9B23A23C2616F5C0002BF809 /* PhotoInsertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoInsertVC.swift; sourceTree = "<group>"; };
@@ -84,6 +93,11 @@
 		9B7228BA26247A0900EC2796 /* MainNavigationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationVC.swift; sourceTree = "<group>"; };
 		9B7228C0262598D800EC2796 /* TeamNarulVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TeamNarulVC.swift; path = nalul/Screen/Setting/ViewController/TeamNarulVC.swift; sourceTree = SOURCE_ROOT; };
 		9B7228C32625F02E00EC2796 /* TeamNarulCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamNarulCell.swift; sourceTree = "<group>"; };
+		9B7228CF2626D15D00EC2796 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		9B7228D22626D17700EC2796 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		9B7228D52626D1A600EC2796 /* APITarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITarget.swift; sourceTree = "<group>"; };
+		9B7228D82626DAE500EC2796 /* GenericResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericResponse.swift; sourceTree = "<group>"; };
+		9B7228DB2626DB0700EC2796 /* SimpleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleData.swift; sourceTree = "<group>"; };
 		9B7E3A05260F36A80086535C /* PopUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PopUp.storyboard; sourceTree = "<group>"; };
 		9B7E3A09260F36B40086535C /* PopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpVC.swift; sourceTree = "<group>"; };
 		9B8AD92B260B45650082D9D3 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -117,12 +131,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A0BA8C0C4EC07E4DBB9CB0F /* Pods_nalul.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0403939C9DEF040E1351B83C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8B2140F1D8F529B93D3848B5 /* Pods_nalul.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		07D506C813CB2F9375C949F9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				996F8EE450F200E3197EECA5 /* Pods-nalul.debug.xcconfig */,
+				7FD8A15DB43AF13923ECE465 /* Pods-nalul.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		9B41C0DC260252A400791CE2 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +187,8 @@
 			children = (
 				9B665EF925FC9A65002E4CD2 /* nalul */,
 				9B665EF825FC9A65002E4CD2 /* Products */,
+				07D506C813CB2F9375C949F9 /* Pods */,
+				0403939C9DEF040E1351B83C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -229,6 +263,8 @@
 		9B665F1A25FC9ACB002E4CD2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9B7228D82626DAE500EC2796 /* GenericResponse.swift */,
+				9B7228DB2626DB0700EC2796 /* SimpleData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -236,6 +272,9 @@
 		9B665F1B25FC9AD4002E4CD2 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				9B7228CF2626D15D00EC2796 /* NetworkResult.swift */,
+				9B7228D22626D17700EC2796 /* APIService.swift */,
+				9B7228D52626D1A600EC2796 /* APITarget.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -419,9 +458,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9B665F0B25FC9A67002E4CD2 /* Build configuration list for PBXNativeTarget "nalul" */;
 			buildPhases = (
+				118312EA325FECB7F6E7BCA2 /* [CP] Check Pods Manifest.lock */,
 				9B665EF325FC9A65002E4CD2 /* Sources */,
 				9B665EF425FC9A65002E4CD2 /* Frameworks */,
 				9B665EF525FC9A65002E4CD2 /* Resources */,
+				05F1A29713908E06325093BA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -491,11 +532,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		05F1A29713908E06325093BA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-nalul/Pods-nalul-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-nalul/Pods-nalul-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-nalul/Pods-nalul-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		118312EA325FECB7F6E7BCA2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-nalul-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9B665EF325FC9A65002E4CD2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B7228D92626DAE500EC2796 /* GenericResponse.swift in Sources */,
+				9B7228D32626D17700EC2796 /* APIService.swift in Sources */,
 				9B9326D925FCBF3A005D06E2 /* MainStartVC.swift in Sources */,
 				9B9326C925FCA4AE005D06E2 /* UIView+Extension.swift in Sources */,
 				9B9433FC2601EE49005D987A /* GalleryListCell.swift in Sources */,
@@ -505,9 +590,11 @@
 				9BD011072620485900A30F7C /* OnboardingPageController.swift in Sources */,
 				9B9434042601FDBD005D987A /* UIColor+Extension.swift in Sources */,
 				9BD0110D26204EBF00A30F7C /* ExplainOnboardingVC.swift in Sources */,
+				9B7228DC2626DB0700EC2796 /* SimpleData.swift in Sources */,
 				9B7228C1262598D800EC2796 /* TeamNarulVC.swift in Sources */,
 				9B23A23D2616F5C0002BF809 /* PhotoInsertVC.swift in Sources */,
 				9BD010F3261F606100A30F7C /* UIDate+Extension.swift in Sources */,
+				9B7228D62626D1A600EC2796 /* APITarget.swift in Sources */,
 				9B665EFB25FC9A65002E4CD2 /* AppDelegate.swift in Sources */,
 				9B9326CD25FCA52E005D06E2 /* UILabel+Extension.swift in Sources */,
 				9BD0110A2620494800A30F7C /* LogoOnboardingVC.swift in Sources */,
@@ -520,6 +607,7 @@
 				9B9AA19E2603427F00B03862 /* UITextView+Extension.swift in Sources */,
 				9B9326C325FCA33D005D06E2 /* UIFont+Extension.swift in Sources */,
 				9B7228C42625F02E00EC2796 /* TeamNarulCell.swift in Sources */,
+				9B7228D02626D15D00EC2796 /* NetworkResult.swift in Sources */,
 				9BD01119262061D900A30F7C /* BackgroundConfirmVC.swift in Sources */,
 				9B9326C625FCA46A005D06E2 /* UIButton+Extension.swift in Sources */,
 				9BD01110262050F700A30F7C /* OnboardingGalleryCell.swift in Sources */,
@@ -671,6 +759,7 @@
 		};
 		9B665F0C25FC9A67002E4CD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 996F8EE450F200E3197EECA5 /* Pods-nalul.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -691,6 +780,7 @@
 		};
 		9B665F0D25FC9A67002E4CD2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FD8A15DB43AF13923ECE465 /* Pods-nalul.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
