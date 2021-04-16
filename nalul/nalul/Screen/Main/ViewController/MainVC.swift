@@ -212,7 +212,7 @@ extension MainVC: UICollectionViewDataSource {
         let titleNameArray: [String] = ["왼쪽 눈","왼쪽 손","점","오른쪽 손","귀","입술","볼","오른쪽 눈","코"]
         
         galleryTab.titleName = titleNameArray[indexPath.row]
-        galleryTab.indexs = indexPath.row
+        galleryTab.indexs = indexPath.row + 1
         
         self.navigationController?.pushViewController(galleryTab, animated: true)
         // 갤러리로 이동

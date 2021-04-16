@@ -8,12 +8,12 @@
 import UIKit
 
 class PhotoInsertVC: UIViewController {
-
+    
     // MARK: Variable Part
     
     var titleName: String?
     var categoryIndex: Int?
-    var question: String?
+    var questionData: QuestionData?
     
     // MARK: IBOutlet
     
@@ -70,11 +70,8 @@ extension PhotoInsertVC {
         postDateLabel.font = UIFont.momFont(size: 16)
         postDateLabel.textColor = .white
         
-        if let question = question {
-            questionLabel.text = question
-        } else {
-            questionLabel.text = "오늘 당신의 눈은 어떤 색인가요?"
-        }
+        getQuestion()
+        // 질문 받아오기
         
         questionLabel.font = UIFont.threeLight(size: 15)
         questionLabel.textColor = .white
@@ -110,14 +107,14 @@ extension PhotoInsertVC {
         // 스크롤 위로 올리기
         
         scrollView.setContentOffset(CGPoint(x: 0, y: self.answerTextView.frame.height+100), animated: true)
-
+        
     }
     
     @objc func touchDownView() {
         // 스크롤 다시 내리기
         
         scrollView.scrollRectToVisible(CGRect(x: 0, y: 0, width: 1, height: 1), animated: true)
-
+        
     }
     
     func scrollViewTap() {
@@ -145,6 +142,32 @@ extension PhotoInsertVC {
             textView.text = "대답을 입력해주세요."
             insertButton.isEnabled = false
         }
+    }
+    
+    func getQuestion() {
+        
+        if let categoryIndex = categoryIndex,
+           let jwt = UserDefaults.standard.string(forKey: "accessToken") {
+            
+            APIService.shared.todayQuestion(categoryIndex, jwt) { [self] result in
+                switch result {
+                case .success(let data):
+                    // 질문 받아오기 완료
+    
+                    self.questionData = data
+                    if let question = questionData?.text {
+                        questionLabel.text = question
+                    }
+
+                case .failure(_):
+                    
+                    questionLabel.text = "오늘 당신의 눈은 어떤 색인가요?"
+                    print("데이터 연결을 확인해주세요")
+                }
+                
+            }
+        }
+        
     }
     
 }
