@@ -407,6 +407,9 @@
                                             <constraint firstAttribute="width" secondItem="VCE-Hz-nkh" secondAttribute="height" multiplier="1:1" id="7Dn-Kk-kDO"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="postButtonDidTap:" destination="bWx-Xc-akB" eventType="touchUpInside" id="BUF-Cc-Cvz"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vwx-AA-AOG">
                                         <rect key="frame" x="132" y="0.0" width="150" height="48"/>

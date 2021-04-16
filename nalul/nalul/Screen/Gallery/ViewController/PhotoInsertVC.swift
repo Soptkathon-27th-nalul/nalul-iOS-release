@@ -14,6 +14,7 @@ class PhotoInsertVC: UIViewController {
     var titleName: String?
     var categoryIndex: Int?
     var questionData: QuestionData?
+    var simpleData: SimpleData?
     
     // MARK: IBOutlet
     
@@ -29,6 +30,45 @@ class PhotoInsertVC: UIViewController {
     
     @IBAction func backButtonDidTap(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    
+    @IBAction func postButtonDidTap(_ sender: Any) {
+        // 글 올리기 서버 연결
+        
+        
+//        if let questionIndex = questionData?.QuestionIdx,
+//           let image = photoChoseButton.imageView?.image,
+//           let contents = answerTextView.text,
+//           let jwt = UserDefaults.standard.string(forKey: "accessToken") {
+//            APIService.shared.postFeed(questionIndex, image, contents, jwt) { [self] result in
+//                switch result {
+//                case .success(let data):
+//
+//                    guard let loadData = data as? SimpleData else {
+//                        return
+//                    }
+//
+//                    self.simpleData = loadData
+//                    if self.simpleData?.status == 200 {
+//                        // 성공 alter 띄우기
+//                    }
+//
+//
+//
+//                case .failure(let error):
+//                    if error == 400 {
+//                        // 토큰 값 만료 -> 다시 로그인 하세요
+//
+//                    } else {
+//                        print("데이터 연결을 확인해주세요")
+//                    }
+//
+//                }
+//
+//            }
+//        }
+        
     }
     
     // MARK: Life Cycle Part
