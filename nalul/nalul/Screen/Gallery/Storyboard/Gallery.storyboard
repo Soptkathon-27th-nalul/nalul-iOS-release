@@ -31,6 +31,9 @@
                                             <constraint firstAttribute="width" secondItem="Rug-dx-E6S" secondAttribute="height" multiplier="1:1" id="JKV-jU-x7t"/>
                                         </constraints>
                                         <state key="normal" image="btnBack"/>
+                                        <connections>
+                                            <action selector="backButtonDidTap:" destination="sqx-FR-qzD" eventType="touchUpInside" id="T4n-c5-YzB"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8r-Tz-84E">
                                         <rect key="frame" x="346" y="0.0" width="48" height="48"/>
@@ -38,6 +41,9 @@
                                             <constraint firstAttribute="width" secondItem="J8r-Tz-84E" secondAttribute="height" multiplier="1:1" id="T9Z-Be-hcx"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="writeButtonDidTap:" destination="sqx-FR-qzD" eventType="touchUpInside" id="cjo-jC-4A1"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1Z-5b-MS0">
                                         <rect key="frame" x="157" y="0.0" width="100" height="48"/>
@@ -391,6 +397,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6P7-1T-Azy">
                                         <rect key="frame" x="12" y="0.0" width="27" height="48"/>
                                         <state key="normal" image="btnBack"/>
+                                        <connections>
+                                            <action selector="backButtonDidTap:" destination="bWx-Xc-akB" eventType="touchUpInside" id="Tbk-nv-Xic"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VCE-Hz-nkh">
                                         <rect key="frame" x="346" y="0.0" width="48" height="48"/>

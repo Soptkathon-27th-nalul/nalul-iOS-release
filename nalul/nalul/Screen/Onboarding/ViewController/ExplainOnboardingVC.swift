@@ -11,7 +11,7 @@ class ExplainOnboardingVC: UIViewController {
     
     // MARK: Variable Part
     
-    var partNameArray: [String] = ["left\neye","left\nhand","eye\nbrow","right\nhand","ear","lips","cheek","right\neye","nose"]
+    var partNameArray: [String] = ["left\neye","left\nhand","mole","right\nhand","ear","lips","cheek","right\neye","nose"]
     
     // MARK: IBOutlet
     

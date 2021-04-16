@@ -12,6 +12,7 @@ class GalleryListVC: UIViewController {
     // MARK: Variable Part
     
     var titleName: String?
+    var indexs: Int?
     
     // MARK: IBOutlet
     
@@ -26,6 +27,18 @@ class GalleryListVC: UIViewController {
     
     // MARK: IBAction
     
+    @IBAction func backButtonDidTap(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func writeButtonDidTap(_ sender: Any) {
+        guard let nextVC = self.storyboard?.instantiateViewController(identifier: "PhotoInsertVC") as? PhotoInsertVC else {
+            return
+        }
+        nextVC.titleName = titleName
+        nextVC.categoryIndex = indexs
+        self.navigationController?.pushViewController(nextVC, animated: true)
+    }
     
     // MARK: Life Cycle Part
     
