@@ -15,6 +15,7 @@ class PhotoInsertVC: UIViewController {
     var categoryIndex: Int?
     var questionData: QuestionData?
     var simpleData: SimpleData?
+    var postImage: UIImage?
     
     // MARK: IBOutlet
     
@@ -32,6 +33,55 @@ class PhotoInsertVC: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    
+    @IBAction func photoChoseButtonDidTap(_ sender: Any) {
+        
+        let optionMenu = UIAlertController(title: nil, message: "게시물 사진 등록하기", preferredStyle: .actionSheet)
+
+        let deleteAction = UIAlertAction(title: "카메라 촬영", style: .default, handler: {
+            // 카메라 선택 시 action
+            
+            (alert: UIAlertAction!) -> Void in
+            
+            let vc = UIImagePickerController()
+            vc.sourceType = .camera
+            vc.cameraDevice = .front
+            vc.delegate = self
+            vc.mediaTypes = ["public.image"]
+            vc.allowsEditing = true
+            self.present(vc, animated: true, completion: nil)
+            
+        })
+        
+        let saveAction = UIAlertAction(title: "앨범에서 사진 선택하기", style: .default, handler: {
+            // 갤러시 선택 시 action
+            
+            (alert: UIAlertAction!) -> Void in
+            
+            let vc = UIImagePickerController()
+            vc.sourceType = .photoLibrary
+            vc.delegate = self
+            vc.mediaTypes = ["public.image"]
+            vc.allowsEditing = true
+            self.present(vc, animated: true, completion: nil)
+        })
+        
+        
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: {
+            
+            (alert: UIAlertAction!) -> Void in
+            
+        })
+        
+        //action sheet에 옵션 추가.
+        
+        optionMenu.addAction(deleteAction)
+        optionMenu.addAction(saveAction)
+        optionMenu.addAction(cancelAction)
+
+        self.present(optionMenu, animated: true, completion: nil)
+    }
     
     @IBAction func postButtonDidTap(_ sender: Any) {
         // 글 올리기 서버 연결
@@ -225,4 +275,31 @@ extension PhotoInsertVC: UITextViewDelegate {
         textViewPlaceHolder(textView: textView)
     }
     
+}
+
+// MARK: UIImagePickerControllerDelegate, UINavigationControllerDelegate
+
+extension PhotoInsertVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
+            
+            // 수정된 이미지가 있을 경우
+            postImage = image
+            
+        } else if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerOriginalImage")] as? UIImage {
+            
+            // 오리지널 이미지가 있을 경우
+            postImage = image
+        }
+        
+        picker.dismiss(animated: true, completion: nil)
+        
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        
+        picker.dismiss(animated: true, completion: nil)
+    }
 }
