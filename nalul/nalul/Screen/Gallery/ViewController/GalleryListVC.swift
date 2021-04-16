@@ -31,6 +31,15 @@ class GalleryListVC: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func writeButtonDidTap(_ sender: Any) {
+        guard let nextVC = self.storyboard?.instantiateViewController(identifier: "PhotoInsertVC") as? PhotoInsertVC else {
+            return
+        }
+        nextVC.titleName = titleName
+        nextVC.categoryIndex = indexs
+        self.navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
     // MARK: Life Cycle Part
     
     override func viewDidLoad() {

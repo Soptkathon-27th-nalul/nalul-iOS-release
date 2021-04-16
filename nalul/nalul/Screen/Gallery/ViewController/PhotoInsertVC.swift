@@ -12,6 +12,7 @@ class PhotoInsertVC: UIViewController {
     // MARK: Variable Part
     
     var titleName: String?
+    var categoryIndex: Int?
     var question: String?
     
     // MARK: IBOutlet
@@ -25,6 +26,10 @@ class PhotoInsertVC: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     
     // MARK: IBAction
+    
+    @IBAction func backButtonDidTap(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     
     // MARK: Life Cycle Part
     
