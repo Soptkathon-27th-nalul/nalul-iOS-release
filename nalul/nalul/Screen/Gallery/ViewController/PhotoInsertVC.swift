@@ -19,13 +19,14 @@ class PhotoInsertVC: UIViewController {
     
     // MARK: IBOutlet
     
-    @IBOutlet weak var insertButton: UIButton!
+    @IBOutlet weak var postButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var postDateLabel: UILabel!
     @IBOutlet weak var photoChoseButton: UIButton!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var answerTextView: UITextView!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var answerBoxImage: UIImageView!
     
     // MARK: IBAction
     
@@ -186,11 +187,11 @@ extension PhotoInsertVC {
     
     func setButton() {
         
-        insertButton.setTitle("등록", for: .normal)
-        insertButton.titleLabel?.font = UIFont.threeLight(size: 14)
-        insertButton.tintColor = .white
-        insertButton.setBorder(borderColor: .white, borderWidth: 1)
-        insertButton.makeRounded(cornerRadius: nil)
+        postButton.setTitle("등록", for: .normal)
+        postButton.titleLabel?.font = UIFont.threeLight(size: 14)
+        postButton.tintColor = .white
+        postButton.setBorder(borderColor: .white, borderWidth: 1)
+        postButton.makeRounded(cornerRadius: nil)
     }
     
     @objc func touchTextView(notification: NSNotification) {
@@ -227,10 +228,13 @@ extension PhotoInsertVC {
         
         if textView.text == "대답을 입력해주세요." {
             textView.text = ""
-            insertButton.isEnabled = true
         } else if textView.text == "" {
             textView.text = "대답을 입력해주세요."
-            insertButton.isEnabled = false
+            postButton.isEnabled = false
+        } else {
+            if postImage != nil {
+                postButton.isEnabled = true
+            }
         }
     }
     
@@ -286,13 +290,25 @@ extension PhotoInsertVC: UIImagePickerControllerDelegate, UINavigationController
         if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
             
             // 수정된 이미지가 있을 경우
-            postImage = image
+            postImage = image.convertToGrayScale()
             
         } else if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerOriginalImage")] as? UIImage {
             
             // 오리지널 이미지가 있을 경우
-            postImage = image
+            postImage = image.convertToGrayScale()
         }
+        
+        photoChoseButton.setImage(postImage, for: .normal)
+        
+        if let text = answerTextView.text {
+            if text != "대답을 입력해주세요." {
+                // 이미 대답이 들어있다면
+                
+                postButton.isEnabled = true
+                // 등록 버튼 활성화
+            }
+        }
+        answerBoxImage.image = UIImage(named: "imgInsertAsset")
         
         picker.dismiss(animated: true, completion: nil)
         
