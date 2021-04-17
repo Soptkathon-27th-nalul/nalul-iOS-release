@@ -87,51 +87,52 @@ class PhotoInsertVC: UIViewController {
     @IBAction func postButtonDidTap(_ sender: Any) {
         // 글 올리기 서버 연결
         
-        let nextStoryboard = UIStoryboard(name: "PopUp", bundle: nil)
-        guard let popUpVC = nextStoryboard.instantiateViewController(identifier: "PopUpVC") as? PopUpVC else { return }
-        
-        popUpVC.questionMent = "오늘의 나를 기록했어요."
-        popUpVC.explainMent = "나의 또다른 부분을 기록해볼까요?"
-        popUpVC.modalPresentationStyle = .overCurrentContext
-        popUpVC.modalTransitionStyle = .crossDissolve
-        
-        self.present(popUpVC, animated: true, completion: nil)
-        popUpVC.setOneButton()
-        // 팝업 띄우기
-        NotificationCenter.default.addObserver(self, selector: #selector(backView(_:)), name: .popNavi, object: nil)
-        // Observer 살리기
-        
-//        if let questionIndex = questionData?.QuestionIdx,
-//           let image = photoChoseButton.imageView?.image,
-//           let contents = answerTextView.text,
-//           let jwt = UserDefaults.standard.string(forKey: "accessToken") {
-//            APIService.shared.postFeed(questionIndex, image, contents, jwt) { [self] result in
-//                switch result {
-//                case .success(let data):
-//
-//                    guard let loadData = data as? SimpleData else {
-//                        return
-//                    }
-//
-//                    self.simpleData = loadData
-//                    if self.simpleData?.status == 200 {
-//                        // 성공 alter 띄우기
-//                    }
-//
-//
-//
-//                case .failure(let error):
-//                    if error == 400 {
-//                        // 토큰 값 만료 -> 다시 로그인 하세요
-//
-//                    } else {
-//                        print("데이터 연결을 확인해주세요")
-//                    }
-//
-//                }
-//
-//            }
-//        }
+        if let questionIndex = questionData?.QuestionIdx,
+           let image = photoChoseButton.imageView?.image,
+           let contents = answerTextView.text,
+           let jwt = UserDefaults.standard.string(forKey: "accessToken") {
+            APIService.shared.postFeed(questionIndex, image, contents, jwt) { [self] result in
+                switch result {
+                case .success(let data):
+
+                    guard let loadData = data as? SimpleData else {
+                        return
+                    }
+
+                    self.simpleData = loadData
+                    if self.simpleData?.status == 200 {
+                        // 성공 alter 띄우기
+                        
+                        let nextStoryboard = UIStoryboard(name: "PopUp", bundle: nil)
+                        guard let popUpVC = nextStoryboard.instantiateViewController(identifier: "PopUpVC") as? PopUpVC else { return }
+                        
+                        popUpVC.questionMent = "오늘의 나를 기록했어요."
+                        popUpVC.explainMent = "나의 또다른 부분을 기록해볼까요?"
+                        popUpVC.modalPresentationStyle = .overCurrentContext
+                        popUpVC.modalTransitionStyle = .crossDissolve
+                        
+                        self.present(popUpVC, animated: true, completion: nil)
+                        popUpVC.setOneButton()
+                        // 팝업 띄우기
+                        NotificationCenter.default.addObserver(self, selector: #selector(backView(_:)), name: .popNavi, object: nil)
+                        // Observer 살리기
+                        
+                    }
+
+
+
+                case .failure(let error):
+                    if error == 400 {
+                        // 토큰 값 만료 -> 다시 로그인 하세요
+
+                    } else {
+                        print("데이터 연결을 확인해주세요")
+                    }
+
+                }
+
+            }
+        }
         
     }
     
