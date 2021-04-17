@@ -70,6 +70,14 @@ extension SettingListVC {
         
     }
     
+    @objc func backView(_ notification: Notification) {
+        // 뒤로 가는 함수
+        
+        self.navigationController?.popViewController(animated: true)
+        NotificationCenter.default.removeObserver(self, name: .popNavi, object: nil)
+        // 옵저버 제거
+    }
+    
 }
 
 extension SettingListVC: UITableViewDelegate {
@@ -80,7 +88,15 @@ extension SettingListVC: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 4 {
+        if indexPath.row == 1 {
+            //BackgroundSettingVC
+            
+            let storyboard = UIStoryboard.init(name: "Onboarding", bundle: nil)
+            guard let nextVC = storyboard.instantiateViewController(identifier: "BackgroundSettingVC") as? BackgroundSettingVC else {return}
+            self.navigationController?.pushViewController(nextVC, animated: true)
+            NotificationCenter.default.addObserver(self, selector: #selector(backView(_:)), name: .popNavi, object: nil)
+
+        } else if indexPath.row == 4 {
             
             guard let nextView = self.storyboard?.instantiateViewController(identifier: "TeamNarulVC") as? TeamNarulVC else {
                 return
