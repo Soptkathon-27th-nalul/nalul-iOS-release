@@ -13,6 +13,7 @@ class GalleryListVC: UIViewController {
     
     var titleName: String?
     var indexs: Int?
+    var feedData: [FeedData]?
     
     // MARK: IBOutlet
     
@@ -46,7 +47,13 @@ class GalleryListVC: UIViewController {
         
         super.viewDidLoad()
         setView()
+        updateFeed()
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        updateFeed()
     }
     
     override func viewDidLayoutSubviews() {
@@ -93,6 +100,29 @@ extension GalleryListVC {
         
     }
     
+    func updateFeed() {
+        
+        if let indexs = indexs,
+           let jwt = UserDefaults.standard.string(forKey: "accessToken") {
+            
+            APIService.shared.feedUpdate(indexs, jwt) { [self] result in
+                switch result {
+                case .success(let data):
+
+                    self.feedData = data
+                    galleryListCollectionView.reloadData()
+                    // Feed 새로고침
+                    
+                    
+                case .failure(let error):
+                    // 데이터 통신 확인해주세요
+                    print(error)
+                }
+                
+            }
+            
+        }
+    }
     
 }
 
@@ -134,6 +164,11 @@ extension GalleryListVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // 최소 단위 12개로 설정
         
+        if let feedData = feedData {
+            if feedData.count > 12 {
+                return feedData.count
+            }
+        }
         return 12
     }
     
@@ -141,6 +176,13 @@ extension GalleryListVC: UICollectionViewDataSource {
         
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GalleryListCell.identifier, for: indexPath) as? GalleryListCell else {
             return UICollectionViewCell()
+        }
+        
+        if let feedData = feedData {
+            if indexPath.row < feedData.count {
+                cell.setimage(imageURL: feedData[indexPath.row].photo)
+            }
+            
         }
         
         return cell
