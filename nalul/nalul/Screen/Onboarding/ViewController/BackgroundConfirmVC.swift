@@ -30,9 +30,25 @@ class BackgroundConfirmVC: UIViewController {
     
     @IBAction func okButtonDidTap(_ sender: Any) {
         
-        signup(uuid: UIDevice.current.identifierForVendor!.uuidString)
-        // 회원가입 시도
-        
+        if let view = self.presentingViewController {
+            if type(of: view) == MainNavigationVC.self {
+                let uniqueFileName: String = "UserBackgroundImage"
+                
+                if let image = backgroundImageView.image {
+                    
+                    ImageFileManager.shared.saveImage(image: image, name: uniqueFileName) { [weak self] onSuccess in
+                        self?.dismiss(animated: true) {
+                            NotificationCenter.default.post(name: .popNavi, object: nil)
+                        }
+                    }
+                } else {
+                    signup(uuid: UIDevice.current.identifierForVendor!.uuidString)
+                }
+            } else {
+                signup(uuid: UIDevice.current.identifierForVendor!.uuidString)
+            }
+            
+        }
     }
     
     

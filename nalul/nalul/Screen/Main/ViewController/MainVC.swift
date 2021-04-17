@@ -60,6 +60,16 @@ class MainVC: UIViewController {
         shakeButton.makeRounded(cornerRadius: nil)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        // 배경화면 설정
+        
+        let uniqueFileName: String = "UserBackgroundImage"
+        if let image = ImageFileManager.shared.getSavedImage(named: uniqueFileName) {
+            userBackImageView.image = image
+        } else {
+            userBackImageView.image = UIImage(named: "testBlackImage")
+        }
+    }
 
 }
 
@@ -71,13 +81,6 @@ extension MainVC {
     
     func setView() {
         // 뷰 관련 Style 설정
-        
-        let uniqueFileName: String = "UserBackgroundImage"
-        if let image = ImageFileManager.shared.getSavedImage(named: uniqueFileName) {
-            userBackImageView.image = image
-        } else {
-            userBackImageView.image = UIImage(named: "testBlackImage")
-        }
 
         subPopUpView.backgroundColor = .nalulDarkGray
         subPopUpView.alpha = 0.6
