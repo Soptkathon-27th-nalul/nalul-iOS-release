@@ -325,6 +325,9 @@
                                                     <constraint firstAttribute="width" secondItem="Uy6-bl-h7I" secondAttribute="height" multiplier="1:1" id="Qhh-hm-xEl"/>
                                                 </constraints>
                                                 <state key="normal" image="plusButton"/>
+                                                <connections>
+                                                    <action selector="photoChoseButtonDidTap:" destination="bWx-Xc-akB" eventType="touchUpInside" id="tka-Ua-8HZ"/>
+                                                </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="filmboxImage" translatesAutoresizingMaskIntoConstraints="NO" id="d5M-Rl-BeD">
                                                 <rect key="frame" x="14" y="17" width="386" height="20"/>
@@ -407,6 +410,9 @@
                                             <constraint firstAttribute="width" secondItem="VCE-Hz-nkh" secondAttribute="height" multiplier="1:1" id="7Dn-Kk-kDO"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="postButtonDidTap:" destination="bWx-Xc-akB" eventType="touchUpInside" id="BUF-Cc-Cvz"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vwx-AA-AOG">
                                         <rect key="frame" x="132" y="0.0" width="150" height="48"/>
@@ -460,9 +466,10 @@
                     </view>
                     <size key="freeformSize" width="414" height="1000"/>
                     <connections>
+                        <outlet property="answerBoxImage" destination="eUs-hX-RJP" id="ZIy-W5-la7"/>
                         <outlet property="answerTextView" destination="3Gc-FH-OO8" id="t77-gy-3ya"/>
-                        <outlet property="insertButton" destination="VCE-Hz-nkh" id="3Mn-Dw-k42"/>
                         <outlet property="photoChoseButton" destination="Uy6-bl-h7I" id="8fn-3M-3MF"/>
+                        <outlet property="postButton" destination="VCE-Hz-nkh" id="3Mn-Dw-k42"/>
                         <outlet property="postDateLabel" destination="hng-ml-mYg" id="VNV-uE-NXE"/>
                         <outlet property="questionLabel" destination="zbj-0J-AWG" id="hEm-QU-yJb"/>
                         <outlet property="scrollView" destination="ElZ-GK-HYl" id="aGE-Ad-BbF"/>

@@ -35,6 +35,14 @@ struct APIService {
         judgeObject(target, completion: completion)
 
     }
+    
+    func postFeed(_ questionIndex: Int, _ image: UIImage, _ contents: String, _ jwt: String, completion: @escaping (NetworkResult<Any>)->(Void)) {
+        
+        let target: APITarget = .postFeed(questionIndex: questionIndex, image: image, contents: contents, jwt: jwt)
+        judgeSimpleObject(target, completion: completion)
+
+    }
+
 
 }
 

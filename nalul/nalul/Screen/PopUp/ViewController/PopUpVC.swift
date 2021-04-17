@@ -15,6 +15,7 @@ class PopUpVC: UIViewController {
     var explainMent: String?
     let yesButton = UIButton()
     let noButton = UIButton()
+    var moment: Bool?
     
     
     // MARK: IBOutlet
@@ -42,6 +43,24 @@ class PopUpVC: UIViewController {
         yesButton.layer.cornerRadius = self.buttonView.frame.height/2
         noButton.layer.cornerRadius = self.buttonView.frame.height/2
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        // 뒷 배경 클릭 시 Event
+        
+        super.touchesBegan(touches, with: event)
+        if let touch = touches.first , touch.view == self.view {
+            if moment == true {
+                
+                yesButtonDidTap()
+                // '그래' 버튼을 누른 것과 동일하게 작동
+                
+            } else {
+                self.dismiss(animated: true, completion: nil)
+            }
+            
+            
+        }
+    }
 
 }
 
@@ -52,9 +71,6 @@ extension PopUpVC {
     // MARK: View Style Function
     
     func setView() {
-        
-        self.view.backgroundColor = .nalulBlack
-        self.view.backgroundColor?.withAlphaComponent(0.6)
         
         self.popUpView.backgroundColor = .nalulBlack
         self.popUpView.backgroundColor?.withAlphaComponent(0.8)
@@ -68,11 +84,7 @@ extension PopUpVC {
     // MARK: Label Style Function
     
     func setLabel() {
-        
-        questionMent = "기록을 삭제하시겠어요?"
-        explainMent = "삭제된 기록은 복구할 수 없습니다."
-        // Test 코드
-        
+       
         if let question = questionMent,
            let explain = explainMent {
             mentLabel.numberOfLines = 0
@@ -106,6 +118,7 @@ extension PopUpVC {
         yesButton.titleLabel?.font = .threeLight(size: 12)
         yesButton.setTitleColor(.white, for: .normal)
         yesButton.backgroundColor = .gray
+        yesButton.addTarget(self, action: #selector(yesButtonDidTap), for: .touchUpInside)
         
         self.buttonView.addSubview(yesButton)
         
@@ -121,6 +134,14 @@ extension PopUpVC {
             .isActive = true
         // Button의 넓이와 높이 주기
         
+        moment = true
+        
+    }
+    
+    @objc func yesButtonDidTap() {
+        self.dismiss(animated: true)
+        NotificationCenter.default.post(name: .popNavi, object: nil)
+        // Observer 보내기
     }
     
     // MARK: Make Two Button Function
@@ -160,6 +181,8 @@ extension PopUpVC {
             .isActive = true
         yesButton.heightAnchor.constraint(equalToConstant: self.buttonView.frame.height)
             .isActive = true
+        
+        moment = false
         
     }
 }
