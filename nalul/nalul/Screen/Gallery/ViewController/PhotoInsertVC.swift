@@ -87,6 +87,19 @@ class PhotoInsertVC: UIViewController {
     @IBAction func postButtonDidTap(_ sender: Any) {
         // 글 올리기 서버 연결
         
+        let nextStoryboard = UIStoryboard(name: "PopUp", bundle: nil)
+        guard let popUpVC = nextStoryboard.instantiateViewController(identifier: "PopUpVC") as? PopUpVC else { return }
+        
+        popUpVC.questionMent = "오늘의 나를 기록했어요."
+        popUpVC.explainMent = "나의 또다른 부분을 기록해볼까요?"
+        popUpVC.modalPresentationStyle = .overCurrentContext
+        popUpVC.modalTransitionStyle = .crossDissolve
+        
+        self.present(popUpVC, animated: true, completion: nil)
+        popUpVC.setOneButton()
+        // 팝업 띄우기
+        NotificationCenter.default.addObserver(self, selector: #selector(backView(_:)), name: .popNavi, object: nil)
+        // Observer 살리기
         
 //        if let questionIndex = questionData?.QuestionIdx,
 //           let image = photoChoseButton.imageView?.image,
@@ -264,6 +277,14 @@ extension PhotoInsertVC {
         
     }
     
+    @objc func backView(_ notification: Notification) {
+        // 뒤로 가는 함수
+        
+        self.navigationController?.popViewController(animated: true)
+        NotificationCenter.default.removeObserver(self, name: .popNavi, object: nil)
+        // 옵저버 제거
+    }
+    
 }
 
 // MARK: UITextFieldDelegate
@@ -318,4 +339,9 @@ extension PhotoInsertVC: UIImagePickerControllerDelegate, UINavigationController
         
         picker.dismiss(animated: true, completion: nil)
     }
+}
+
+extension Notification.Name {
+    // Observer 이름 등록
+    static let popNavi = Notification.Name("popNavi")
 }
