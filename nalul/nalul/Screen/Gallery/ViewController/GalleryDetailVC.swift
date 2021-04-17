@@ -13,7 +13,7 @@ class GalleryDetailVC: UIViewController {
     
     var titleName: String?
     var postDate: String?
-    var userPhoto: UIImage?
+    var userPhoto: String?
     var question: String?
     var answer: String?
     
@@ -30,6 +30,9 @@ class GalleryDetailVC: UIViewController {
     
     // MARK: IBAction
     
+    @IBAction func backButtonDidTap(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     
     // MARK: Life Cycle Part
     
@@ -54,7 +57,7 @@ extension GalleryDetailVC {
     func setView() {
         
         if let userPhoto = userPhoto {
-            userImageView.image = userPhoto
+            userImageView.setImage(from: userPhoto)
         } else {
             userImageView.image = UIImage(named: "miniTest")
         }

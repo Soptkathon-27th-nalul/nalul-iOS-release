@@ -188,5 +188,23 @@ extension GalleryListVC: UICollectionViewDataSource {
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let nextVC = self.storyboard?.instantiateViewController(identifier: "GalleryDetailVC") as? GalleryDetailVC else {
+            return
+        }
+        nextVC.titleName = titleName
+        if let feedData = feedData {
+            if indexPath.row < feedData.count {
+                self.navigationController?.pushViewController(nextVC, animated: true)
+                nextVC.postDate = feedData[indexPath.row].createdAt
+                nextVC.userPhoto = feedData[indexPath.row].photo
+                nextVC.question = feedData[indexPath.row].Question
+                nextVC.answer = feedData[indexPath.row].text
+            }
+            
+        }
+        
+    }
+    
     
 }
