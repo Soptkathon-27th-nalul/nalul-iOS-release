@@ -120,6 +120,10 @@ extension GalleryListVC {
                 
             }
             
+        } else {
+            // 토큰이 만료되었거나 없는 것
+            
+            print("앱 다시 실행해주세요 하고 다시 켜기")
         }
     }
     

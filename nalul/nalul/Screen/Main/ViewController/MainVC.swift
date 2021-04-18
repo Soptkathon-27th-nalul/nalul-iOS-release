@@ -12,7 +12,7 @@ class MainVC: UIViewController {
     // MARK: Variable Part
     
     var partNameArray: [String] = ["left\neye","left\nhand","mole","right\nhand","ear","lips","cheek","right\neye","nose"]
-    var shuffleData: ShuffleData?
+    var shuffleData: [String]?
     
     // MARK: IBOutlet
     
@@ -57,9 +57,10 @@ class MainVC: UIViewController {
                 case .success(let data):
                     // 셔플 성공
                     
-                    shuffleData = data
-                //                    homeAlbumCollectionView.reloadData()
-                
+                    shuffleData = data.toArray()
+                    // 배열로 데이터 받아오기
+                    homeAlbumCollectionView.reloadData()
+                    
                 case .failure(let error):
                     
                     if error == 400 {
@@ -106,7 +107,7 @@ class MainVC: UIViewController {
             userBackImageView.image = UIImage(named: "testBlackImage")
         }
     }
-
+    
 }
 
 // MARK: Extension
@@ -249,11 +250,17 @@ extension MainVC: UICollectionViewDataSource {
         
         if let data = shuffleData {
             // 표시 할 데이터가 있을 때
-            
+            if data[indexPath.row] != "" {
+                cell.setimage(imageURL: data[indexPath.row])
+            } else {
+                cell.configure(name: partNameArray[indexPath.row])
+                cell.userImage.image = nil
+            }
         } else {
             // 데이터가 없을 때
             
             cell.configure(name: partNameArray[indexPath.row])
+            cell.userImage.image = nil
         }
         
         return cell

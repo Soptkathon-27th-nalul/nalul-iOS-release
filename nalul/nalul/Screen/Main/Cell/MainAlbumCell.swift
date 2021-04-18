@@ -30,4 +30,9 @@ class MainAlbumCell: UICollectionViewCell {
     func configure(name: String) {
         self.partNameLabel.text = name
     }
+    
+    func setimage(imageURL: String) {
+        self.partNameLabel.text = ""
+        userImage.setImage(from: imageURL)
+    }
 }
