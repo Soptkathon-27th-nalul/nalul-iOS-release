@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MessageUI
 
 class SettingListVC: UIViewController {
     
@@ -96,6 +97,17 @@ extension SettingListVC: UITableViewDelegate {
             self.navigationController?.pushViewController(nextVC, animated: true)
             NotificationCenter.default.addObserver(self, selector: #selector(backView(_:)), name: .popNavi, object: nil)
 
+        } else if indexPath.row == 2 {
+            // 문의 메일 보내기
+            
+            
+        } else if indexPath.row == 3 {
+            // 이용약관 페이지로 이동
+            
+            if let url = URL(string: "https://www.notion.so/suzieep/4037f79130984665ad56bdfa58db10c8") {
+                UIApplication.shared.open(url, options: [:])
+            }
+            
         } else if indexPath.row == 4 {
             
             guard let nextView = self.storyboard?.instantiateViewController(identifier: "TeamNarulVC") as? TeamNarulVC else {
