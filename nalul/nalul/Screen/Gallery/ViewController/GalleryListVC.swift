@@ -47,7 +47,6 @@ class GalleryListVC: UIViewController {
         
         super.viewDidLoad()
         setView()
-        updateFeed()
         
     }
     
@@ -126,6 +125,8 @@ extension GalleryListVC {
     
 }
 
+// MARK: UICollectionViewDelegateFlowLayout
+
 extension GalleryListVC: UICollectionViewDelegateFlowLayout {
     // CollectionView 크기 잡기
     
@@ -158,6 +159,8 @@ extension GalleryListVC: UICollectionViewDelegateFlowLayout {
     
 }
 
+// MARK: UICollectionViewDataSource
+
 extension GalleryListVC: UICollectionViewDataSource {
     // CollectionView 데이터 넣기
     
@@ -181,6 +184,8 @@ extension GalleryListVC: UICollectionViewDataSource {
         if let feedData = feedData {
             if indexPath.row < feedData.count {
                 cell.setimage(imageURL: feedData[indexPath.row].photo)
+            } else {
+                cell.galleryImageView.image = nil
             }
             
         }
