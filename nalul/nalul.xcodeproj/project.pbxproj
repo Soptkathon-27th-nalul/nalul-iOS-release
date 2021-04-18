@@ -40,6 +40,8 @@
 		9B7228E8262813AA00EC2796 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7228E7262813AA00EC2796 /* SplashVC.swift */; };
 		9B7228EB2628141700EC2796 /* LoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7228EA2628141700EC2796 /* LoginData.swift */; };
 		9B7228F426282CBD00EC2796 /* QuestionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7228F326282CBD00EC2796 /* QuestionData.swift */; };
+		9B7228F8262B446400EC2796 /* FeedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7228F7262B446400EC2796 /* FeedData.swift */; };
+		9B7228FB262B474100EC2796 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7228FA262B474100EC2796 /* UIImageView+Extension.swift */; };
 		9B7E3A06260F36A80086535C /* PopUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B7E3A05260F36A80086535C /* PopUp.storyboard */; };
 		9B7E3A0A260F36B50086535C /* PopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7E3A09260F36B40086535C /* PopUpVC.swift */; };
 		9B8AD92C260B45650082D9D3 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8AD92B260B45650082D9D3 /* MainVC.swift */; };
@@ -106,6 +108,8 @@
 		9B7228E7262813AA00EC2796 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		9B7228EA2628141700EC2796 /* LoginData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginData.swift; sourceTree = "<group>"; };
 		9B7228F326282CBD00EC2796 /* QuestionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionData.swift; sourceTree = "<group>"; };
+		9B7228F7262B446400EC2796 /* FeedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedData.swift; sourceTree = "<group>"; };
+		9B7228FA262B474100EC2796 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		9B7E3A05260F36A80086535C /* PopUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PopUp.storyboard; sourceTree = "<group>"; };
 		9B7E3A09260F36B40086535C /* PopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpVC.swift; sourceTree = "<group>"; };
 		9B8AD92B260B45650082D9D3 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -265,6 +269,7 @@
 				9B071B57260C941000CCECF4 /* UIScreen+Extension.swift */,
 				9BD010F2261F606100A30F7C /* UIDate+Extension.swift */,
 				9BD0111E262185B400A30F7C /* UIImage+Extension.swift */,
+				9B7228FA262B474100EC2796 /* UIImageView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -276,6 +281,7 @@
 				9B7228DB2626DB0700EC2796 /* SimpleData.swift */,
 				9B7228EA2628141700EC2796 /* LoginData.swift */,
 				9B7228F326282CBD00EC2796 /* QuestionData.swift */,
+				9B7228F7262B446400EC2796 /* FeedData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -616,6 +622,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B7228F8262B446400EC2796 /* FeedData.swift in Sources */,
 				9B7228D92626DAE500EC2796 /* GenericResponse.swift in Sources */,
 				9B7228D32626D17700EC2796 /* APIService.swift in Sources */,
 				9B9326D925FCBF3A005D06E2 /* MainStartVC.swift in Sources */,
@@ -645,6 +652,7 @@
 				9B071B58260C941000CCECF4 /* UIScreen+Extension.swift in Sources */,
 				9BCABC4C26031DA0002B4D29 /* MainStartBlockCell.swift in Sources */,
 				9B9AA19E2603427F00B03862 /* UITextView+Extension.swift in Sources */,
+				9B7228FB262B474100EC2796 /* UIImageView+Extension.swift in Sources */,
 				9B9326C325FCA33D005D06E2 /* UIFont+Extension.swift in Sources */,
 				9B7228C42625F02E00EC2796 /* TeamNarulCell.swift in Sources */,
 				9B7228D02626D15D00EC2796 /* NetworkResult.swift in Sources */,
@@ -732,7 +740,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -787,7 +795,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

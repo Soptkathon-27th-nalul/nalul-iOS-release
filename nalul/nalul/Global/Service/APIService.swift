@@ -42,6 +42,13 @@ struct APIService {
         judgeSimpleObject(target, completion: completion)
 
     }
+    
+    func feedUpdate(_ category: Int, _ jwt: String, completion: @escaping (NetworkResult<[FeedData]>)->(Void)) {
+        
+        let target: APITarget = .categoryFeed(category: category, jwt: jwt)
+        judgeObject(target, completion: completion)
+
+    }
 
 
 }

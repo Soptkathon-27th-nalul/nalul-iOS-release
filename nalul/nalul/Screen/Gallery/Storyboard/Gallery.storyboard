@@ -152,7 +152,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IP3-e2-E99">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="759.5"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="miniTest" translatesAutoresizingMaskIntoConstraints="NO" id="FRO-Lb-qHa">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="miniTest" translatesAutoresizingMaskIntoConstraints="NO" id="FRO-Lb-qHa">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="FRO-Lb-qHa" secondAttribute="height" multiplier="1:1" id="zL0-nU-Qd4"/>
@@ -227,6 +227,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y8W-dD-jL7">
                                         <rect key="frame" x="12" y="0.0" width="27" height="48"/>
                                         <state key="normal" image="btnBack"/>
+                                        <connections>
+                                            <action selector="backButtonDidTap:" destination="PVs-dF-7Sd" eventType="touchUpInside" id="Cj5-9Q-fzc"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTu-dl-cKj">
                                         <rect key="frame" x="346" y="0.0" width="48" height="48"/>
