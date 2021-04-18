@@ -29,7 +29,14 @@ struct APIService {
 
     }
     
-    func todayQuestion(_ category: Int, _ jwt: String, completion: @escaping (NetworkResult<QuestionData>)->(Void)) {
+    func shuffle(_ jwt: String, completion: @escaping (NetworkResult<ShuffleData>)->(Void)) {
+        
+        let target: APITarget = .shuffleMain(jwt: jwt)
+        judgeObject(target, completion: completion)
+
+    }
+    
+   func todayQuestion(_ category: Int, _ jwt: String, completion: @escaping (NetworkResult<QuestionData>)->(Void)) {
         
         let target: APITarget = .todayQuestion(category: category, jwt: jwt)
         judgeObject(target, completion: completion)
