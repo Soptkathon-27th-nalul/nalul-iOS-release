@@ -142,6 +142,12 @@ extension SettingListVC: UITableViewDelegate {
             }
             
             self.navigationController?.pushViewController(nextView, animated: true)
+        } else if indexPath.row == 5 {
+            // 오픈소스 보여주기
+            
+            if let url = URL(string: "https://www.notion.so/suzieep/eace98fb0bb440cab3c6c5bb965c6ee5") {
+                UIApplication.shared.open(url, options: [:])
+            }
         }
     }
 }
