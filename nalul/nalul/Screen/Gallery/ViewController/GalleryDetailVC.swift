@@ -16,6 +16,7 @@ class GalleryDetailVC: UIViewController {
     var userPhoto: String?
     var question: String?
     var answer: String?
+    var deleteIndex: Int?
     
     // MARK: IBOutlet
     
@@ -45,8 +46,13 @@ class GalleryDetailVC: UIViewController {
         popUpVC.modalPresentationStyle = .overCurrentContext
         popUpVC.modalTransitionStyle = .crossDissolve
         
+        if let deleteIndex =  deleteIndex {
+            popUpVC.deleteIndex = deleteIndex
+        }
+            
         self.present(popUpVC, animated: true, completion: nil)
         popUpVC.setTwoButton()
+        NotificationCenter.default.addObserver(self, selector: #selector(backView(_:)), name: .popNavi, object: nil)
     }
     
     // MARK: Life Cycle Part
@@ -127,6 +133,14 @@ extension GalleryDetailVC {
         deleteButton.tintColor = .white
         deleteButton.setBorder(borderColor: .white, borderWidth: 1)
         deleteButton.makeRounded(cornerRadius: nil)
+    }
+    
+    @objc func backView(_ notification: Notification) {
+        // 뒤로 가는 함수
+        
+        self.navigationController?.popViewController(animated: true)
+        NotificationCenter.default.removeObserver(self, name: .popNavi, object: nil)
+        // 옵저버 제거
     }
     
 }

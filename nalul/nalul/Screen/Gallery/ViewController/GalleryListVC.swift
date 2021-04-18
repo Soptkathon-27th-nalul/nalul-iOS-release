@@ -205,6 +205,7 @@ extension GalleryListVC: UICollectionViewDataSource {
                 nextVC.userPhoto = feedData[indexPath.row].photo
                 nextVC.question = feedData[indexPath.row].Question
                 nextVC.answer = feedData[indexPath.row].text
+                nextVC.deleteIndex = feedData[indexPath.row].PostIdx
             }
             
         }
