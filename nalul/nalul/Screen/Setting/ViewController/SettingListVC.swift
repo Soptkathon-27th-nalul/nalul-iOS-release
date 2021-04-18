@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MessageUI
 
 class SettingListVC: UIViewController {
     
@@ -78,6 +79,15 @@ extension SettingListVC {
         // 옵저버 제거
     }
     
+    func showSendMailErrorAlert() {
+        
+        let sendMailErrorAlert = UIAlertController(title: "메일 전송 실패", message: "아이폰 - Mail 설정을 확인해주세요.", preferredStyle: .alert)
+        let confirmAction = UIAlertAction(title: "확인", style: .default)
+        
+        sendMailErrorAlert.addAction(confirmAction)
+        self.present(sendMailErrorAlert, animated: true, completion: nil)
+    }
+    
 }
 
 extension SettingListVC: UITableViewDelegate {
@@ -96,6 +106,35 @@ extension SettingListVC: UITableViewDelegate {
             self.navigationController?.pushViewController(nextVC, animated: true)
             NotificationCenter.default.addObserver(self, selector: #selector(backView(_:)), name: .popNavi, object: nil)
 
+        } else if indexPath.row == 2 {
+            // 문의 메일 보내기
+            
+            if MFMailComposeViewController.canSendMail() {
+                // 메일 보내기가 가능한지 확인
+                        
+                        let compseVC = MFMailComposeViewController()
+                        compseVC.mailComposeDelegate = self
+                        
+                        compseVC.setToRecipients(["shorryshu@gmail.com"])
+                        compseVC.setSubject("'나를'팀에게 문의하기")
+//                        compseVC.setMessageBody("", isHTML: false)
+                        
+                        self.present(compseVC, animated: true, completion: nil)
+                        
+                    }
+                    else {
+                        // 불가능 시 alter으로 보여주기
+                        
+                        self.showSendMailErrorAlert()
+                    }
+            
+        } else if indexPath.row == 3 {
+            // 이용약관 페이지로 이동
+            
+            if let url = URL(string: "https://www.notion.so/suzieep/4037f79130984665ad56bdfa58db10c8") {
+                UIApplication.shared.open(url, options: [:])
+            }
+            
         } else if indexPath.row == 4 {
             
             guard let nextView = self.storyboard?.instantiateViewController(identifier: "TeamNarulVC") as? TeamNarulVC else {
@@ -103,6 +142,12 @@ extension SettingListVC: UITableViewDelegate {
             }
             
             self.navigationController?.pushViewController(nextView, animated: true)
+        } else if indexPath.row == 5 {
+            // 오픈소스 보여주기
+            
+            if let url = URL(string: "https://www.notion.so/suzieep/eace98fb0bb440cab3c6c5bb965c6ee5") {
+                UIApplication.shared.open(url, options: [:])
+            }
         }
     }
 }
@@ -132,4 +177,11 @@ extension SettingListVC: UITableViewDataSource {
     
     
     
+}
+
+extension SettingListVC: MFMailComposeViewControllerDelegate {
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+            controller.dismiss(animated: true, completion: nil)
+        }
 }

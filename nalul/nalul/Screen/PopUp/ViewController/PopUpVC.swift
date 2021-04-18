@@ -74,8 +74,6 @@ extension PopUpVC {
     
     func setView() {
         
-        self.popUpView.backgroundColor = .nalulBlack
-        self.popUpView.backgroundColor?.withAlphaComponent(0.8)
         self.popUpView.setRounded(radius: 32.5)
         self.popUpView.setBorder(borderColor: .nalulLightGray, borderWidth: 1)
         
