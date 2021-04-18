@@ -34,6 +34,21 @@ class GalleryDetailVC: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    
+    @IBAction func deleteButtonDidTap(_ sender: Any) {
+        
+        let nextStoryboard = UIStoryboard(name: "PopUp", bundle: nil)
+        guard let popUpVC = nextStoryboard.instantiateViewController(identifier: "PopUpVC") as? PopUpVC else { return }
+        
+        popUpVC.questionMent = "기록을 삭제하시겠어요?"
+        popUpVC.explainMent = "삭제된 기록은 복구할 수 없습니다."
+        popUpVC.modalPresentationStyle = .overCurrentContext
+        popUpVC.modalTransitionStyle = .crossDissolve
+        
+        self.present(popUpVC, animated: true, completion: nil)
+        popUpVC.setTwoButton()
+    }
+    
     // MARK: Life Cycle Part
     
     override func viewDidLoad() {

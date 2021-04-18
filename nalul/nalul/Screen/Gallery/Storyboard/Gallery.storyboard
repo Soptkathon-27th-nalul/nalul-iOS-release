@@ -237,6 +237,9 @@
                                             <constraint firstAttribute="width" secondItem="jTu-dl-cKj" secondAttribute="height" multiplier="1:1" id="uGj-aA-NQC"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="deleteButtonDidTap:" destination="PVs-dF-7Sd" eventType="touchUpInside" id="8lM-Nh-anc"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCA-q8-kQl">
                                         <rect key="frame" x="132" y="0.0" width="150" height="48"/>
