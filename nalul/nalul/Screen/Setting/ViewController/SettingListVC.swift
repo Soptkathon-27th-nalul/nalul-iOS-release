@@ -79,6 +79,15 @@ extension SettingListVC {
         // 옵저버 제거
     }
     
+    func showSendMailErrorAlert() {
+        
+        let sendMailErrorAlert = UIAlertController(title: "메일 전송 실패", message: "아이폰 - Mail 설정을 확인해주세요.", preferredStyle: .alert)
+        let confirmAction = UIAlertAction(title: "확인", style: .default)
+        
+        sendMailErrorAlert.addAction(confirmAction)
+        self.present(sendMailErrorAlert, animated: true, completion: nil)
+    }
+    
 }
 
 extension SettingListVC: UITableViewDelegate {
@@ -100,6 +109,24 @@ extension SettingListVC: UITableViewDelegate {
         } else if indexPath.row == 2 {
             // 문의 메일 보내기
             
+            if MFMailComposeViewController.canSendMail() {
+                // 메일 보내기가 가능한지 확인
+                        
+                        let compseVC = MFMailComposeViewController()
+                        compseVC.mailComposeDelegate = self
+                        
+                        compseVC.setToRecipients(["shorryshu@gmail.com"])
+                        compseVC.setSubject("'나를'팀에게 문의하기")
+//                        compseVC.setMessageBody("", isHTML: false)
+                        
+                        self.present(compseVC, animated: true, completion: nil)
+                        
+                    }
+                    else {
+                        // 불가능 시 alter으로 보여주기
+                        
+                        self.showSendMailErrorAlert()
+                    }
             
         } else if indexPath.row == 3 {
             // 이용약관 페이지로 이동
@@ -144,4 +171,11 @@ extension SettingListVC: UITableViewDataSource {
     
     
     
+}
+
+extension SettingListVC: MFMailComposeViewControllerDelegate {
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+            controller.dismiss(animated: true, completion: nil)
+        }
 }
