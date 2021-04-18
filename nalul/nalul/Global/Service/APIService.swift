@@ -49,7 +49,12 @@ struct APIService {
         judgeObject(target, completion: completion)
 
     }
-
+    
+    func deleteFeed(_ postIdx: Int, _ jwt: String, completion: @escaping (NetworkResult<Any>)->(Void)) {
+        
+        let target: APITarget = .deleteFeed(postIndex: postIdx, jwt: jwt)
+        judgeSimpleObject(target, completion: completion)
+    }
 
 }
 
