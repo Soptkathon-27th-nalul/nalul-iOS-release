@@ -56,7 +56,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ti0-hp-pig"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.60483303449011794" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="omN-hD-HNd" firstAttribute="centerY" secondItem="0iQ-Gv-ePk" secondAttribute="centerY" constant="-80" id="eNw-QZ-mgB"/>
                             <constraint firstItem="ti0-hp-pig" firstAttribute="trailing" secondItem="omN-hD-HNd" secondAttribute="trailing" constant="27" id="jc0-OU-4mb"/>

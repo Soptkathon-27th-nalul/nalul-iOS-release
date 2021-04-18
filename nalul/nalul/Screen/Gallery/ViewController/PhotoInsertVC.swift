@@ -8,23 +8,133 @@
 import UIKit
 
 class PhotoInsertVC: UIViewController {
-
+    
     // MARK: Variable Part
     
     var titleName: String?
-    var question: String?
+    var categoryIndex: Int?
+    var questionData: QuestionData?
+    var simpleData: SimpleData?
+    var postImage: UIImage?
     
     // MARK: IBOutlet
     
-    @IBOutlet weak var insertButton: UIButton!
+    @IBOutlet weak var postButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var postDateLabel: UILabel!
     @IBOutlet weak var photoChoseButton: UIButton!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var answerTextView: UITextView!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var answerBoxImage: UIImageView!
     
     // MARK: IBAction
+    
+    @IBAction func backButtonDidTap(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    
+    @IBAction func photoChoseButtonDidTap(_ sender: Any) {
+        
+        let optionMenu = UIAlertController(title: nil, message: "게시물 사진 등록하기", preferredStyle: .actionSheet)
+
+        let deleteAction = UIAlertAction(title: "카메라 촬영", style: .default, handler: {
+            // 카메라 선택 시 action
+            
+            (alert: UIAlertAction!) -> Void in
+            
+            let vc = UIImagePickerController()
+            vc.sourceType = .camera
+            vc.cameraDevice = .front
+            vc.delegate = self
+            vc.mediaTypes = ["public.image"]
+            vc.allowsEditing = true
+            self.present(vc, animated: true, completion: nil)
+            
+        })
+        
+        let saveAction = UIAlertAction(title: "앨범에서 사진 선택하기", style: .default, handler: {
+            // 갤러시 선택 시 action
+            
+            (alert: UIAlertAction!) -> Void in
+            
+            let vc = UIImagePickerController()
+            vc.sourceType = .photoLibrary
+            vc.delegate = self
+            vc.mediaTypes = ["public.image"]
+            vc.allowsEditing = true
+            self.present(vc, animated: true, completion: nil)
+        })
+        
+        
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: {
+            
+            (alert: UIAlertAction!) -> Void in
+            
+        })
+        
+        //action sheet에 옵션 추가.
+        
+        optionMenu.addAction(deleteAction)
+        optionMenu.addAction(saveAction)
+        optionMenu.addAction(cancelAction)
+
+        self.present(optionMenu, animated: true, completion: nil)
+    }
+    
+    @IBAction func postButtonDidTap(_ sender: Any) {
+        // 글 올리기 서버 연결
+        
+        if let questionIndex = questionData?.QuestionIdx,
+           let image = photoChoseButton.imageView?.image,
+           let contents = answerTextView.text,
+           let jwt = UserDefaults.standard.string(forKey: "accessToken") {
+            APIService.shared.postFeed(questionIndex, image, contents, jwt) { [self] result in
+                switch result {
+                case .success(let data):
+
+                    guard let loadData = data as? SimpleData else {
+                        return
+                    }
+
+                    self.simpleData = loadData
+                    if self.simpleData?.status == 200 {
+                        // 성공 alter 띄우기
+                        
+                        let nextStoryboard = UIStoryboard(name: "PopUp", bundle: nil)
+                        guard let popUpVC = nextStoryboard.instantiateViewController(identifier: "PopUpVC") as? PopUpVC else { return }
+                        
+                        popUpVC.questionMent = "오늘의 나를 기록했어요."
+                        popUpVC.explainMent = "나의 또다른 부분을 기록해볼까요?"
+                        popUpVC.modalPresentationStyle = .overCurrentContext
+                        popUpVC.modalTransitionStyle = .crossDissolve
+                        
+                        self.present(popUpVC, animated: true, completion: nil)
+                        popUpVC.setOneButton()
+                        // 팝업 띄우기
+                        NotificationCenter.default.addObserver(self, selector: #selector(backView(_:)), name: .popNavi, object: nil)
+                        // Observer 살리기
+                        
+                    }
+
+
+
+                case .failure(let error):
+                    if error == 400 {
+                        // 토큰 값 만료 -> 다시 로그인 하세요
+
+                    } else {
+                        print("데이터 연결을 확인해주세요")
+                    }
+
+                }
+
+            }
+        }
+        
+    }
     
     // MARK: Life Cycle Part
     
@@ -65,11 +175,8 @@ extension PhotoInsertVC {
         postDateLabel.font = UIFont.momFont(size: 16)
         postDateLabel.textColor = .white
         
-        if let question = question {
-            questionLabel.text = question
-        } else {
-            questionLabel.text = "오늘 당신의 눈은 어떤 색인가요?"
-        }
+        getQuestion()
+        // 질문 받아오기
         
         questionLabel.font = UIFont.threeLight(size: 15)
         questionLabel.textColor = .white
@@ -94,25 +201,25 @@ extension PhotoInsertVC {
     
     func setButton() {
         
-        insertButton.setTitle("등록", for: .normal)
-        insertButton.titleLabel?.font = UIFont.threeLight(size: 14)
-        insertButton.tintColor = .white
-        insertButton.setBorder(borderColor: .white, borderWidth: 1)
-        insertButton.makeRounded(cornerRadius: nil)
+        postButton.setTitle("등록", for: .normal)
+        postButton.titleLabel?.font = UIFont.threeLight(size: 14)
+        postButton.tintColor = .white
+        postButton.setBorder(borderColor: .white, borderWidth: 1)
+        postButton.makeRounded(cornerRadius: nil)
     }
     
     @objc func touchTextView(notification: NSNotification) {
         // 스크롤 위로 올리기
         
         scrollView.setContentOffset(CGPoint(x: 0, y: self.answerTextView.frame.height+100), animated: true)
-
+        
     }
     
     @objc func touchDownView() {
         // 스크롤 다시 내리기
         
         scrollView.scrollRectToVisible(CGRect(x: 0, y: 0, width: 1, height: 1), animated: true)
-
+        
     }
     
     func scrollViewTap() {
@@ -135,11 +242,48 @@ extension PhotoInsertVC {
         
         if textView.text == "대답을 입력해주세요." {
             textView.text = ""
-            insertButton.isEnabled = true
         } else if textView.text == "" {
             textView.text = "대답을 입력해주세요."
-            insertButton.isEnabled = false
+            postButton.isEnabled = false
+        } else {
+            if postImage != nil {
+                postButton.isEnabled = true
+            }
         }
+    }
+    
+    func getQuestion() {
+        
+        if let categoryIndex = categoryIndex,
+           let jwt = UserDefaults.standard.string(forKey: "accessToken") {
+            
+            APIService.shared.todayQuestion(categoryIndex, jwt) { [self] result in
+                switch result {
+                case .success(let data):
+                    // 질문 받아오기 완료
+    
+                    self.questionData = data
+                    if let question = questionData?.text {
+                        questionLabel.text = question
+                    }
+
+                case .failure(_):
+                    
+                    questionLabel.text = "오늘 당신의 눈은 어떤 색인가요?"
+                    print("데이터 연결을 확인해주세요")
+                }
+                
+            }
+        }
+        
+    }
+    
+    @objc func backView(_ notification: Notification) {
+        // 뒤로 가는 함수
+        
+        self.navigationController?.popViewController(animated: true)
+        NotificationCenter.default.removeObserver(self, name: .popNavi, object: nil)
+        // 옵저버 제거
     }
     
 }
@@ -157,4 +301,48 @@ extension PhotoInsertVC: UITextViewDelegate {
         textViewPlaceHolder(textView: textView)
     }
     
+}
+
+// MARK: UIImagePickerControllerDelegate, UINavigationControllerDelegate
+
+extension PhotoInsertVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
+            
+            // 수정된 이미지가 있을 경우
+            postImage = image.convertToGrayScale()
+            
+        } else if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerOriginalImage")] as? UIImage {
+            
+            // 오리지널 이미지가 있을 경우
+            postImage = image.convertToGrayScale()
+        }
+        
+        photoChoseButton.setImage(postImage, for: .normal)
+        
+        if let text = answerTextView.text {
+            if text != "대답을 입력해주세요." {
+                // 이미 대답이 들어있다면
+                
+                postButton.isEnabled = true
+                // 등록 버튼 활성화
+            }
+        }
+        answerBoxImage.image = UIImage(named: "imgInsertAsset")
+        
+        picker.dismiss(animated: true, completion: nil)
+        
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        
+        picker.dismiss(animated: true, completion: nil)
+    }
+}
+
+extension Notification.Name {
+    // Observer 이름 등록
+    static let popNavi = Notification.Name("popNavi")
 }

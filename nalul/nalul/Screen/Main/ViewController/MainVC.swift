@@ -11,7 +11,7 @@ class MainVC: UIViewController {
     
     // MARK: Variable Part
     
-    var partNameArray: [String] = ["left\neye","left\nhand","eye\nbrow","right\nhand","ear","lips","cheek","right\neye","nose"]
+    var partNameArray: [String] = ["left\neye","left\nhand","mole","right\nhand","ear","lips","cheek","right\neye","nose"]
     var shuffleData: ShuffleData?
     
     // MARK: IBOutlet
@@ -96,7 +96,17 @@ class MainVC: UIViewController {
         shakeButton.makeRounded(cornerRadius: nil)
     }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        // 배경화면 설정
+        
+        let uniqueFileName: String = "UserBackgroundImage"
+        if let image = ImageFileManager.shared.getSavedImage(named: uniqueFileName) {
+            userBackImageView.image = image
+        } else {
+            userBackImageView.image = UIImage(named: "testBlackImage")
+        }
+    }
+
 }
 
 // MARK: Extension
@@ -107,13 +117,6 @@ extension MainVC {
     
     func setView() {
         // 뷰 관련 Style 설정
-        
-        let uniqueFileName: String = "UserBackgroundImage"
-        if let image = ImageFileManager.shared.getSavedImage(named: uniqueFileName) {
-            userBackImageView.image = image
-        } else {
-            userBackImageView.image = UIImage(named: "testBlackImage")
-        }
         
         subPopUpView.backgroundColor = .nalulDarkGray
         subPopUpView.alpha = 0.6
@@ -254,6 +257,24 @@ extension MainVC: UICollectionViewDataSource {
         }
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // cell 클릭 시
+        
+        let storyboard = UIStoryboard.init(name: "Gallery", bundle: nil)
+        guard let galleryTab = storyboard.instantiateViewController(identifier: "GalleryListVC") as? GalleryListVC else {
+            return
+        }
+        
+        let titleNameArray: [String] = ["왼쪽 눈","왼쪽 손","점","오른쪽 손","귀","입술","볼","오른쪽 눈","코"]
+        
+        galleryTab.titleName = titleNameArray[indexPath.row]
+        galleryTab.indexs = indexPath.row + 1
+        
+        self.navigationController?.pushViewController(galleryTab, animated: true)
+        // 갤러리로 이동
+        
     }
     
     

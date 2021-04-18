@@ -35,6 +35,33 @@ struct APIService {
         judgeObject(target, completion: completion)
 
     }
+    
+   func todayQuestion(_ category: Int, _ jwt: String, completion: @escaping (NetworkResult<QuestionData>)->(Void)) {
+        
+        let target: APITarget = .todayQuestion(category: category, jwt: jwt)
+        judgeObject(target, completion: completion)
+
+    }
+    
+    func postFeed(_ questionIndex: Int, _ image: UIImage, _ contents: String, _ jwt: String, completion: @escaping (NetworkResult<Any>)->(Void)) {
+        
+        let target: APITarget = .postFeed(questionIndex: questionIndex, image: image, contents: contents, jwt: jwt)
+        judgeSimpleObject(target, completion: completion)
+
+    }
+    
+    func feedUpdate(_ category: Int, _ jwt: String, completion: @escaping (NetworkResult<[FeedData]>)->(Void)) {
+        
+        let target: APITarget = .categoryFeed(category: category, jwt: jwt)
+        judgeObject(target, completion: completion)
+
+    }
+    
+    func deleteFeed(_ postIdx: Int, _ jwt: String, completion: @escaping (NetworkResult<Any>)->(Void)) {
+        
+        let target: APITarget = .deleteFeed(postIndex: postIdx, jwt: jwt)
+        judgeSimpleObject(target, completion: completion)
+    }
 
 }
 

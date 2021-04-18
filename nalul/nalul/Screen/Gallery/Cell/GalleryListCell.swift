@@ -25,4 +25,8 @@ class GalleryListCell: UICollectionViewCell {
     
     // MARK: Function
     
+    func setimage(imageURL: String) {
+        galleryImageView.setImage(from: imageURL)
+    }
+    
 }

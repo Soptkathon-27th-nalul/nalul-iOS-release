@@ -8,13 +8,16 @@
 import UIKit
 
 class PopUpVC: UIViewController {
-
+    
     // MARK: Variable Part
     
     var questionMent: String?
     var explainMent: String?
     let yesButton = UIButton()
     let noButton = UIButton()
+    var moment: Bool?
+    var deleteIndex: Int?
+    var simpleData: SimpleData?
     
     
     // MARK: IBOutlet
@@ -42,7 +45,25 @@ class PopUpVC: UIViewController {
         yesButton.layer.cornerRadius = self.buttonView.frame.height/2
         noButton.layer.cornerRadius = self.buttonView.frame.height/2
     }
-
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        // 뒷 배경 클릭 시 Event
+        
+        super.touchesBegan(touches, with: event)
+        if let touch = touches.first , touch.view == self.view {
+            if moment == true {
+                
+                postYesButtonDidTap()
+                // '그래' 버튼을 누른 것과 동일하게 작동
+                
+            } else {
+                self.dismiss(animated: true, completion: nil)
+            }
+            
+            
+        }
+    }
+    
 }
 
 // MARK: Extension
@@ -52,9 +73,6 @@ extension PopUpVC {
     // MARK: View Style Function
     
     func setView() {
-        
-        self.view.backgroundColor = .nalulBlack
-        self.view.backgroundColor?.withAlphaComponent(0.6)
         
         self.popUpView.backgroundColor = .nalulBlack
         self.popUpView.backgroundColor?.withAlphaComponent(0.8)
@@ -68,10 +86,6 @@ extension PopUpVC {
     // MARK: Label Style Function
     
     func setLabel() {
-        
-        questionMent = "기록을 삭제하시겠어요?"
-        explainMent = "삭제된 기록은 복구할 수 없습니다."
-        // Test 코드
         
         if let question = questionMent,
            let explain = explainMent {
@@ -106,6 +120,7 @@ extension PopUpVC {
         yesButton.titleLabel?.font = .threeLight(size: 12)
         yesButton.setTitleColor(.white, for: .normal)
         yesButton.backgroundColor = .gray
+        yesButton.addTarget(self, action: #selector(postYesButtonDidTap), for: .touchUpInside)
         
         self.buttonView.addSubview(yesButton)
         
@@ -121,6 +136,14 @@ extension PopUpVC {
             .isActive = true
         // Button의 넓이와 높이 주기
         
+        moment = true
+        
+    }
+    
+    @objc func postYesButtonDidTap() {
+        self.dismiss(animated: true)
+        NotificationCenter.default.post(name: .popNavi, object: nil)
+        // Observer 보내기
     }
     
     // MARK: Make Two Button Function
@@ -132,6 +155,7 @@ extension PopUpVC {
         noButton.titleLabel?.font = .threeLight(size: 12)
         noButton.setTitleColor(.white, for: .normal)
         noButton.backgroundColor = .gray
+        noButton.addTarget(self, action: #selector(noButtonDidTap), for: .touchUpInside)
         
         self.buttonView.addSubview(noButton)
         
@@ -149,6 +173,7 @@ extension PopUpVC {
         yesButton.setTitleColor(.white, for: .normal)
         yesButton.backgroundColor = .clear
         yesButton.setBorder(borderColor: .gray, borderWidth: 1)
+        yesButton.addTarget(self, action: #selector(delateYesDidTap), for: .touchUpInside)
         
         self.buttonView.addSubview(yesButton)
         
@@ -161,5 +186,45 @@ extension PopUpVC {
         yesButton.heightAnchor.constraint(equalToConstant: self.buttonView.frame.height)
             .isActive = true
         
+        moment = false
+        
+    }
+    
+    @objc func noButtonDidTap() {
+        self.dismiss(animated: true)
+    }
+    
+    @objc func delateYesDidTap() {
+        // 게시물 삭제하기
+        
+        if let deleteIndex = deleteIndex,
+           let jwt = UserDefaults.standard.string(forKey: "accessToken") {
+            
+            APIService.shared.deleteFeed(deleteIndex, jwt) { [self] result in
+                switch result {
+                case .success(let data):
+                    
+                    guard let loadData = data as? SimpleData else {
+                        return
+                    }
+                    
+                    self.simpleData = loadData
+                    if self.simpleData?.status == 200 {
+                        // 삭제 후 돌아가기
+                        
+                        postYesButtonDidTap()
+                    }
+                    
+                    
+                    
+                case .failure(_):
+                    // 데이터 확인하세요
+                    print("데이터 확인")
+                    
+                }
+                
+            }
+            
+        }
     }
 }
