@@ -29,10 +29,13 @@ class MainAlbumCell: UICollectionViewCell {
     
     func configure(name: String) {
         self.partNameLabel.text = name
+        self.contentView.setBorder(borderColor: .white, borderWidth: 1)
+        
     }
     
     func setimage(imageURL: String) {
         self.partNameLabel.text = ""
         userImage.setImage(from: imageURL)
+        self.contentView.setBorder(borderColor: .white, borderWidth: 0)
     }
 }

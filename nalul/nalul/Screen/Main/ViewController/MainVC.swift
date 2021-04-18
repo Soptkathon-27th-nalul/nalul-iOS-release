@@ -58,6 +58,7 @@ class MainVC: UIViewController {
                     // 셔플 성공
                     
                     shuffleData = data.toArray()
+                    UserDefaults.standard.setValue(shuffleData, forKey: "MainShuffleData")
                     // 배열로 데이터 받아오기
                     homeAlbumCollectionView.reloadData()
                     
@@ -248,8 +249,8 @@ extension MainVC: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
         
-        if let data = shuffleData {
-            // 표시 할 데이터가 있을 때
+        if let data = UserDefaults.standard.stringArray(forKey: "MainShuffleData") {
+            
             if data[indexPath.row] != "" {
                 cell.setimage(imageURL: data[indexPath.row])
             } else {
@@ -257,8 +258,6 @@ extension MainVC: UICollectionViewDataSource {
                 cell.userImage.image = nil
             }
         } else {
-            // 데이터가 없을 때
-            
             cell.configure(name: partNameArray[indexPath.row])
             cell.userImage.image = nil
         }
