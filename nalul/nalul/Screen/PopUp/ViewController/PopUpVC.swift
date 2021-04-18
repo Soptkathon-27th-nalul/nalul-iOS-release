@@ -8,7 +8,7 @@
 import UIKit
 
 class PopUpVC: UIViewController {
-
+    
     // MARK: Variable Part
     
     var questionMent: String?
@@ -16,6 +16,8 @@ class PopUpVC: UIViewController {
     let yesButton = UIButton()
     let noButton = UIButton()
     var moment: Bool?
+    var deleteIndex: Int?
+    var simpleData: SimpleData?
     
     
     // MARK: IBOutlet
@@ -51,7 +53,7 @@ class PopUpVC: UIViewController {
         if let touch = touches.first , touch.view == self.view {
             if moment == true {
                 
-                yesButtonDidTap()
+                postYesButtonDidTap()
                 // '그래' 버튼을 누른 것과 동일하게 작동
                 
             } else {
@@ -61,7 +63,7 @@ class PopUpVC: UIViewController {
             
         }
     }
-
+    
 }
 
 // MARK: Extension
@@ -84,7 +86,7 @@ extension PopUpVC {
     // MARK: Label Style Function
     
     func setLabel() {
-       
+        
         if let question = questionMent,
            let explain = explainMent {
             mentLabel.numberOfLines = 0
@@ -118,7 +120,7 @@ extension PopUpVC {
         yesButton.titleLabel?.font = .threeLight(size: 12)
         yesButton.setTitleColor(.white, for: .normal)
         yesButton.backgroundColor = .gray
-        yesButton.addTarget(self, action: #selector(yesButtonDidTap), for: .touchUpInside)
+        yesButton.addTarget(self, action: #selector(postYesButtonDidTap), for: .touchUpInside)
         
         self.buttonView.addSubview(yesButton)
         
@@ -138,7 +140,7 @@ extension PopUpVC {
         
     }
     
-    @objc func yesButtonDidTap() {
+    @objc func postYesButtonDidTap() {
         self.dismiss(animated: true)
         NotificationCenter.default.post(name: .popNavi, object: nil)
         // Observer 보내기
@@ -153,6 +155,7 @@ extension PopUpVC {
         noButton.titleLabel?.font = .threeLight(size: 12)
         noButton.setTitleColor(.white, for: .normal)
         noButton.backgroundColor = .gray
+        noButton.addTarget(self, action: #selector(noButtonDidTap), for: .touchUpInside)
         
         self.buttonView.addSubview(noButton)
         
@@ -170,6 +173,7 @@ extension PopUpVC {
         yesButton.setTitleColor(.white, for: .normal)
         yesButton.backgroundColor = .clear
         yesButton.setBorder(borderColor: .gray, borderWidth: 1)
+        yesButton.addTarget(self, action: #selector(delateYesDidTap), for: .touchUpInside)
         
         self.buttonView.addSubview(yesButton)
         
@@ -184,5 +188,43 @@ extension PopUpVC {
         
         moment = false
         
+    }
+    
+    @objc func noButtonDidTap() {
+        self.dismiss(animated: true)
+    }
+    
+    @objc func delateYesDidTap() {
+        // 게시물 삭제하기
+        
+        if let deleteIndex = deleteIndex,
+           let jwt = UserDefaults.standard.string(forKey: "accessToken") {
+            
+            APIService.shared.deleteFeed(deleteIndex, jwt) { [self] result in
+                switch result {
+                case .success(let data):
+                    
+                    guard let loadData = data as? SimpleData else {
+                        return
+                    }
+                    
+                    self.simpleData = loadData
+                    if self.simpleData?.status == 200 {
+                        // 삭제 후 돌아가기
+                        
+                        postYesButtonDidTap()
+                    }
+                    
+                    
+                    
+                case .failure(_):
+                    // 데이터 확인하세요
+                    print("데이터 확인")
+                    
+                }
+                
+            }
+            
+        }
     }
 }

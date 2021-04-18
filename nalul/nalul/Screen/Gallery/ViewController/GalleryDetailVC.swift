@@ -16,6 +16,7 @@ class GalleryDetailVC: UIViewController {
     var userPhoto: String?
     var question: String?
     var answer: String?
+    var deleteIndex: Int?
     
     // MARK: IBOutlet
     
@@ -32,6 +33,26 @@ class GalleryDetailVC: UIViewController {
     
     @IBAction func backButtonDidTap(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    
+    @IBAction func deleteButtonDidTap(_ sender: Any) {
+        
+        let nextStoryboard = UIStoryboard(name: "PopUp", bundle: nil)
+        guard let popUpVC = nextStoryboard.instantiateViewController(identifier: "PopUpVC") as? PopUpVC else { return }
+        
+        popUpVC.questionMent = "기록을 삭제하시겠어요?"
+        popUpVC.explainMent = "삭제된 기록은 복구할 수 없습니다."
+        popUpVC.modalPresentationStyle = .overCurrentContext
+        popUpVC.modalTransitionStyle = .crossDissolve
+        
+        if let deleteIndex =  deleteIndex {
+            popUpVC.deleteIndex = deleteIndex
+        }
+            
+        self.present(popUpVC, animated: true, completion: nil)
+        popUpVC.setTwoButton()
+        NotificationCenter.default.addObserver(self, selector: #selector(backView(_:)), name: .popNavi, object: nil)
     }
     
     // MARK: Life Cycle Part
@@ -112,6 +133,14 @@ extension GalleryDetailVC {
         deleteButton.tintColor = .white
         deleteButton.setBorder(borderColor: .white, borderWidth: 1)
         deleteButton.makeRounded(cornerRadius: nil)
+    }
+    
+    @objc func backView(_ notification: Notification) {
+        // 뒤로 가는 함수
+        
+        self.navigationController?.popViewController(animated: true)
+        NotificationCenter.default.removeObserver(self, name: .popNavi, object: nil)
+        // 옵저버 제거
     }
     
 }
