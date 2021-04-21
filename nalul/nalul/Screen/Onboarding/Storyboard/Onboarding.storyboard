@@ -163,6 +163,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboardingBg" translatesAutoresizingMaskIntoConstraints="NO" id="yfc-Fe-nQF">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="GYj-L3-Y9N">
                                 <rect key="frame" x="61" y="131" width="292" height="634"/>
                                 <subviews>
@@ -204,13 +207,16 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mUt-hZ-Yqo"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="O4z-8g-Use" firstAttribute="centerY" secondItem="Zf6-UG-QHv" secondAttribute="centerY" id="2kH-Co-CQY"/>
                             <constraint firstItem="O4z-8g-Use" firstAttribute="leading" secondItem="W6W-b7-gQH" secondAttribute="leading" constant="5" id="ElT-OS-WKS"/>
+                            <constraint firstItem="yfc-Fe-nQF" firstAttribute="leading" secondItem="mUt-hZ-Yqo" secondAttribute="leading" id="NdF-KO-zL4"/>
                             <constraint firstItem="GYj-L3-Y9N" firstAttribute="centerX" secondItem="W6W-b7-gQH" secondAttribute="centerX" id="Rlh-MN-42b"/>
                             <constraint firstItem="GYj-L3-Y9N" firstAttribute="centerY" secondItem="W6W-b7-gQH" secondAttribute="centerY" id="RsO-G9-cRQ"/>
+                            <constraint firstItem="yfc-Fe-nQF" firstAttribute="top" secondItem="W6W-b7-gQH" secondAttribute="top" id="eMA-Gg-thS"/>
+                            <constraint firstAttribute="bottom" secondItem="yfc-Fe-nQF" secondAttribute="bottom" id="gvo-mZ-jkZ"/>
                             <constraint firstItem="GYj-L3-Y9N" firstAttribute="leading" secondItem="mUt-hZ-Yqo" secondAttribute="leading" constant="61" id="hZk-RF-Wll"/>
+                            <constraint firstItem="mUt-hZ-Yqo" firstAttribute="trailing" secondItem="yfc-Fe-nQF" secondAttribute="trailing" id="sB3-TJ-GIK"/>
                         </constraints>
                     </view>
                     <connections>
