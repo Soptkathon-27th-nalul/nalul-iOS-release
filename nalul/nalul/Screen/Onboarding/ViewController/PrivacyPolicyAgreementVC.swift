@@ -63,7 +63,7 @@ extension PrivacyPolicyAgreementVC {
             agreementButton.setAttributedTitle(attributedStr, for: .normal)
         }
         
-        agreementLabel.text = "다음 화면으로 넘기시면 개인 정보 수집 및 처리 방침에\n동의하시는 것으로 간주됩니다."
+        agreementLabel.text = "다음 화면으로 넘기시면 개인 정보 수집 및 처리 방침에 동의하시는 것으로 간주됩니다."
         agreementLabel.numberOfLines = 0
         agreementLabel.font = UIFont.threeLight(size: 12)
         agreementLabel.textColor = .white

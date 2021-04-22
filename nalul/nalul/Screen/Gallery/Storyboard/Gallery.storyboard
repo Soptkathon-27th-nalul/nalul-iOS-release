@@ -25,9 +25,8 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="48"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rug-dx-E6S">
-                                        <rect key="frame" x="31" y="12" width="24" height="24"/>
+                                        <rect key="frame" x="20" y="0.0" width="48" height="48"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="24" id="A2l-2k-uUU"/>
                                             <constraint firstAttribute="width" secondItem="Rug-dx-E6S" secondAttribute="height" multiplier="1:1" id="JKV-jU-x7t"/>
                                         </constraints>
                                         <state key="normal" image="btnBack"/>
@@ -61,9 +60,11 @@
                                     <constraint firstItem="Rug-dx-E6S" firstAttribute="centerY" secondItem="xZu-ZF-K6L" secondAttribute="centerY" id="HIK-Ud-Jqc"/>
                                     <constraint firstItem="h1Z-5b-MS0" firstAttribute="top" secondItem="xZu-ZF-K6L" secondAttribute="top" id="O1g-Ag-p5N"/>
                                     <constraint firstItem="J8r-Tz-84E" firstAttribute="top" secondItem="xZu-ZF-K6L" secondAttribute="top" id="Pnd-1Y-bll"/>
-                                    <constraint firstItem="Rug-dx-E6S" firstAttribute="leading" secondItem="xZu-ZF-K6L" secondAttribute="leading" constant="31" id="QWk-4E-HN4"/>
                                     <constraint firstItem="h1Z-5b-MS0" firstAttribute="centerX" secondItem="xZu-ZF-K6L" secondAttribute="centerX" id="XAE-Kc-5j8"/>
+                                    <constraint firstItem="Rug-dx-E6S" firstAttribute="top" secondItem="xZu-ZF-K6L" secondAttribute="top" id="XL9-UF-P5l"/>
+                                    <constraint firstItem="Rug-dx-E6S" firstAttribute="leading" secondItem="xZu-ZF-K6L" secondAttribute="leading" constant="20" id="afL-MK-lmi"/>
                                     <constraint firstAttribute="trailing" secondItem="J8r-Tz-84E" secondAttribute="trailing" constant="20" id="aop-72-DBB"/>
+                                    <constraint firstAttribute="bottom" secondItem="Rug-dx-E6S" secondAttribute="bottom" id="fkk-4y-5Yn"/>
                                     <constraint firstAttribute="height" constant="48" id="jZb-Oe-6Jb"/>
                                     <constraint firstAttribute="bottom" secondItem="J8r-Tz-84E" secondAttribute="bottom" id="mV1-Jx-MCa"/>
                                 </constraints>
@@ -225,7 +226,10 @@
                                 <rect key="frame" x="0.0" y="45" width="414" height="48"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y8W-dD-jL7">
-                                        <rect key="frame" x="12" y="0.0" width="27" height="48"/>
+                                        <rect key="frame" x="12" y="0.0" width="48" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="y8W-dD-jL7" secondAttribute="height" multiplier="1:1" id="HT5-aq-3Gg"/>
+                                        </constraints>
                                         <state key="normal" image="btnBack"/>
                                         <connections>
                                             <action selector="backButtonDidTap:" destination="PVs-dF-7Sd" eventType="touchUpInside" id="Cj5-9Q-fzc"/>
@@ -404,7 +408,10 @@
                                 <rect key="frame" x="0.0" y="45" width="414" height="48"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6P7-1T-Azy">
-                                        <rect key="frame" x="12" y="0.0" width="27" height="48"/>
+                                        <rect key="frame" x="12" y="0.0" width="48" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="6P7-1T-Azy" secondAttribute="height" multiplier="1:1" id="zKw-D3-GZm"/>
+                                        </constraints>
                                         <state key="normal" image="btnBack"/>
                                         <connections>
                                             <action selector="backButtonDidTap:" destination="bWx-Xc-akB" eventType="touchUpInside" id="Tbk-nv-Xic"/>
