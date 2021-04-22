@@ -14,6 +14,7 @@ class OnboardingPageController: UIPageViewController {
     lazy var VCArray:[UIViewController] = {
         return [self.VCInstance(name: "LogoOnboardingVC"),
                 self.VCInstance(name: "ExplainOnboardingVC"),
+                self.VCInstance(name: "PrivacyPolicyAgreementVC"),
                 self.VCInstance(name: "BackgroundSettingVC")]
     }()
     
