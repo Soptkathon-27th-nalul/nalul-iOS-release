@@ -11,6 +11,7 @@
 		9B071B54260C8F6100CCECF4 /* MainAlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B071B53260C8F6100CCECF4 /* MainAlbumCell.swift */; };
 		9B071B58260C941000CCECF4 /* UIScreen+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B071B57260C941000CCECF4 /* UIScreen+Extension.swift */; };
 		9B23A23D2616F5C0002BF809 /* PhotoInsertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B23A23C2616F5C0002BF809 /* PhotoInsertVC.swift */; };
+		9B33127526300AF400607497 /* PrivacyPolicyAgreementVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B33127426300AF400607497 /* PrivacyPolicyAgreementVC.swift */; };
 		9B41C0E0260252B600791CE2 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B41C0DF260252B600791CE2 /* Setting.storyboard */; };
 		9B41C0E3260252C600791CE2 /* SettingListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B41C0E2260252C600791CE2 /* SettingListVC.swift */; };
 		9B665EFB25FC9A65002E4CD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B665EFA25FC9A65002E4CD2 /* AppDelegate.swift */; };
@@ -78,6 +79,7 @@
 		9B071B53260C8F6100CCECF4 /* MainAlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAlbumCell.swift; sourceTree = "<group>"; };
 		9B071B57260C941000CCECF4 /* UIScreen+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Extension.swift"; sourceTree = "<group>"; };
 		9B23A23C2616F5C0002BF809 /* PhotoInsertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoInsertVC.swift; sourceTree = "<group>"; };
+		9B33127426300AF400607497 /* PrivacyPolicyAgreementVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyAgreementVC.swift; sourceTree = "<group>"; };
 		9B41C0DF260252B600791CE2 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Setting.storyboard; path = nalul/Screen/Setting/Storyboard/Setting.storyboard; sourceTree = SOURCE_ROOT; };
 		9B41C0E2260252C600791CE2 /* SettingListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingListVC.swift; path = nalul/Screen/Setting/ViewController/SettingListVC.swift; sourceTree = SOURCE_ROOT; };
 		9B665EF725FC9A65002E4CD2 /* nalul.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nalul.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -484,6 +486,7 @@
 				9BD0110C26204EBF00A30F7C /* ExplainOnboardingVC.swift */,
 				9BD01114262054F400A30F7C /* BackgroundSettingVC.swift */,
 				9BD01118262061D900A30F7C /* BackgroundConfirmVC.swift */,
+				9B33127426300AF400607497 /* PrivacyPolicyAgreementVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -649,6 +652,7 @@
 				9B7228F0262826B400EC2796 /* ShuffleData.swift in Sources */,
 				9B9326CD25FCA52E005D06E2 /* UILabel+Extension.swift in Sources */,
 				9BD0110A2620494800A30F7C /* LogoOnboardingVC.swift in Sources */,
+				9B33127526300AF400607497 /* PrivacyPolicyAgreementVC.swift in Sources */,
 				9B41C0E3260252C600791CE2 /* SettingListVC.swift in Sources */,
 				9B7E3A0A260F36B50086535C /* PopUpVC.swift in Sources */,
 				9B8AD92C260B45650082D9D3 /* MainVC.swift in Sources */,
