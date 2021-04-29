@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y93-TR-YZb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -43,9 +43,8 @@
                                 <rect key="frame" x="16" y="505" width="382" height="288"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8BO-bw-Vma">
-                                        <rect key="frame" x="163" y="111" width="56" height="56"/>
+                                        <rect key="frame" x="160" y="108" width="62" height="62"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="56" id="tAE-z3-7Nl"/>
                                             <constraint firstAttribute="width" secondItem="8BO-bw-Vma" secondAttribute="height" multiplier="1:1" id="w2i-MA-0i3"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
@@ -115,6 +114,7 @@
                             <constraint firstItem="olk-ns-oii" firstAttribute="top" secondItem="GmN-gf-quq" secondAttribute="bottom" id="i5F-md-70L"/>
                             <constraint firstItem="Hsz-a4-zu7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iKF-jj-41a"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hsz-a4-zu7" secondAttribute="trailing" id="ibg-FQ-JfG"/>
+                            <constraint firstItem="8BO-bw-Vma" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="56/375" id="kqw-EJ-LDp"/>
                             <constraint firstItem="usP-v1-zzV" firstAttribute="top" secondItem="olk-ns-oii" secondAttribute="bottom" id="mZO-QO-Bez"/>
                             <constraint firstItem="GmN-gf-quq" firstAttribute="leading" secondItem="MpH-hK-Pu9" secondAttribute="leading" constant="34" id="tl9-oh-MTF"/>
                             <constraint firstItem="MpH-hK-Pu9" firstAttribute="bottom" secondItem="usP-v1-zzV" secondAttribute="bottom" constant="46" id="wha-SE-M60"/>
