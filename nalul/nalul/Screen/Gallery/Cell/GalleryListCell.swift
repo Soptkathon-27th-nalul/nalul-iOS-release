@@ -27,6 +27,7 @@ class GalleryListCell: UICollectionViewCell {
     
     func setimage(imageURL: String) {
         galleryImageView.setImage(from: imageURL)
+        self.contentView.setBorder(borderColor: .nalulLightGray, borderWidth: 0)
     }
     
 }

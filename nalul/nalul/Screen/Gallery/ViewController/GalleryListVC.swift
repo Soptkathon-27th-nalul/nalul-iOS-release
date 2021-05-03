@@ -190,6 +190,7 @@ extension GalleryListVC: UICollectionViewDataSource {
                 cell.setimage(imageURL: feedData[indexPath.row].photo)
             } else {
                 cell.galleryImageView.image = nil
+                cell.contentView.setBorder(borderColor: .nalulLightGray, borderWidth: 1)
             }
             
         }

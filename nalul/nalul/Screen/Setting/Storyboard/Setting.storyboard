@@ -320,10 +320,9 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9vi-eE-cwg">
-                                <rect key="frame" x="183" y="568" width="48" height="48"/>
+                                <rect key="frame" x="180.5" y="568" width="53" height="53"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="48" id="N8S-eG-hin"/>
-                                    <constraint firstAttribute="height" constant="48" id="agC-ob-evH"/>
+                                    <constraint firstAttribute="width" secondItem="9vi-eE-cwg" secondAttribute="height" multiplier="1:1" id="LLE-aP-XWT"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <connections>
@@ -331,26 +330,26 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Special Thanks to" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JtK-M5-Nwp">
-                                <rect key="frame" x="149" y="675" width="116" height="16.5"/>
+                                <rect key="frame" x="149" y="680" width="116" height="16.5"/>
                                 <fontDescription key="fontDescription" name="S-CoreDream-4Regular" family="S-Core Dream" pointSize="14"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="민제 지혜 인애" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEk-zo-nUs">
-                                <rect key="frame" x="162.5" y="702.5" width="89" height="16.5"/>
+                                <rect key="frame" x="162.5" y="707.5" width="89" height="16.5"/>
                                 <fontDescription key="fontDescription" name="S-CoreDream-4Regular" family="S-Core Dream" pointSize="14"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gA3-F0-6sV">
-                                <rect key="frame" x="162.5" y="720" width="89" height="1"/>
+                                <rect key="frame" x="162.5" y="725" width="89" height="1"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="7oC-jA-KMU"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shout Our Passion Together Sopkathon" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6YK-r1-sBF">
-                                <rect key="frame" x="115" y="758" width="184" height="32.5"/>
+                                <rect key="frame" x="115" y="763" width="184" height="32.5"/>
                                 <fontDescription key="fontDescription" name="S-CoreDream-4Regular" family="S-Core Dream" pointSize="14"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -364,6 +363,7 @@
                             <constraint firstItem="fPw-1y-v5f" firstAttribute="leading" secondItem="mYO-Al-Brv" secondAttribute="leading" id="AzO-ss-crU"/>
                             <constraint firstItem="9vi-eE-cwg" firstAttribute="top" secondItem="UYD-en-BPu" secondAttribute="bottom" constant="63" id="BxD-Cf-rGC"/>
                             <constraint firstItem="6YK-r1-sBF" firstAttribute="top" secondItem="gA3-F0-6sV" secondAttribute="bottom" constant="37" id="HJl-qc-3Xq"/>
+                            <constraint firstItem="9vi-eE-cwg" firstAttribute="width" secondItem="iNv-OB-vUp" secondAttribute="width" multiplier="48/375" id="HLq-EU-fT4"/>
                             <constraint firstItem="yEk-zo-nUs" firstAttribute="centerX" secondItem="iNv-OB-vUp" secondAttribute="centerX" id="K78-ho-TWh"/>
                             <constraint firstItem="gA3-F0-6sV" firstAttribute="top" secondItem="yEk-zo-nUs" secondAttribute="bottom" constant="1" id="QZC-bw-cLY"/>
                             <constraint firstItem="gA3-F0-6sV" firstAttribute="trailing" secondItem="yEk-zo-nUs" secondAttribute="trailing" id="U5X-HP-y3r"/>
