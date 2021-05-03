@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1ay-jm-gff">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="odV-VD-kID">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -18,6 +18,9 @@
         </array>
         <array key="SCDream4.otf">
             <string>S-CoreDream-4Regular</string>
+        </array>
+        <array key="SCDream5.otf">
+            <string>S-CoreDream-5Medium</string>
         </array>
     </customFonts>
     <scenes>
@@ -396,11 +399,186 @@
             </objects>
             <point key="canvasLocation" x="2263.768115942029" y="-177.45535714285714"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="wQV-4m-8zN">
+            <objects>
+                <viewController id="odV-VD-kID" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Am0-WJ-yX3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="2100"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Nc-BP-58S">
+                                <rect key="frame" x="0.0" y="44" width="414" height="48"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tcl-UD-lVU">
+                                        <rect key="frame" x="20" y="0.0" width="48" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="tcl-UD-lVU" secondAttribute="height" id="dxv-s5-UZ7"/>
+                                        </constraints>
+                                        <state key="normal" image="btnBack"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nalul 소개" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2At-Vv-GcJ">
+                                        <rect key="frame" x="170" y="14" width="74.5" height="20"/>
+                                        <fontDescription key="fontDescription" name="S-CoreDream-3Light" family="S-Core Dream" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.078431372549019607" green="0.078431372549019607" blue="0.078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="0Fo-zs-Zcd"/>
+                                    <constraint firstItem="tcl-UD-lVU" firstAttribute="leading" secondItem="1Nc-BP-58S" secondAttribute="leading" constant="20" id="3SS-5f-iKE"/>
+                                    <constraint firstItem="2At-Vv-GcJ" firstAttribute="centerX" secondItem="1Nc-BP-58S" secondAttribute="centerX" id="RCZ-dN-XAX"/>
+                                    <constraint firstAttribute="bottom" secondItem="tcl-UD-lVU" secondAttribute="bottom" id="afX-Ak-day"/>
+                                    <constraint firstItem="2At-Vv-GcJ" firstAttribute="centerY" secondItem="1Nc-BP-58S" secondAttribute="centerY" id="oDI-P2-LjT"/>
+                                    <constraint firstItem="tcl-UD-lVU" firstAttribute="top" secondItem="1Nc-BP-58S" secondAttribute="top" id="rfF-Z0-WNi"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bmg-av-RkF">
+                                <rect key="frame" x="0.0" y="92" width="414" height="2008"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dwF-Ov-skJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="2111"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="나에게 중독되어 가는 과정." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFo-a6-3Zh">
+                                                <rect key="frame" x="113" y="61" width="188" height="19"/>
+                                                <fontDescription key="fontDescription" name="S-CoreDream-2ExtraLight" family="S-Core Dream" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nalul" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8G-QH-htc">
+                                                <rect key="frame" x="185.5" y="104" width="43.5" height="23.5"/>
+                                                <fontDescription key="fontDescription" name="S-CoreDream-3Light" family="S-Core Dream" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="infoImage" translatesAutoresizingMaskIntoConstraints="NO" id="6ob-4g-AEE">
+                                                <rect key="frame" x="48" y="150.5" width="318" height="689.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="6ob-4g-AEE" secondAttribute="height" multiplier="280:607" id="aPA-ad-8Nt"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="매일 nalul 찍습니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PPs-TR-IG5">
+                                                <rect key="frame" x="132" y="897" width="150" height="20"/>
+                                                <fontDescription key="fontDescription" name="S-CoreDream-3Light" family="S-Core Dream" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="나의 각 부위를 매일 남길 수 있습니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehh-2h-Fb5">
+                                                <rect key="frame" x="100" y="936" width="214" height="15"/>
+                                                <fontDescription key="fontDescription" name="S-CoreDream-2ExtraLight" family="S-Core Dream" pointSize="13"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="날마다 조금씩 달라지는  당신의 외면을 찍어보세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPF-D1-yQX">
+                                                <rect key="frame" x="62.5" y="970" width="289" height="15"/>
+                                                <fontDescription key="fontDescription" name="S-CoreDream-2ExtraLight" family="S-Core Dream" pointSize="13"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="infoGalleryImage" translatesAutoresizingMaskIntoConstraints="NO" id="Ny9-hY-IU2">
+                                                <rect key="frame" x="48" y="1077" width="318" height="706.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Ny9-hY-IU2" secondAttribute="height" multiplier="280:622" id="7S8-AS-CaD"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="매일 nalul 기록합니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVj-S1-8ac">
+                                                <rect key="frame" x="124" y="1840.5" width="166.5" height="20"/>
+                                                <fontDescription key="fontDescription" name="S-CoreDream-3Light" family="S-Core Dream" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="당신 내면의 생각을 함께 기록하세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zwo-pp-79Y">
+                                                <rect key="frame" x="104" y="1879.5" width="206.5" height="15"/>
+                                                <fontDescription key="fontDescription" name="S-CoreDream-2ExtraLight" family="S-Core Dream" pointSize="13"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="부위를 찍고 등록하면 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQd-lj-Vkq">
+                                                <rect key="frame" x="145" y="1913.5" width="124" height="15"/>
+                                                <fontDescription key="fontDescription" name="S-CoreDream-2ExtraLight" family="S-Core Dream" pointSize="13"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="그와 관련된 질문들이 준비되어있어요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mV9-Wx-9tX">
+                                                <rect key="frame" x="99.5" y="1947.5" width="215" height="15"/>
+                                                <fontDescription key="fontDescription" name="S-CoreDream-2ExtraLight" family="S-Core Dream" pointSize="13"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ver 1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fws-eD-sOq">
+                                                <rect key="frame" x="182" y="2055.5" width="50.5" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="S-CoreDream-5Medium" family="S-Core Dream" pointSize="15"/>
+                                                <color key="textColor" red="0.37647058823529411" green="0.36470588235294116" blue="0.36470588235294116" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="PPs-TR-IG5" firstAttribute="top" secondItem="6ob-4g-AEE" secondAttribute="bottom" constant="57" id="2hb-gw-TAi"/>
+                                            <constraint firstItem="6ob-4g-AEE" firstAttribute="top" secondItem="S8G-QH-htc" secondAttribute="bottom" constant="23" id="BxE-YA-1qa"/>
+                                            <constraint firstItem="MVj-S1-8ac" firstAttribute="top" secondItem="Ny9-hY-IU2" secondAttribute="bottom" constant="57" id="Caf-YM-bvs"/>
+                                            <constraint firstItem="vFo-a6-3Zh" firstAttribute="centerX" secondItem="dwF-Ov-skJ" secondAttribute="centerX" id="DSe-cA-XFE"/>
+                                            <constraint firstItem="mV9-Wx-9tX" firstAttribute="centerX" secondItem="dwF-Ov-skJ" secondAttribute="centerX" id="EEP-Cn-F6N"/>
+                                            <constraint firstItem="wQd-lj-Vkq" firstAttribute="top" secondItem="Zwo-pp-79Y" secondAttribute="bottom" constant="19" id="Eti-Al-VYr"/>
+                                            <constraint firstAttribute="bottom" secondItem="fws-eD-sOq" secondAttribute="bottom" constant="38" id="GDB-sW-eTB"/>
+                                            <constraint firstItem="S8G-QH-htc" firstAttribute="centerX" secondItem="dwF-Ov-skJ" secondAttribute="centerX" id="Kd6-hr-S9s"/>
+                                            <constraint firstItem="pPF-D1-yQX" firstAttribute="top" secondItem="ehh-2h-Fb5" secondAttribute="bottom" constant="19" id="Lbo-Dx-c7S"/>
+                                            <constraint firstItem="Ny9-hY-IU2" firstAttribute="centerX" secondItem="dwF-Ov-skJ" secondAttribute="centerX" id="OAL-kg-sqF"/>
+                                            <constraint firstItem="mV9-Wx-9tX" firstAttribute="top" secondItem="wQd-lj-Vkq" secondAttribute="bottom" constant="19" id="PlQ-tH-NPF"/>
+                                            <constraint firstItem="MVj-S1-8ac" firstAttribute="centerX" secondItem="dwF-Ov-skJ" secondAttribute="centerX" id="UoH-Yn-oP7"/>
+                                            <constraint firstItem="Ny9-hY-IU2" firstAttribute="top" secondItem="pPF-D1-yQX" secondAttribute="bottom" constant="92" id="VjH-nv-3dZ"/>
+                                            <constraint firstItem="pPF-D1-yQX" firstAttribute="centerX" secondItem="dwF-Ov-skJ" secondAttribute="centerX" id="Vri-U0-PDj"/>
+                                            <constraint firstItem="Zwo-pp-79Y" firstAttribute="centerX" secondItem="dwF-Ov-skJ" secondAttribute="centerX" id="X1d-nm-iAu"/>
+                                            <constraint firstItem="Ny9-hY-IU2" firstAttribute="leading" secondItem="dwF-Ov-skJ" secondAttribute="leading" constant="48" id="aSh-Np-2AT"/>
+                                            <constraint firstItem="6ob-4g-AEE" firstAttribute="centerX" secondItem="dwF-Ov-skJ" secondAttribute="centerX" id="adP-Py-9cr"/>
+                                            <constraint firstItem="PPs-TR-IG5" firstAttribute="centerX" secondItem="dwF-Ov-skJ" secondAttribute="centerX" id="ekY-cK-1QB"/>
+                                            <constraint firstItem="Zwo-pp-79Y" firstAttribute="top" secondItem="MVj-S1-8ac" secondAttribute="bottom" constant="19" id="g0P-z7-34d"/>
+                                            <constraint firstItem="ehh-2h-Fb5" firstAttribute="top" secondItem="PPs-TR-IG5" secondAttribute="bottom" constant="19" id="gRC-Kw-b0A"/>
+                                            <constraint firstItem="vFo-a6-3Zh" firstAttribute="top" secondItem="dwF-Ov-skJ" secondAttribute="top" constant="61" id="i7c-aY-yBp"/>
+                                            <constraint firstItem="ehh-2h-Fb5" firstAttribute="centerX" secondItem="dwF-Ov-skJ" secondAttribute="centerX" id="k2K-fH-z9P"/>
+                                            <constraint firstItem="6ob-4g-AEE" firstAttribute="leading" secondItem="dwF-Ov-skJ" secondAttribute="leading" constant="48" id="kao-K4-vJG"/>
+                                            <constraint firstItem="S8G-QH-htc" firstAttribute="top" secondItem="vFo-a6-3Zh" secondAttribute="bottom" constant="24" id="tcQ-qt-Vlc"/>
+                                            <constraint firstItem="fws-eD-sOq" firstAttribute="top" secondItem="mV9-Wx-9tX" secondAttribute="bottom" constant="93" id="u0y-FA-IVV"/>
+                                            <constraint firstItem="fws-eD-sOq" firstAttribute="centerX" secondItem="dwF-Ov-skJ" secondAttribute="centerX" id="vbU-Ba-qGT"/>
+                                            <constraint firstItem="wQd-lj-Vkq" firstAttribute="centerX" secondItem="dwF-Ov-skJ" secondAttribute="centerX" id="zs2-y7-960"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="dwF-Ov-skJ" secondAttribute="trailing" id="Zmi-k4-FXt"/>
+                                    <constraint firstAttribute="bottom" secondItem="dwF-Ov-skJ" secondAttribute="bottom" id="cWC-9d-iAZ"/>
+                                    <constraint firstItem="dwF-Ov-skJ" firstAttribute="leading" secondItem="bmg-av-RkF" secondAttribute="leading" id="cij-w4-lMH"/>
+                                    <constraint firstItem="dwF-Ov-skJ" firstAttribute="top" secondItem="bmg-av-RkF" secondAttribute="top" id="qc3-ab-ouO"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="d76-fz-8rd"/>
+                        <color key="backgroundColor" red="0.078431372549019607" green="0.078431372549019607" blue="0.078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="d76-fz-8rd" firstAttribute="trailing" secondItem="1Nc-BP-58S" secondAttribute="trailing" id="3zd-Uf-n5u"/>
+                            <constraint firstItem="dwF-Ov-skJ" firstAttribute="width" secondItem="Am0-WJ-yX3" secondAttribute="width" id="Hj5-a5-05N"/>
+                            <constraint firstItem="1Nc-BP-58S" firstAttribute="top" secondItem="Am0-WJ-yX3" secondAttribute="top" constant="44" id="I7A-D7-rWn"/>
+                            <constraint firstItem="bmg-av-RkF" firstAttribute="leading" secondItem="d76-fz-8rd" secondAttribute="leading" id="Ik8-Xj-QJz"/>
+                            <constraint firstItem="bmg-av-RkF" firstAttribute="top" secondItem="1Nc-BP-58S" secondAttribute="bottom" id="PWp-XF-lT6"/>
+                            <constraint firstItem="dwF-Ov-skJ" firstAttribute="height" secondItem="Am0-WJ-yX3" secondAttribute="height" priority="250" id="T6v-Sj-z0Z"/>
+                            <constraint firstItem="d76-fz-8rd" firstAttribute="trailing" secondItem="bmg-av-RkF" secondAttribute="trailing" id="jRN-Ot-Vyk"/>
+                            <constraint firstItem="1Nc-BP-58S" firstAttribute="leading" secondItem="d76-fz-8rd" secondAttribute="leading" id="pxO-qI-244"/>
+                            <constraint firstAttribute="bottom" secondItem="bmg-av-RkF" secondAttribute="bottom" id="rRU-ls-bfv"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="414" height="2100"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hat-d6-8Pe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3339.130434782609" y="-116.51785714285714"/>
+        </scene>
     </scenes>
     <resources>
         <image name="bgSettings" width="375" height="812"/>
         <image name="btnBack" width="27" height="25"/>
         <image name="btnSettings1" width="38" height="38"/>
+        <image name="infoGalleryImage" width="280" height="622"/>
+        <image name="infoImage" width="280" height="607"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
