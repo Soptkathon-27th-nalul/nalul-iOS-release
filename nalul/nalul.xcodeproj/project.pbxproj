@@ -70,6 +70,7 @@
 		9BD01115262054F400A30F7C /* BackgroundSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD01114262054F400A30F7C /* BackgroundSettingVC.swift */; };
 		9BD01119262061D900A30F7C /* BackgroundConfirmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD01118262061D900A30F7C /* BackgroundConfirmVC.swift */; };
 		9BD0111F262185B400A30F7C /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD0111E262185B400A30F7C /* UIImage+Extension.swift */; };
+		9BD25915264068B30044F4CD /* NalulIntroVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD25914264068B30044F4CD /* NalulIntroVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -140,6 +141,7 @@
 		9BD01114262054F400A30F7C /* BackgroundSettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundSettingVC.swift; sourceTree = "<group>"; };
 		9BD01118262061D900A30F7C /* BackgroundConfirmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundConfirmVC.swift; sourceTree = "<group>"; };
 		9BD0111E262185B400A30F7C /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		9BD25914264068B30044F4CD /* NalulIntroVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NalulIntroVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +188,7 @@
 			children = (
 				9B41C0E2260252C600791CE2 /* SettingListVC.swift */,
 				9B7228C0262598D800EC2796 /* TeamNarulVC.swift */,
+				9BD25914264068B30044F4CD /* NalulIntroVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -661,6 +664,7 @@
 				9BCABC4C26031DA0002B4D29 /* MainStartBlockCell.swift in Sources */,
 				9B9AA19E2603427F00B03862 /* UITextView+Extension.swift in Sources */,
 				9B7228FB262B474100EC2796 /* UIImageView+Extension.swift in Sources */,
+				9BD25915264068B30044F4CD /* NalulIntroVC.swift in Sources */,
 				9B9326C325FCA33D005D06E2 /* UIFont+Extension.swift in Sources */,
 				9B7228C42625F02E00EC2796 /* TeamNarulCell.swift in Sources */,
 				9B7228D02626D15D00EC2796 /* NetworkResult.swift in Sources */,
