@@ -98,7 +98,16 @@ extension SettingListVC: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 1 {
+        
+        if indexPath.row == 0 {
+            
+            guard let nextView = self.storyboard?.instantiateViewController(identifier: "NalulIntroVC") as? NalulIntroVC else {
+                return
+            }
+            
+            self.navigationController?.pushViewController(nextView, animated: true)
+            
+        } else if indexPath.row == 1 {
             //BackgroundSettingVC
             
             let storyboard = UIStoryboard.init(name: "Onboarding", bundle: nil)
