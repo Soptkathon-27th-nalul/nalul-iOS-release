@@ -11,6 +11,9 @@ class MainStartVC: UIViewController {
 
     // MARK: Variable Part
     
+    var exImage: [String] = ["exRightEye","exLeftHand","exMole","exRightHand","exEar","exMouse","exCheek","exLeftEye","exNose"]
+    var nextBool: Bool = false
+    
     // MARK: IBOutlet
     
     @IBOutlet weak var backgroundImageView: UIImageView!
@@ -30,15 +33,41 @@ class MainStartVC: UIViewController {
     
     
     @IBAction func yesButtonDidTap(_ sender: Any) {
-        guard let mainVC = self.storyboard?.instantiateViewController(identifier: "MainNavigationVC") as? MainNavigationVC else {
-            return
+        
+        if !nextBool {
+            
+            nextBool = true
+            yesButton.setTitle("시작", for: .normal)
+            blockCollectionView.reloadData()
+            
+            useExplainLabel.text = "매일 나를 만날 준비가 되었다면\n시작을 눌러주세요."
+            useExplainLabel.textColor = .white
+            useExplainLabel.font = UIFont.twoExLight(size:  11)
+            useExplainLabel.numberOfLines = 0
+            
+            if let text = useExplainLabel.text {
+                // 첫째줄 부분에만 폰트를 다르게 설정
+                let attributedStr = NSMutableAttributedString(string: useExplainLabel.text ?? "")
+                attributedStr.addAttribute(NSAttributedString.Key(rawValue: kCTFontAttributeName as String), value: UIFont.threeLight(size: 14), range: (text as NSString).range(of: "매일 나를 만날 준비가 되었다면"))
+
+                useExplainLabel.attributedText = attributedStr
+            }
+            
+            useExplainLabel.lineSetting(kernValue: 0, lineSpacing: 12)
+            
+        } else {
+            
+            guard let mainVC = self.storyboard?.instantiateViewController(identifier: "MainNavigationVC") as? MainNavigationVC else {
+                return
+            }
+            self.view.window?.rootViewController?.dismiss(animated: false, completion: {
+                // 현재뷰를 pop 한 다음, 다음 뷰로 이동하기
+                mainVC.modalPresentationStyle = .fullScreen
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                appDelegate.window?.rootViewController?.present(mainVC, animated: true, completion: nil)
+            })
         }
-        self.view.window?.rootViewController?.dismiss(animated: false, completion: {
-            // 현재뷰를 pop 한 다음, 다음 뷰로 이동하기
-            mainVC.modalPresentationStyle = .fullScreen
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            appDelegate.window?.rootViewController?.present(mainVC, animated: true, completion: nil)
-        })
+        
     }
     
     // MARK: Life Cycle Part
@@ -84,7 +113,7 @@ extension MainStartVC {
     func setButton() {
         // 버튼 관련 Style 설정
 
-        yesButton.setTitle("그래", for: .normal)
+        yesButton.setTitle("다음", for: .normal)
         yesButton.titleLabel?.font = UIFont.threeLight(size: 14)
         yesButton.tintColor = .white
         yesButton.setBorder(borderColor: .white, borderWidth: 1)
@@ -96,7 +125,7 @@ extension MainStartVC {
     func setLabel() {
         // 라벨 관련 Style 설정
         
-        welcomeLabel.text = "narul\n안녕하세요, 반가워요"
+        welcomeLabel.text = "narul\n나를 마주하는 시간을 시작해볼까요?"
         welcomeLabel.numberOfLines = 0
         welcomeLabel.textColor = .white
         welcomeLabel.font = UIFont.threeLight(size: 14)
@@ -111,11 +140,11 @@ extension MainStartVC {
         
         welcomeLabel.lineSetting(kernValue: 0, lineSpacing: 14)
         
-        subLabel.text = "시작은 달콤하게"
+        subLabel.text = "당신의 조각들을 매일 찍어 기록해보세요."
         subLabel.textColor = .white
         subLabel.font = UIFont.twoExLight(size: 11)
         
-        useExplainLabel.text = "이제 시작. 나를에서 나를 찾아봐요\n나에게 중독되어 가는거에요, narul"
+        useExplainLabel.text = "매일 나를 만날 준비가 되었다면\n다음을 눌러주세요."
         useExplainLabel.textColor = .white
         useExplainLabel.font = UIFont.twoExLight(size:  11)
         useExplainLabel.numberOfLines = 0
@@ -123,7 +152,7 @@ extension MainStartVC {
         if let text = useExplainLabel.text {
             // 첫째줄 부분에만 폰트를 다르게 설정
             let attributedStr = NSMutableAttributedString(string: useExplainLabel.text ?? "")
-            attributedStr.addAttribute(NSAttributedString.Key(rawValue: kCTFontAttributeName as String), value: UIFont.threeLight(size: 14), range: (text as NSString).range(of: "이제 시작. 나를에서 나를 찾아봐요"))
+            attributedStr.addAttribute(NSAttributedString.Key(rawValue: kCTFontAttributeName as String), value: UIFont.threeLight(size: 14), range: (text as NSString).range(of: "매일 나를 만날 준비가 되었다면"))
 
             useExplainLabel.attributedText = attributedStr
         }
@@ -179,6 +208,17 @@ extension MainStartVC: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
         
+        if !nextBool {
+            cell.backgroundImageView.image = UIImage(named: exImage[indexPath.row])
+            cell.plusImageView.isHidden = true
+        } else {
+            UIView.animate(withDuration: 1.0, delay: 0.0, options: .curveEaseOut, animations: {
+                cell.backgroundImageView.isHidden = true
+                cell.plusImageView.isHidden = false
+                cell.contentView.alpha = 0.6
+            })
+            
+        }
         return cell
     }
     

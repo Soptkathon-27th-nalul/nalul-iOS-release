@@ -20,5 +20,17 @@ extension Date {
         
         return dateString
     }
+    
+    func mainDatePickerToString() -> String {
+        // date 타입을 string으로 바꾸기
+        
+        let formatter = DateFormatter()
+        let format = "yyyy.MM.dd"
+        formatter.locale = Locale(identifier: "ko")
+        formatter.dateFormat = format
+        let dateString = formatter.string(from: self)
+        
+        return dateString
+    }
 
 }

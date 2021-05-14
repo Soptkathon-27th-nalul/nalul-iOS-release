@@ -13,7 +13,7 @@ class TeamNarulVC: UIViewController {
     
     var clickEvent: Bool = false
     var memberImage: [String] = ["syImage","hjImage","saImage","jmImage","mhImage","sjImage"]
-    var memberName: [String] = ["PM_정수연\n\n@instgram","PM_노희지\n\n@instgram","Designer_최선아\n\n@instgram","Designer_김재민\n\n@instgram","iOS_김민희\n\n@xdmini_","Server_이수진\n\n@instgram"]
+    var memberName: [String] = ["PM_정수연\n\n@shu_yum","PM_노희지\n\n@heeejii1","Designer_최선아\n\n@cocodoori","Designer_김재민\n\n@jam__in__","iOS_김민희\n\n@xdmini_","Server_이수진\n\n@suz_in_"]
     
     // MARK: IBOutlet
     

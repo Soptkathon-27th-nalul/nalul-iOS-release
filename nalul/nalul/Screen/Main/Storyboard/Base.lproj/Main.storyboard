@@ -78,6 +78,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dZS-En-4v3">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plusButtonImg" translatesAutoresizingMaskIntoConstraints="NO" id="hVV-pG-T5c">
                                                     <rect key="frame" x="56" y="51" width="16" height="26"/>
                                                     <constraints>
@@ -86,11 +89,19 @@
                                                 </imageView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="dZS-En-4v3" firstAttribute="top" secondItem="3wl-NR-8cj" secondAttribute="top" id="7WF-To-E5C"/>
+                                                <constraint firstItem="dZS-En-4v3" firstAttribute="leading" secondItem="3wl-NR-8cj" secondAttribute="leading" id="Iro-29-Wsk"/>
                                                 <constraint firstItem="hVV-pG-T5c" firstAttribute="centerY" secondItem="3wl-NR-8cj" secondAttribute="centerY" id="N82-35-0XI"/>
                                                 <constraint firstItem="hVV-pG-T5c" firstAttribute="centerX" secondItem="3wl-NR-8cj" secondAttribute="centerX" id="Oci-4I-yKo"/>
+                                                <constraint firstAttribute="trailing" secondItem="dZS-En-4v3" secondAttribute="trailing" id="SiP-dG-OGO"/>
                                                 <constraint firstItem="hVV-pG-T5c" firstAttribute="width" secondItem="3wl-NR-8cj" secondAttribute="width" multiplier="11/88" id="eWt-Ph-vg9"/>
+                                                <constraint firstAttribute="bottom" secondItem="dZS-En-4v3" secondAttribute="bottom" id="n8d-rS-fwb"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="backgroundImageView" destination="dZS-En-4v3" id="EfH-rn-03Z"/>
+                                            <outlet property="plusImageView" destination="hVV-pG-T5c" id="lYv-DX-BOc"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>

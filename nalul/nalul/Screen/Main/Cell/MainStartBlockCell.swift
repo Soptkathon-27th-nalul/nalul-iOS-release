@@ -13,8 +13,13 @@ class MainStartBlockCell: UICollectionViewCell {
     
     static let identifier = "MainStartBlockCell"
     
+    // MARK: IBOutlet
+    
+    @IBOutlet weak var backgroundImageView: UIImageView!
+    @IBOutlet weak var plusImageView: UIImageView!
+
+    
     override func awakeFromNib() {
         self.contentView.backgroundColor = .white
-        self.contentView.alpha = 0.6
     }
 }

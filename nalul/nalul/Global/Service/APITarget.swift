@@ -26,7 +26,7 @@ extension APITarget: TargetType {
     
     var baseURL: URL {
         // baseURL - 서버의 도메인
-        return URL(string: "http://3.36.215.151:3000")!
+        return URL(string: "http://13.124.224.41:3000")!
     }
     
     var path: String {

@@ -107,7 +107,6 @@ extension BackgroundConfirmVC {
             switch result {
             case .success(let data):
                 // 회원가입 완료
-                print(data)
                 signupData = data
                 UserDefaults.standard.setValue(signupData?.accessToken, forKey: "accessToken")
                 // 토큰 저장
@@ -134,12 +133,15 @@ extension BackgroundConfirmVC {
                 guard let homeTab = storyboard.instantiateViewController(identifier: "MainStartVC") as? MainStartVC else {
                     return
                 }
-                self?.view.window?.rootViewController?.dismiss(animated: false, completion: {
-                    // 현재뷰를 pop 한 다음, 다음 뷰로 이동하기
-                    homeTab.modalPresentationStyle = .fullScreen
-                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                    appDelegate.window?.rootViewController?.present(homeTab, animated: true, completion: nil)
-                })
+//                self?.view.window?.rootViewController?.dismiss(animated: false, completion: {
+//                    // 현재뷰를 pop 한 다음, 다음 뷰로 이동하기
+//                    homeTab.modalPresentationStyle = .fullScreen
+//                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//                    appDelegate.window?.rootViewController?.present(homeTab, animated: true, completion: nil)
+//                })
+                homeTab.modalPresentationStyle = .fullScreen
+                self?.present(homeTab, animated: true, completion: nil)
+//                self?.navigationController?.pushViewController(homeTab, animated: true)
                 
             }
         }

@@ -141,21 +141,21 @@ extension MainVC {
         // Label 관련 Style 설정
         
         todayQuestionLabel.numberOfLines = 0
-        todayQuestionLabel.text = "당신의 나를에게\n점점 나에게 빠져들어가고 있나요?"
+        todayQuestionLabel.text = "nalul\n오늘은 어떤 부분을 기록하고 싶으세요?"
         todayQuestionLabel.font = UIFont.threeLight(size: 14)
         todayQuestionLabel.textColor = .white
         
         if let text = todayQuestionLabel.text {
             // 첫째줄만 폰트를 다르게 설정
             let attributedStr = NSMutableAttributedString(string: text)
-            attributedStr.addAttribute(NSAttributedString.Key(rawValue: kCTFontAttributeName as String), value: UIFont.threeLight(size: 12), range: (text as NSString).range(of: "당신의 나를에게"))
+            attributedStr.addAttribute(NSAttributedString.Key(rawValue: kCTFontAttributeName as String), value: UIFont.threeLight(size: 12), range: (text as NSString).range(of: "nalul"))
             
             todayQuestionLabel.attributedText = attributedStr
         }
         
         todayQuestionLabel.lineSetting(kernValue: 0, lineSpacing: 14)
         
-        dateLabel.text = "그렇게 중독되어 가는거에요"
+        dateLabel.text = Date().mainDatePickerToString()
         dateLabel.font = UIFont.twoExLight(size: 11)
         dateLabel.textColor = .white
         setExplainLabel()
@@ -186,11 +186,11 @@ extension MainVC {
         if shuffleData == nil {
             // 데이터가 없을 때 멘트
             
-            explainLabel.text = "+ 버튼을 눌러 사진을 추가하세요\n사진 순서는 랜덤입니다"
+            explainLabel.text = "각 부위를 눌러 사진을 추가해보세요.\n당신의 부분들을 랜덤으로 모아서 보여드려요."
             if let text = explainLabel.text {
                 // 두번째줄만 폰트를 다르게 설정
                 let attributedStr = NSMutableAttributedString(string: text)
-                attributedStr.addAttribute(NSAttributedString.Key(rawValue: kCTFontAttributeName as String), value: UIFont.twoExLight(size: 11), range: (text as NSString).range(of: "사진 순서는 랜덤입니다"))
+                attributedStr.addAttribute(NSAttributedString.Key(rawValue: kCTFontAttributeName as String), value: UIFont.twoExLight(size: 11), range: (text as NSString).range(of: "당신의 부분들을 랜덤으로 모아서 보여드려요."))
                 
                 explainLabel.attributedText = attributedStr
             }
