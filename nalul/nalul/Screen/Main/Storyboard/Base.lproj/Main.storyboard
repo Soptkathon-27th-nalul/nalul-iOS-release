@@ -251,6 +251,17 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LX0-Ti-ih3">
                                 <rect key="frame" x="0.0" y="502.5" width="414" height="250.5"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QEE-c4-1Q0">
+                                        <rect key="frame" x="197" y="236.5" width="20" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="cnY-uf-ugO"/>
+                                            <constraint firstAttribute="width" constant="20" id="dQj-ia-gkl"/>
+                                        </constraints>
+                                        <state key="normal" image="x"/>
+                                        <connections>
+                                            <action selector="closeButtonDidTap:" destination="eYD-yx-JCR" eventType="touchUpInside" id="nFJ-4i-NQI"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fq1-n6-gej">
                                         <rect key="frame" x="179" y="102" width="56" height="56"/>
                                         <constraints>
@@ -262,19 +273,12 @@
                                             <action selector="shuffleButtonDidTap:" destination="eYD-yx-JCR" eventType="touchUpInside" id="fKy-yR-P2N"/>
                                         </connections>
                                     </button>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="x" translatesAutoresizingMaskIntoConstraints="NO" id="886-ln-bU6">
-                                        <rect key="frame" x="202" y="241.5" width="10" height="14"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="14" id="Tqc-uA-C6k"/>
-                                            <constraint firstAttribute="width" constant="10" id="iKf-zc-sM6"/>
-                                        </constraints>
-                                    </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="886-ln-bU6" secondAttribute="bottom" constant="-5" id="7it-yo-WlI"/>
                                     <constraint firstItem="Fq1-n6-gej" firstAttribute="centerX" secondItem="LX0-Ti-ih3" secondAttribute="centerX" id="Bd5-91-c2u"/>
-                                    <constraint firstItem="886-ln-bU6" firstAttribute="centerX" secondItem="LX0-Ti-ih3" secondAttribute="centerX" id="S0y-Dh-EaS"/>
+                                    <constraint firstAttribute="bottom" secondItem="QEE-c4-1Q0" secondAttribute="bottom" constant="-10" id="SSC-hz-J1O"/>
                                     <constraint firstItem="Fq1-n6-gej" firstAttribute="centerY" secondItem="LX0-Ti-ih3" secondAttribute="centerY" constant="5" id="XhJ-zd-xPR"/>
+                                    <constraint firstItem="QEE-c4-1Q0" firstAttribute="centerX" secondItem="LX0-Ti-ih3" secondAttribute="centerX" id="vSd-mm-03r"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -308,7 +312,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="8z6-MY-eW6"/>
                     <connections>
-                        <outlet property="clipImage" destination="886-ln-bU6" id="fDT-Pg-Lfw"/>
+                        <outlet property="closeButton" destination="QEE-c4-1Q0" id="na6-VJ-HWJ"/>
                         <outlet property="constraintToBottom" destination="q0y-qM-WIA" id="tVR-WZ-l4a"/>
                         <outlet property="constraintToTop" destination="zEU-mc-IU8" id="yE3-Cu-zRd"/>
                         <outlet property="dateLabel" destination="uWG-Ve-iOy" id="9ki-Xp-0dA"/>
