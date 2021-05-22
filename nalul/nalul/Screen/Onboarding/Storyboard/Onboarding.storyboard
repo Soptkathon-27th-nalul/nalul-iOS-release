@@ -249,7 +249,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Zf6-UG-QHv" secondAttribute="height" multiplier="253:465" id="zV6-ec-LGQ"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="group51"/>
+                                <state key="normal" backgroundImage="backgroundExImg"/>
                                 <connections>
                                     <action selector="registerButtonDidTap:" destination="zco-1N-JH9" eventType="touchUpInside" id="M0i-k0-Vrl"/>
                                 </connections>
@@ -308,7 +308,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UeZ-Oj-dyj">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UeZ-Oj-dyj">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ob0-6q-ACa">
@@ -358,8 +358,8 @@
     </scenes>
     <resources>
         <image name="arrowPencilLeftLarge5121" width="148" height="148"/>
+        <image name="backgroundExImg" width="253" height="465"/>
         <image name="btnHiStranger" width="221" height="221"/>
-        <image name="group51" width="253" height="465"/>
         <image name="onboardingBg" width="375" height="812"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
