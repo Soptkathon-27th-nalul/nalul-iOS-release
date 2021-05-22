@@ -292,6 +292,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="clickImageView" destination="O4z-8g-Use" id="TeZ-Ce-6jQ"/>
                         <outlet property="explainLabel" destination="Puj-6z-ZRI" id="hIA-Vg-go4"/>
                         <outlet property="titleLabel" destination="DqP-9X-BnD" id="TbE-Gt-4w1"/>
                     </connections>

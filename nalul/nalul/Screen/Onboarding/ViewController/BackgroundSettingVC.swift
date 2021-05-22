@@ -17,6 +17,7 @@ class BackgroundSettingVC: UIViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var explainLabel: UILabel!
+    @IBOutlet weak var clickImageView: UIImageView!
     
     // MARK: IBAction
     
@@ -98,6 +99,19 @@ extension BackgroundSettingVC {
         explainLabel.font = .threeLight(size: 14)
         explainLabel.textColor = .init(white: 1.0, alpha: 0.6)
         explainLabel.textAlignment = .center
+        
+        self.clickImageView.transform = CGAffineTransform(scaleX: 0.4, y: 0.4)
+        UIView.animate(
+           withDuration: 1.4,
+            delay: 0.3,
+           usingSpringWithDamping: 0.2,
+           initialSpringVelocity: 0.3,
+            options: [.repeat, .curveEaseIn],
+           animations: {
+               self.clickImageView.transform = CGAffineTransform(scaleX: 1, y: 1)
+           },
+           completion: nil)
+             
     }
 }
 
