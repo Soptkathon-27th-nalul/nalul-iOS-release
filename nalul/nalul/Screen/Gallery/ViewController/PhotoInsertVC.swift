@@ -19,6 +19,8 @@ class PhotoInsertVC: UIViewController {
     
     // MARK: IBOutlet
     
+    
+    @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var postButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var postDateLabel: UILabel!
@@ -235,6 +237,7 @@ extension PhotoInsertVC {
         singleTapGestureRecognizer.isEnabled = true
         singleTapGestureRecognizer.cancelsTouchesInView = false
         scrollView.addGestureRecognizer(singleTapGestureRecognizer)
+        headerView.addGestureRecognizer(singleTapGestureRecognizer)
     }
     
     @objc func myTapMethod(sender: UITapGestureRecognizer) {

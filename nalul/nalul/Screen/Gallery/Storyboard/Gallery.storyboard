@@ -481,6 +481,7 @@
                     <connections>
                         <outlet property="answerBoxImage" destination="eUs-hX-RJP" id="ZIy-W5-la7"/>
                         <outlet property="answerTextView" destination="3Gc-FH-OO8" id="t77-gy-3ya"/>
+                        <outlet property="headerView" destination="1ee-ST-e6A" id="rLi-cZ-FYq"/>
                         <outlet property="photoChoseButton" destination="Uy6-bl-h7I" id="8fn-3M-3MF"/>
                         <outlet property="postButton" destination="VCE-Hz-nkh" id="3Mn-Dw-k42"/>
                         <outlet property="postDateLabel" destination="hng-ml-mYg" id="VNV-uE-NXE"/>
