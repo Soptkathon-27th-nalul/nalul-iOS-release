@@ -93,9 +93,10 @@ extension BackgroundSettingVC {
         titleLabel.textColor = .white
         
         explainLabel.text = "나를의 배경은 당신입니다.\n화면에 꽉 찰 수 있는 정면 사진을 올려주세요.\n등록하는 모든 사진은 흑백처리 됩니다."
+        explainLabel.lineSetting(kernValue: 0, lineSpacing: 3)
+        explainLabel.numberOfLines = 0
         explainLabel.font = .threeLight(size: 14)
         explainLabel.textColor = .init(white: 1.0, alpha: 0.6)
-        explainLabel.numberOfLines = 0
         explainLabel.textAlignment = .center
     }
 }

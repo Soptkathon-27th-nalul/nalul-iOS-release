@@ -261,7 +261,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowPencilLeftLarge5121" translatesAutoresizingMaskIntoConstraints="NO" id="O4z-8g-Use">
-                                <rect key="frame" x="5" y="368" width="160" height="160"/>
+                                <rect key="frame" x="5" y="308" width="160" height="160"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="O4z-8g-Use" secondAttribute="height" multiplier="1:1" id="HFf-db-qk4"/>
                                     <constraint firstAttribute="width" constant="160" id="rDM-9y-YdK"/>
@@ -281,7 +281,7 @@
                             <constraint firstItem="yfc-Fe-nQF" firstAttribute="leading" secondItem="mUt-hZ-Yqo" secondAttribute="leading" id="NdF-KO-zL4"/>
                             <constraint firstItem="DqP-9X-BnD" firstAttribute="centerX" secondItem="W6W-b7-gQH" secondAttribute="centerX" id="Pe5-J4-FMr"/>
                             <constraint firstItem="Zf6-UG-QHv" firstAttribute="leading" secondItem="mUt-hZ-Yqo" secondAttribute="leading" constant="62" id="Sj6-Dn-YuM"/>
-                            <constraint firstItem="O4z-8g-Use" firstAttribute="centerY" secondItem="Zf6-UG-QHv" secondAttribute="centerY" constant="80" id="dcV-cM-jc1"/>
+                            <constraint firstItem="O4z-8g-Use" firstAttribute="centerY" secondItem="Zf6-UG-QHv" secondAttribute="centerY" constant="20" id="dcV-cM-jc1"/>
                             <constraint firstItem="yfc-Fe-nQF" firstAttribute="top" secondItem="W6W-b7-gQH" secondAttribute="top" id="eMA-Gg-thS"/>
                             <constraint firstItem="Puj-6z-ZRI" firstAttribute="top" secondItem="DqP-9X-BnD" secondAttribute="bottom" constant="12" id="g4e-ID-0hC"/>
                             <constraint firstItem="DqP-9X-BnD" firstAttribute="top" secondItem="Zf6-UG-QHv" secondAttribute="bottom" constant="47" id="gUn-yO-M9M"/>
