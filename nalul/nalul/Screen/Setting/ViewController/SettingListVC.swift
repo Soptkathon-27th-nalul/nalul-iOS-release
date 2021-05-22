@@ -12,7 +12,7 @@ class SettingListVC: UIViewController {
     
     // MARK: Variable Part
     
-    var titleList: [String] = ["nalue 소개", "배경 재설정", "문의하기", "서비스 이용약관", "팀 nalue", "오픈소스"]
+    var titleList: [String] = ["nalul 소개", "배경 재설정", "문의하기", "서비스 이용약관", "팀 nalul", "오픈소스"]
     
     // MARK: IBOutlet
     
