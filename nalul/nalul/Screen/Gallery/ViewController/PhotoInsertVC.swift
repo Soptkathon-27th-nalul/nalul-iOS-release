@@ -305,6 +305,30 @@ extension PhotoInsertVC: UITextViewDelegate {
         textViewPlaceHolder(textView: textView)
     }
     
+    func textViewDidChange(_ textView: UITextView) {
+        
+        if textView.text.count > 0 {
+            // textView에 값이 있을 때
+            
+            if postImage != nil {
+                // 이미지가 존재한다면
+                
+                postButton.isEnabled = true
+                // 등록 버튼 활성화
+            } else {
+                // 아직 이미지가 존재하지 않는다면
+                
+                postButton.isEnabled = false
+                // 등록 버튼 비활성화
+            }
+        } else {
+            // textView에 값이 없다면
+            
+            postButton.isEnabled = false
+            // 등록 버튼 비활성화
+        }
+    }
+    
 }
 
 // MARK: UIImagePickerControllerDelegate, UINavigationControllerDelegate
