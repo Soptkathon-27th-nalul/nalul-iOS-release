@@ -249,7 +249,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Zf6-UG-QHv" secondAttribute="height" multiplier="253:465" id="zV6-ec-LGQ"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="group51"/>
+                                <state key="normal" backgroundImage="backgroundExImg"/>
                                 <connections>
                                     <action selector="registerButtonDidTap:" destination="zco-1N-JH9" eventType="touchUpInside" id="M0i-k0-Vrl"/>
                                 </connections>
@@ -261,7 +261,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowPencilLeftLarge5121" translatesAutoresizingMaskIntoConstraints="NO" id="O4z-8g-Use">
-                                <rect key="frame" x="5" y="368" width="160" height="160"/>
+                                <rect key="frame" x="5" y="308" width="160" height="160"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="O4z-8g-Use" secondAttribute="height" multiplier="1:1" id="HFf-db-qk4"/>
                                     <constraint firstAttribute="width" constant="160" id="rDM-9y-YdK"/>
@@ -281,7 +281,7 @@
                             <constraint firstItem="yfc-Fe-nQF" firstAttribute="leading" secondItem="mUt-hZ-Yqo" secondAttribute="leading" id="NdF-KO-zL4"/>
                             <constraint firstItem="DqP-9X-BnD" firstAttribute="centerX" secondItem="W6W-b7-gQH" secondAttribute="centerX" id="Pe5-J4-FMr"/>
                             <constraint firstItem="Zf6-UG-QHv" firstAttribute="leading" secondItem="mUt-hZ-Yqo" secondAttribute="leading" constant="62" id="Sj6-Dn-YuM"/>
-                            <constraint firstItem="O4z-8g-Use" firstAttribute="centerY" secondItem="Zf6-UG-QHv" secondAttribute="centerY" constant="80" id="dcV-cM-jc1"/>
+                            <constraint firstItem="O4z-8g-Use" firstAttribute="centerY" secondItem="Zf6-UG-QHv" secondAttribute="centerY" constant="20" id="dcV-cM-jc1"/>
                             <constraint firstItem="yfc-Fe-nQF" firstAttribute="top" secondItem="W6W-b7-gQH" secondAttribute="top" id="eMA-Gg-thS"/>
                             <constraint firstItem="Puj-6z-ZRI" firstAttribute="top" secondItem="DqP-9X-BnD" secondAttribute="bottom" constant="12" id="g4e-ID-0hC"/>
                             <constraint firstItem="DqP-9X-BnD" firstAttribute="top" secondItem="Zf6-UG-QHv" secondAttribute="bottom" constant="47" id="gUn-yO-M9M"/>
@@ -292,6 +292,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="clickImageView" destination="O4z-8g-Use" id="TeZ-Ce-6jQ"/>
                         <outlet property="explainLabel" destination="Puj-6z-ZRI" id="hIA-Vg-go4"/>
                         <outlet property="titleLabel" destination="DqP-9X-BnD" id="TbE-Gt-4w1"/>
                     </connections>
@@ -308,7 +309,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UeZ-Oj-dyj">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UeZ-Oj-dyj">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ob0-6q-ACa">
@@ -358,8 +359,8 @@
     </scenes>
     <resources>
         <image name="arrowPencilLeftLarge5121" width="148" height="148"/>
+        <image name="backgroundExImg" width="253" height="465"/>
         <image name="btnHiStranger" width="221" height="221"/>
-        <image name="group51" width="253" height="465"/>
         <image name="onboardingBg" width="375" height="812"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

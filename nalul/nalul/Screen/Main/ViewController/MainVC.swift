@@ -29,7 +29,7 @@ class MainVC: UIViewController {
     @IBOutlet weak var middleSubView: UIView!
     
     @IBOutlet weak var subPopUpView: UIView!
-    @IBOutlet weak var clipImage: UIImageView!
+    @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var explainLabel: UILabel!
     
     @IBOutlet weak var constraintToBottom: NSLayoutConstraint!
@@ -82,6 +82,24 @@ class MainVC: UIViewController {
         }
         
     }
+    
+    @IBAction func closeButtonDidTap(_ sender: Any) {
+        // 엑스 버튼 클릭 시 플로팅 팝업 제거
+        
+        self.closeButton.isSelected = false
+        self.closeButton.isHidden = true
+        
+        let transition = CATransition()
+        transition.duration = 1
+        transition.timingFunction = .init(name: .easeInEaseOut)
+        transition.type = .push
+        transition.subtype = .fromBottom
+        subPopUpView.layer.add(transition, forKey: CATransitionType.push.rawValue)
+        self.subPopUpView.isHidden = true
+        // 밑으로 떨어지는 효과와 함께 플로팅 팝업 숨기기
+        
+    }
+    
     
     
     // MARK: Life Cycle Part

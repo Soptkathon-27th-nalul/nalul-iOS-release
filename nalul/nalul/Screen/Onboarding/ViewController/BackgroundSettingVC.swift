@@ -17,6 +17,7 @@ class BackgroundSettingVC: UIViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var explainLabel: UILabel!
+    @IBOutlet weak var clickImageView: UIImageView!
     
     // MARK: IBAction
     
@@ -93,10 +94,24 @@ extension BackgroundSettingVC {
         titleLabel.textColor = .white
         
         explainLabel.text = "나를의 배경은 당신입니다.\n화면에 꽉 찰 수 있는 정면 사진을 올려주세요.\n등록하는 모든 사진은 흑백처리 됩니다."
+        explainLabel.lineSetting(kernValue: 0, lineSpacing: 3)
+        explainLabel.numberOfLines = 0
         explainLabel.font = .threeLight(size: 14)
         explainLabel.textColor = .init(white: 1.0, alpha: 0.6)
-        explainLabel.numberOfLines = 0
         explainLabel.textAlignment = .center
+        
+        self.clickImageView.transform = CGAffineTransform(scaleX: 0.4, y: 0.4)
+        UIView.animate(
+           withDuration: 1.4,
+            delay: 0.3,
+           usingSpringWithDamping: 0.2,
+           initialSpringVelocity: 0.3,
+            options: [.repeat, .curveEaseIn],
+           animations: {
+               self.clickImageView.transform = CGAffineTransform(scaleX: 1, y: 1)
+           },
+           completion: nil)
+             
     }
 }
 

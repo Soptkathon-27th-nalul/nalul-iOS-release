@@ -19,6 +19,8 @@ class PhotoInsertVC: UIViewController {
     
     // MARK: IBOutlet
     
+    
+    @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var postButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var postDateLabel: UILabel!
@@ -235,6 +237,7 @@ extension PhotoInsertVC {
         singleTapGestureRecognizer.isEnabled = true
         singleTapGestureRecognizer.cancelsTouchesInView = false
         scrollView.addGestureRecognizer(singleTapGestureRecognizer)
+        headerView.addGestureRecognizer(singleTapGestureRecognizer)
     }
     
     @objc func myTapMethod(sender: UITapGestureRecognizer) {
@@ -303,6 +306,30 @@ extension PhotoInsertVC: UITextViewDelegate {
     
     func textViewDidEndEditing(_ textView: UITextView) {
         textViewPlaceHolder(textView: textView)
+    }
+    
+    func textViewDidChange(_ textView: UITextView) {
+        
+        if textView.text.count > 0 {
+            // textView에 값이 있을 때
+            
+            if postImage != nil {
+                // 이미지가 존재한다면
+                
+                postButton.isEnabled = true
+                // 등록 버튼 활성화
+            } else {
+                // 아직 이미지가 존재하지 않는다면
+                
+                postButton.isEnabled = false
+                // 등록 버튼 비활성화
+            }
+        } else {
+            // textView에 값이 없다면
+            
+            postButton.isEnabled = false
+            // 등록 버튼 비활성화
+        }
     }
     
 }
