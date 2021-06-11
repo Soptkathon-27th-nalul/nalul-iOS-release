@@ -125,8 +125,8 @@ extension SettingListVC: UITableViewDelegate {
                         compseVC.mailComposeDelegate = self
                         
                         compseVC.setToRecipients(["shorryshu@gmail.com"])
-                        compseVC.setSubject("'나를' 팀에게 문의하기")
-//                        compseVC.setMessageBody("사용자의 나를 팀에게 문의사", isHTML: false)
+                        compseVC.setSubject("‘nalul’ 1:1 문의하기")
+                        compseVC.setMessageBody("문의 내용:", isHTML: false)
                         
                         self.present(compseVC, animated: true, completion: nil)
                         
