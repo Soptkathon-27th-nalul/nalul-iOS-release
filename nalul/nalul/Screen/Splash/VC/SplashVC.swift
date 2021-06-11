@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Lottie
 
 class SplashVC: UIViewController {
     
@@ -17,7 +18,7 @@ class SplashVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        login(uuid: UIDevice.current.identifierForVendor!.uuidString)
+        setLottie()
     }
     
 }
@@ -27,6 +28,34 @@ class SplashVC: UIViewController {
 extension SplashVC {
     
     // MARK: Function
+    
+    func setLottie(){
+        
+        self.view.backgroundColor = .nalulBlack
+        
+        let animationView = AnimationView(name: "splash")
+        
+        animationView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height)
+        
+        // 애니메이션뷰의 콘텐트모드 설정
+        animationView.contentMode = .scaleAspectFill
+        
+        // 에러 나는 부분
+        
+        // 애니메이션뷰를 메인뷰에 추가
+        view.addSubview(animationView)
+        animationView.play(fromProgress: 0,
+                           toProgress: 1,
+                           loopMode: LottieLoopMode.playOnce,
+                           completion: { (finished) in
+                            if finished {
+                                self.login(uuid: UIDevice.current.identifierForVendor!.uuidString)
+                            } else {
+                                // 앱 다시 확인
+                            }
+                           })
+        
+    }
     
     func login(uuid: String) {
         // 로그인 서버 연결 함수

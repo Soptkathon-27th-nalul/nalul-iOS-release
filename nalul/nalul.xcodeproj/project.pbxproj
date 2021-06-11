@@ -71,6 +71,7 @@
 		9BD01119262061D900A30F7C /* BackgroundConfirmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD01118262061D900A30F7C /* BackgroundConfirmVC.swift */; };
 		9BD0111F262185B400A30F7C /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD0111E262185B400A30F7C /* UIImage+Extension.swift */; };
 		9BD25915264068B30044F4CD /* NalulIntroVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD25914264068B30044F4CD /* NalulIntroVC.swift */; };
+		9BD72CDB26736BE900CE299C /* splash.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BD72CDA26736BE900CE299C /* splash.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -142,6 +143,7 @@
 		9BD01118262061D900A30F7C /* BackgroundConfirmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundConfirmVC.swift; sourceTree = "<group>"; };
 		9BD0111E262185B400A30F7C /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		9BD25914264068B30044F4CD /* NalulIntroVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NalulIntroVC.swift; sourceTree = "<group>"; };
+		9BD72CDA26736BE900CE299C /* splash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = splash.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -352,6 +354,7 @@
 			isa = PBXGroup;
 			children = (
 				9B7228E7262813AA00EC2796 /* SplashVC.swift */,
+				9BD72CDA26736BE900CE299C /* splash.json */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -570,6 +573,7 @@
 				9B7E3A06260F36A80086535C /* PopUp.storyboard in Resources */,
 				9B665F2F25FC9D67002E4CD2 /* SCDream7.otf in Resources */,
 				9B665F3225FC9D67002E4CD2 /* SCDream5.otf in Resources */,
+				9BD72CDB26736BE900CE299C /* splash.json in Resources */,
 				9B9433F12601E12C005D987A /* Gallery.storyboard in Resources */,
 				9B665F3125FC9D67002E4CD2 /* SCDream8.otf in Resources */,
 				9BD01104262046F800A30F7C /* Onboarding.storyboard in Resources */,
