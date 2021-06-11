@@ -6,6 +6,7 @@ target 'nalul' do
   use_frameworks!
   pod 'Moya', '~> 14.0'
   pod 'Kingfisher', '~> 6.0'
+  pod 'lottie-ios'
   # Pods for nalul
 
 end
