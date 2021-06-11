@@ -193,6 +193,8 @@ extension PhotoInsertVC {
         answerTextView.textAlignment = .left
         answerTextView.backgroundColor = .none
         
+        scrollView.delegate = self
+        
     }
     
     func setView() {
@@ -376,4 +378,11 @@ extension PhotoInsertVC: UIImagePickerControllerDelegate, UINavigationController
 extension Notification.Name {
     // Observer 이름 등록
     static let popNavi = Notification.Name("popNavi")
+}
+
+extension PhotoInsertVC: UIScrollViewDelegate {
+    
+    func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
+        self.view.endEditing(true)
+    }
 }
