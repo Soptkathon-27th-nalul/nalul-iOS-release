@@ -112,6 +112,7 @@ class MainVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
     override func viewWillLayoutSubviews() {
         shakeButton.makeRounded(cornerRadius: nil)
     }
@@ -125,6 +126,8 @@ class MainVC: UIViewController {
         } else {
             userBackImageView.image = UIImage(named: "testBlackImage")
         }
+        
+        shuffleButtonDidTap(self)
     }
     
 }
