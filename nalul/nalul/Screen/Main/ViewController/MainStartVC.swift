@@ -13,6 +13,12 @@ class MainStartVC: UIViewController {
     
     var exImage: [String] = ["exRightEye","exLeftHand","exMole","exRightHand","exEar","exMouse","exCheek","exLeftEye","exNose"]
     var nextBool: Bool = false
+    var buttonTitle: String = "다음" {
+        willSet {
+            yesButton.setTitle(buttonTitle, for: .normal)
+//            yesButton.titleLabel?.text = buttonTitle
+        }
+    }
     
     // MARK: IBOutlet
     
@@ -32,18 +38,17 @@ class MainStartVC: UIViewController {
     // MARK: IBAction
     
     
-    @IBAction func yesButtonDidTap(_ sender: Any) {
+    @IBAction func yesButtonDidTap(_ sender: UIButton) {
         
         if !nextBool {
-            
             nextBool = true
-            yesButton.setTitle("시작", for: .normal)
             blockCollectionView.reloadData()
-            
+            buttonTitle = "시작"
             useExplainLabel.text = "매일 나를 만날 준비가 되었다면\n시작을 눌러주세요."
             useExplainLabel.textColor = .white
             useExplainLabel.font = UIFont.twoExLight(size:  11)
             useExplainLabel.numberOfLines = 0
+            
             
             if let text = useExplainLabel.text {
                 // 첫째줄 부분에만 폰트를 다르게 설정
@@ -112,8 +117,8 @@ extension MainStartVC {
     
     func setButton() {
         // 버튼 관련 Style 설정
-
-        yesButton.setTitle("다음", for: .normal)
+        
+        yesButton.setTitle(buttonTitle, for: .normal)
         yesButton.titleLabel?.font = UIFont.threeLight(size: 14)
         yesButton.tintColor = .white
         yesButton.setBorder(borderColor: .white, borderWidth: 1)

@@ -49,7 +49,7 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <connections>
-                                            <action selector="yesButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eMD-nb-D8S"/>
+                                            <action selector="yesButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G37-V2-0KI"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -140,7 +140,7 @@
                         <outlet property="topLayoutConstraint" destination="AxZ-ZT-KBi" id="tMT-j5-Ff7"/>
                         <outlet property="useExplainLabel" destination="usP-v1-zzV" id="RsF-3t-jFN"/>
                         <outlet property="welcomeLabel" destination="Hsz-a4-zu7" id="O1S-bT-kD5"/>
-                        <outlet property="yesButton" destination="8BO-bw-Vma" id="waj-uu-gBA"/>
+                        <outlet property="yesButton" destination="8BO-bw-Vma" id="NbM-nu-xEM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
