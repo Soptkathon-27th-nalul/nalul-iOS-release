@@ -93,8 +93,12 @@ class PhotoInsertVC: UIViewController {
            let image = photoChoseButton.imageView?.image,
            let contents = answerTextView.text,
            let jwt = UserDefaults.standard.string(forKey: "accessToken") {
+            
+            postButton.isEnabled = false
+            
             APIService.shared.postFeed(questionIndex, image, contents, jwt) { [self] result in
                 switch result {
+                
                 case .success(let data):
 
                     guard let loadData = data as? SimpleData else {
@@ -120,9 +124,9 @@ class PhotoInsertVC: UIViewController {
                         // Observer 살리기
                         
                     }
-
-
-
+                    
+                    postButton.isEnabled = true
+                    
                 case .failure(let error):
                     if error == 400 {
                         // 토큰 값 만료 -> 다시 로그인 하세요
@@ -130,6 +134,7 @@ class PhotoInsertVC: UIViewController {
                     } else {
                         print("데이터 연결을 확인해주세요")
                     }
+                    postButton.isEnabled = true
 
                 }
 
@@ -138,6 +143,7 @@ class PhotoInsertVC: UIViewController {
             // 토큰이 만료되었거나 없는 것
             
             print("앱 다시 실행해주세요 하고 다시 켜기")
+            postButton.isEnabled = true
         }
         
     }
