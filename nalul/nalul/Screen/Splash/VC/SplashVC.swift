@@ -14,6 +14,8 @@ class SplashVC: UIViewController {
     
     var loginData: LoginData?
     
+    @IBOutlet weak var splashView: UIView!
+    
     // MARK: Life Cycle Part
     
     override func viewDidLoad() {
@@ -32,10 +34,11 @@ extension SplashVC {
     func setLottie(){
         
         self.view.backgroundColor = .nalulBlack
+        splashView.backgroundColor = .clear
         
         let animationView = AnimationView(name: "splash")
         
-        animationView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height)
+        animationView.frame = CGRect(x: 0, y: 0, width: splashView.bounds.width, height: splashView.bounds.height)
         
         // 애니메이션뷰의 콘텐트모드 설정
         animationView.contentMode = .scaleAspectFill
@@ -43,7 +46,7 @@ extension SplashVC {
         // 에러 나는 부분
         
         // 애니메이션뷰를 메인뷰에 추가
-        view.addSubview(animationView)
+        splashView.addSubview(animationView)
         animationView.play(fromProgress: 0,
                            toProgress: 1,
                            loopMode: LottieLoopMode.playOnce,
