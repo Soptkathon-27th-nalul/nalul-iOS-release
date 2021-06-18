@@ -16,7 +16,6 @@ class MainStartVC: UIViewController {
     var buttonTitle: String = "다음" {
         willSet {
             yesButton.setTitle(buttonTitle, for: .normal)
-//            yesButton.titleLabel?.text = buttonTitle
         }
     }
     

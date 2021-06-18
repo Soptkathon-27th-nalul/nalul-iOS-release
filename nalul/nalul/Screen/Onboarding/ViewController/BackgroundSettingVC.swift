@@ -12,12 +12,14 @@ class BackgroundSettingVC: UIViewController {
     // MARK: Variable Part
     
     var myImage: UIImage?
+    var myBool: Bool = false
     
     // MARK: IBOutlet
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var explainLabel: UILabel!
     @IBOutlet weak var clickImageView: UIImageView!
+    @IBOutlet weak var backButton: UIButton!
     
     // MARK: IBAction
     
@@ -71,12 +73,27 @@ class BackgroundSettingVC: UIViewController {
         self.present(optionMenu, animated: true, completion: nil)
     }
     
+    
+    @IBAction func backButtonDidTap(_ sender: Any) {
+        
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     // MARK: Life Cycle Part
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setView()
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if myBool {
+            backButton.isHidden = false
+            
+        } else {
+            backButton.isHidden = true
+        }
     }
     
     

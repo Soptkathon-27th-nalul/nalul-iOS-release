@@ -113,6 +113,7 @@ extension SettingListVC: UITableViewDelegate {
             let storyboard = UIStoryboard.init(name: "Onboarding", bundle: nil)
             guard let nextVC = storyboard.instantiateViewController(identifier: "BackgroundSettingVC") as? BackgroundSettingVC else {return}
             self.navigationController?.pushViewController(nextVC, animated: true)
+            nextVC.myBool = true
             NotificationCenter.default.addObserver(self, selector: #selector(backView(_:)), name: .popNavi, object: nil)
 
         } else if indexPath.row == 2 {

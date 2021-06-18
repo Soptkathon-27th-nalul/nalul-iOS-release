@@ -273,9 +273,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="osE-RV-ZAV">
+                                <rect key="frame" x="20" y="44" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="0Sw-xA-vde"/>
+                                    <constraint firstAttribute="width" secondItem="osE-RV-ZAV" secondAttribute="height" multiplier="1:1" id="3pr-0F-KyY"/>
+                                </constraints>
+                                <state key="normal" image="btnBack"/>
+                                <connections>
+                                    <action selector="backButtonDidTap:" destination="zco-1N-JH9" eventType="touchUpInside" id="q9j-Cc-ykR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mUt-hZ-Yqo"/>
                         <constraints>
+                            <constraint firstItem="osE-RV-ZAV" firstAttribute="leading" secondItem="mUt-hZ-Yqo" secondAttribute="leading" constant="20" id="81y-gh-OX4"/>
+                            <constraint firstItem="osE-RV-ZAV" firstAttribute="top" secondItem="W6W-b7-gQH" secondAttribute="top" constant="44" id="9iP-cS-2eU"/>
                             <constraint firstItem="Zf6-UG-QHv" firstAttribute="centerY" secondItem="W6W-b7-gQH" secondAttribute="centerY" constant="-80" id="EVr-B4-T9n"/>
                             <constraint firstItem="O4z-8g-Use" firstAttribute="leading" secondItem="W6W-b7-gQH" secondAttribute="leading" constant="5" id="ElT-OS-WKS"/>
                             <constraint firstItem="yfc-Fe-nQF" firstAttribute="leading" secondItem="mUt-hZ-Yqo" secondAttribute="leading" id="NdF-KO-zL4"/>
@@ -292,6 +305,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="osE-RV-ZAV" id="imW-Bz-AXa"/>
                         <outlet property="clickImageView" destination="O4z-8g-Use" id="TeZ-Ce-6jQ"/>
                         <outlet property="explainLabel" destination="Puj-6z-ZRI" id="hIA-Vg-go4"/>
                         <outlet property="titleLabel" destination="DqP-9X-BnD" id="TbE-Gt-4w1"/>
@@ -368,6 +382,7 @@
     <resources>
         <image name="arrowPencilLeftLarge5121" width="148" height="148"/>
         <image name="backgroundExImg" width="253" height="465"/>
+        <image name="btnBack" width="27" height="25"/>
         <image name="imgOnboardingLogo" width="273" height="273"/>
         <image name="onboardingBg" width="375" height="812"/>
         <systemColor name="systemBackgroundColor">
