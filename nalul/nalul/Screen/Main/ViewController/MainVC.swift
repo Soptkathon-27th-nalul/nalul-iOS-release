@@ -66,6 +66,7 @@ class MainVC: UIViewController {
                     
                     if error == 400 {
                         // 사진이 하나도 없을 때
+                        UserDefaults.standard.removeObject(forKey: "MainShuffleData")
                         homeAlbumCollectionView.reloadData()
                         setExplainLabel()
                     } else {
