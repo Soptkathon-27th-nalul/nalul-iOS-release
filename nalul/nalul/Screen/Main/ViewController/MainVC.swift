@@ -205,20 +205,13 @@ extension MainVC {
         explainLabel.font = UIFont.threeLight(size: 14)
         explainLabel.textColor = .white
         
-        if shuffleData == nil {
-            // 데이터가 없을 때 멘트
+        explainLabel.text = "각 부위를 눌러 사진을 추가해보세요.\n당신의 부분들을 랜덤으로 모아서 보여드려요."
+        if let text = explainLabel.text {
+            // 두번째줄만 폰트를 다르게 설정
+            let attributedStr = NSMutableAttributedString(string: text)
+            attributedStr.addAttribute(NSAttributedString.Key(rawValue: kCTFontAttributeName as String), value: UIFont.twoExLight(size: 11), range: (text as NSString).range(of: "당신의 부분들을 랜덤으로 모아서 보여드려요."))
             
-            explainLabel.text = "각 부위를 눌러 사진을 추가해보세요.\n당신의 부분들을 랜덤으로 모아서 보여드려요."
-            if let text = explainLabel.text {
-                // 두번째줄만 폰트를 다르게 설정
-                let attributedStr = NSMutableAttributedString(string: text)
-                attributedStr.addAttribute(NSAttributedString.Key(rawValue: kCTFontAttributeName as String), value: UIFont.twoExLight(size: 11), range: (text as NSString).range(of: "당신의 부분들을 랜덤으로 모아서 보여드려요."))
-                
-                explainLabel.attributedText = attributedStr
-            }
-        } else {
-            // 데이터가 있을 때 멘트
-            
+            explainLabel.attributedText = attributedStr
         }
         
         explainLabel.lineSetting(kernValue: 0, lineSpacing: 12)
