@@ -14,6 +14,7 @@
 		9B33127526300AF400607497 /* PrivacyPolicyAgreementVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B33127426300AF400607497 /* PrivacyPolicyAgreementVC.swift */; };
 		9B41C0E0260252B600791CE2 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B41C0DF260252B600791CE2 /* Setting.storyboard */; };
 		9B41C0E3260252C600791CE2 /* SettingListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B41C0E2260252C600791CE2 /* SettingListVC.swift */; };
+		9B4FFE35267E50EE00797E96 /* suna2.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B4FFE34267E50EE00797E96 /* suna2.json */; };
 		9B665EFB25FC9A65002E4CD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B665EFA25FC9A65002E4CD2 /* AppDelegate.swift */; };
 		9B665EFF25FC9A65002E4CD2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B665EFE25FC9A65002E4CD2 /* ViewController.swift */; };
 		9B665F0225FC9A65002E4CD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B665F0025FC9A65002E4CD2 /* Main.storyboard */; };
@@ -71,7 +72,6 @@
 		9BD01119262061D900A30F7C /* BackgroundConfirmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD01118262061D900A30F7C /* BackgroundConfirmVC.swift */; };
 		9BD0111F262185B400A30F7C /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD0111E262185B400A30F7C /* UIImage+Extension.swift */; };
 		9BD25915264068B30044F4CD /* NalulIntroVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD25914264068B30044F4CD /* NalulIntroVC.swift */; };
-		9BD72CDB26736BE900CE299C /* splash.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BD72CDA26736BE900CE299C /* splash.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +84,7 @@
 		9B33127426300AF400607497 /* PrivacyPolicyAgreementVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyAgreementVC.swift; sourceTree = "<group>"; };
 		9B41C0DF260252B600791CE2 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Setting.storyboard; path = nalul/Screen/Setting/Storyboard/Setting.storyboard; sourceTree = SOURCE_ROOT; };
 		9B41C0E2260252C600791CE2 /* SettingListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingListVC.swift; path = nalul/Screen/Setting/ViewController/SettingListVC.swift; sourceTree = SOURCE_ROOT; };
+		9B4FFE34267E50EE00797E96 /* suna2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = suna2.json; sourceTree = "<group>"; };
 		9B665EF725FC9A65002E4CD2 /* nalul.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nalul.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B665EFA25FC9A65002E4CD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B665EFE25FC9A65002E4CD2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -143,7 +144,6 @@
 		9BD01118262061D900A30F7C /* BackgroundConfirmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundConfirmVC.swift; sourceTree = "<group>"; };
 		9BD0111E262185B400A30F7C /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		9BD25914264068B30044F4CD /* NalulIntroVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NalulIntroVC.swift; sourceTree = "<group>"; };
-		9BD72CDA26736BE900CE299C /* splash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = splash.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -354,7 +354,7 @@
 			isa = PBXGroup;
 			children = (
 				9B7228E7262813AA00EC2796 /* SplashVC.swift */,
-				9BD72CDA26736BE900CE299C /* splash.json */,
+				9B4FFE34267E50EE00797E96 /* suna2.json */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -571,9 +571,9 @@
 				9B665F0725FC9A67002E4CD2 /* LaunchScreen.storyboard in Resources */,
 				9B7228E52628139900EC2796 /* Splash.storyboard in Resources */,
 				9B7E3A06260F36A80086535C /* PopUp.storyboard in Resources */,
+				9B4FFE35267E50EE00797E96 /* suna2.json in Resources */,
 				9B665F2F25FC9D67002E4CD2 /* SCDream7.otf in Resources */,
 				9B665F3225FC9D67002E4CD2 /* SCDream5.otf in Resources */,
-				9BD72CDB26736BE900CE299C /* splash.json in Resources */,
 				9B9433F12601E12C005D987A /* Gallery.storyboard in Resources */,
 				9B665F3125FC9D67002E4CD2 /* SCDream8.otf in Resources */,
 				9BD01104262046F800A30F7C /* Onboarding.storyboard in Resources */,
@@ -829,6 +829,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = DUQE66MABG;
 				INFOPLIST_FILE = nalul/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -852,6 +853,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = DUQE66MABG;
 				INFOPLIST_FILE = nalul/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;

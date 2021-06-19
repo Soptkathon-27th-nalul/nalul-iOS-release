@@ -18,10 +18,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tjb-Mx-OXB">
-                                <rect key="frame" x="104.5" y="345.5" width="205" height="205"/>
+                                <rect key="frame" x="135" y="348" width="144" height="200"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="tjb-Mx-OXB" secondAttribute="height" multiplier="1:1" id="NaY-db-SeV"/>
+                                    <constraint firstAttribute="width" secondItem="tjb-Mx-OXB" secondAttribute="height" multiplier="105:146" id="NaY-db-SeV"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -30,7 +30,7 @@
                         <constraints>
                             <constraint firstItem="tjb-Mx-OXB" firstAttribute="centerY" secondItem="48v-FL-nXo" secondAttribute="centerY" id="0wg-HX-4eP"/>
                             <constraint firstItem="tjb-Mx-OXB" firstAttribute="centerX" secondItem="48v-FL-nXo" secondAttribute="centerX" id="7po-bn-FZx"/>
-                            <constraint firstItem="tjb-Mx-OXB" firstAttribute="width" secondItem="48v-FL-nXo" secondAttribute="width" multiplier="186:375" id="Be1-4c-RV2"/>
+                            <constraint firstItem="tjb-Mx-OXB" firstAttribute="width" secondItem="48v-FL-nXo" secondAttribute="width" multiplier="130/375" id="wZt-MF-5JC"/>
                         </constraints>
                     </view>
                     <connections>

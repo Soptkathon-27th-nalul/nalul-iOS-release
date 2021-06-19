@@ -36,7 +36,7 @@ extension SplashVC {
         self.view.backgroundColor = .nalulBlack
         splashView.backgroundColor = .clear
         
-        let animationView = AnimationView(name: "splash")
+        let animationView = AnimationView(name: "suna2")
         
         animationView.frame = CGRect(x: 0, y: 0, width: splashView.bounds.width, height: splashView.bounds.height)
         

@@ -174,9 +174,13 @@ extension GalleryListVC: UICollectionViewDataSource {
         if let feedData = feedData {
             if feedData.count > 12 {
                 return feedData.count
+            } else {
+                return 12
             }
+        } else {
+            return 12
         }
-        return 12
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

@@ -113,7 +113,7 @@ class PhotoInsertVC: UIViewController {
                         guard let popUpVC = nextStoryboard.instantiateViewController(identifier: "PopUpVC") as? PopUpVC else { return }
                         
                         popUpVC.questionMent = "오늘의 나를 기록했어요."
-                        popUpVC.explainMent = "나의 또다른 부분을 기록해볼까요?"
+                        popUpVC.explainMent = "나의 또 다른 부분을 기록해볼까요?"
                         popUpVC.modalPresentationStyle = .overCurrentContext
                         popUpVC.modalTransitionStyle = .crossDissolve
                         
