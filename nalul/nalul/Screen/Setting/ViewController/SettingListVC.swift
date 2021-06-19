@@ -81,7 +81,7 @@ extension SettingListVC {
     
     func showSendMailErrorAlert() {
         
-        let sendMailErrorAlert = UIAlertController(title: "메일 전송 실패", message: "아이폰 - Mail 설정을 확인해주세요.", preferredStyle: .alert)
+        let sendMailErrorAlert = UIAlertController(title: "메일 전송 실패", message: "아이폰 - Mail 설정을 확인해주세요.\n(문의 이메일 주소: shorryshu@gmail.com)", preferredStyle: .alert)
         let confirmAction = UIAlertAction(title: "확인", style: .default)
         
         sendMailErrorAlert.addAction(confirmAction)
